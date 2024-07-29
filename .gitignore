@@ -1,0 +1,26 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore Composer dependencies
+vendor/
+
+# Ignore environment variables
+.env
+
+# Ignore IDE config files
+.idea/
+.vscode/
+
+# Ignore log files
+storage/logs/
+
+# Ignore Composer lock file (optional, if you don't want to lock dependencies)
+composer.lock
+
+# Ignore other system files
+.DS_Store
+Thumbs.db
+
+# Ignore other build or dependency directories
+/dist
+/build
