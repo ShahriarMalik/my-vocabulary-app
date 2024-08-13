@@ -1,0 +1,109 @@
+<mat-toolbar color="primary">
+  <span class="logo">VokabelProfi</span>
+  <!-- <span class="spacer"></span> -->
+
+  <!-- Learn Menu-->
+  <button mat-button [matMenuTriggerFor]="learnMenu" class="menu-item">
+    Learn
+  </button>
+  <mat-menu #learnMenu="matMenu">
+    <button mat-menu-item>A1</button>
+    <button mat-menu-item>A2</button>
+    <button mat-menu-item>B1</button>
+    <button mat-menu-item>B2</button>
+    <button mat-menu-item>C1</button>
+    <button mat-menu-item>C2</button>
+  </mat-menu>
+
+  <!-- Exercises -->
+  <button mat-button>Exercises</button>
+
+  <!-- Tips-->
+  <button mat-button>Tips</button>
+
+  <!-- My Word-->
+  @if (isLoggedIn) {
+  <button mat-button>My Words</button>
+  }
+
+  <span class="spacer"></span>
+
+  <!-- Search-->
+  <button mat-icon-button aria-label="search">
+    <mat-icon>search</mat-icon>
+  </button>
+
+  <!-- Language Toggle-->
+  <button mat-button [matMenuTriggerFor]="languageMenu">
+    <div class="language-selection">
+      @if(currentLanguage == 'en'){
+      <img
+        src="assets/images/en.png"
+        alt="English Flag"
+        width="20"
+        height="20"
+      />
+      } @else if (currentLanguage == 'de') {
+      <img
+        src="assets/images/de.png"
+        alt="German Flag"
+        width="20"
+        height="20"
+      />
+      }
+      <span>{{ currentLanguage.toUpperCase() }}</span>
+      <mat-icon>keyboard_arrow_down</mat-icon>
+    </div>
+  </button>
+
+  <mat-menu #languageMenu="matMenu">
+    <button mat-menu-item (click)="changeLanguage('en')">
+      <div class="language-selection">
+        <img
+          src="assets/images/en.png"
+          alt="English Flag"
+          width="20"
+          height="20"
+        />
+        <span>EN</span>
+      </div>
+    </button>
+    <button mat-menu-item (click)="changeLanguage('de')">
+      <div class="language-selection">
+        <img
+          src="assets/images/de.png"
+          alt="German Flag"
+          width="20"
+          height="20"
+        />
+        <span>DE</span>
+      </div>
+    </button>
+  </mat-menu>
+
+  <!--Theme Toggle-->
+
+  <button
+    mat-icon-button
+    [matMenuTriggerFor]="themeMenu"
+    aria-label="Toggle Theme"
+  >
+    <mat-icon>{{ isDarkTheme() ? "dark_mode" : "light_mode" }}</mat-icon>
+  </button>
+
+  <mat-menu #themeMenu="matMenu">
+    <button mat-menu-item (click)="setTheme('dark')">
+      <mat-icon>dark_mode</mat-icon>
+      <!-- Icon for dark theme -->
+      <span>Dark</span>
+    </button>
+    <button mat-menu-item (click)="setTheme('light')">
+      <mat-icon>light_mode</mat-icon>
+      <!-- Icon for light theme -->
+      <span>Light</span>
+    </button>
+  </mat-menu>
+
+  <button mat-button>Login</button>
+  <button mat-button>Sign Up</button>
+</mat-toolbar>

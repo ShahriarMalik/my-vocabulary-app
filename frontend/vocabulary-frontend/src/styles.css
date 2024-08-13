@@ -1,46 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
-
+/* Global styles */
 html,
 body {
   height: 100%;
-}
-body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-/* Light Theme*/
-:root {
-  --primary-color: #1976d2;
+/* Light Theme (Azure Blue) */
+body.light-theme {
+  --primary-color: #bbdcfd;
   --accent-color: #e91e63;
   --background-color: #ffffff;
   --text-color: #000000;
+
+  /* Applying the Azure Blue theme styles */
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
-/* Dark Theme*/
-.dark-theme {
+/* Dark Theme */
+body.dark-theme {
   --primary-color: #bb86fc;
   --accent-color: #03dac6;
   --background-color: #121212;
   --text-color: #ffffff;
+
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 body {
   background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-.mat-toolbar {
-  background-color: var(--primary-color);
-  color: var(--text-color);
-}
-
-.mat-card {
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-.mat-button {
-  background-color: var(--primary-color);
   color: var(--text-color);
 }
