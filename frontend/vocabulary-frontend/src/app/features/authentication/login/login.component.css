@@ -1,0 +1,34 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem;
+}
+
+.mat-mdc-card-header {
+  justify-content: center;
+}
+
+.title {
+  color: var(--primary-color);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 37.5rem; /* 600px */
+  margin: 1.25rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-form-field {
+  margin-bottom: 1.25rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+}
