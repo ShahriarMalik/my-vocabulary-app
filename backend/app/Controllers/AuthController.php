@@ -237,4 +237,27 @@ class AuthController {
 
         return $response->withJson(['message' => 'Password reset successfully']);
     }
+
+    /**
+     * Check if an email address already exists
+     *
+     * @param array $request
+     * @param object $response
+     * @return object
+     */
+    public function checkEmailExists(array $request, object $response): object {
+        $data = $request;
+
+        // Validate input
+        if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
+            return $response->withJson(['exists' => false, 'message' => 'Invalid email format'], 400);
+        }
+
+        // Check if email exists
+        $user = new User($this->userGateway);
+        $emailExists = $user->emailExists($data['email']);
+
+        return $response->withJson(['exists' => $emailExists], 200);
+    }
+
 }

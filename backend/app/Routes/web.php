@@ -20,6 +20,7 @@ route('POST', '/refresh', [AuthController::class, 'refresh']);
 route('POST', '/logout', [AuthController::class, 'logout']);
 route('POST', '/request-password-reset', [AuthController::class, 'requestPasswordReset']);
 route('POST', '/reset-password', [AuthController::class, 'resetPassword']);
+route('POST', '/check-email', [AuthController::class, 'checkEmailExists']);
 
 // Define WordController routes
 route('GET', '/word/fetch', [WordController::class, 'fetchWordData']);
