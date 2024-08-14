@@ -4,6 +4,12 @@
   "newProjectRoot": "projects",
   "projects": {
     "vocabulary-frontend": {
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "de": "src/locale/messages.de.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -16,9 +22,7 @@
             "outputPath": "dist/vocabulary-frontend",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js", "@angular/localize/init"],
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
@@ -31,6 +35,7 @@
               "src/styles.css"
             ],
             "scripts": [],
+            "localize": ["en-US", "de"],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
@@ -57,6 +62,10 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
+            },
+            "de": {
+              "localize": ["de"],
+              "outputPath": "dist/vocabulary-frontend-de"
             }
           },
           "defaultConfiguration": "production"
@@ -69,6 +78,9 @@
             },
             "development": {
               "buildTarget": "vocabulary-frontend:build:development"
+            },
+            "de": {
+              "buildTarget": "vocabulary-frontend:build:de"
             }
           },
           "defaultConfiguration": "development"
@@ -81,7 +93,8 @@
           "options": {
             "polyfills": [
               "zone.js",
-              "zone.js/testing"
+              "zone.js/testing",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
