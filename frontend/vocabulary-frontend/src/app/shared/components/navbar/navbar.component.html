@@ -1,7 +1,41 @@
 <mat-toolbar color="primary">
+  <!-- Mobile Menu Icon -->
+  <button
+    mat-icon-button
+    aria-label="Menu"
+    i18n-aria-label="@@menuButton"
+    class="menu-button"
+    [matMenuTriggerFor]="mobileMenu"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+
   <span class="logo" i18n="@@appLogo">VokabelProfi</span>
 
-  <!-- Learn Menu-->
+  <mat-menu #mobileMenu="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="learnMenu" i18n="@@learnButton">
+      Learn
+    </button>
+    <button mat-menu-item i18n="@@exercisesButton">Exercises</button>
+    <button mat-menu-item i18n="@@tipsButton">Tips</button>
+    @if (isLoggedIn) {
+    <button mat-menu-item i18n="@@myWordsButton">My Words</button>
+    }
+    <button
+      mat-menu-item
+      [matMenuTriggerFor]="languageMenu"
+      i18n="@@languageButton"
+    >
+      Language
+    </button>
+    <button mat-menu-item [matMenuTriggerFor]="themeMenu" i18n="@@themeButton">
+      Theme
+    </button>
+    <button mat-menu-item i18n="@@loginButton">Login</button>
+    <button mat-menu-item i18n="@@signUpButton">Sign Up</button>
+  </mat-menu>
+
+  <!-- Full Menu for Larger Screens -->
   <button
     mat-button
     [matMenuTriggerFor]="learnMenu"
@@ -19,13 +53,9 @@
     <button mat-menu-item>C2</button>
   </mat-menu>
 
-  <!-- Exercises -->
   <button mat-button i18n="@@exercisesButton">Exercises</button>
-
-  <!-- Tips-->
   <button mat-button i18n="@@tipsButton">Tips</button>
 
-  <!-- My Words-->
   @if (isLoggedIn) {
   <button mat-button i18n="@@myWordsButton">My Words</button>
   }
@@ -37,7 +67,7 @@
     <mat-icon>search</mat-icon>
   </button>
 
-  <!-- Language Toggle-->
+  <!-- Language Toggle -->
   <button mat-button [matMenuTriggerFor]="languageMenu">
     <div class="language-selection">
       @if(currentLanguage == 'en'){

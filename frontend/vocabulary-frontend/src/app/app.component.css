@@ -1,0 +1,25 @@
+.sidenav-container {
+  min-height: calc(100vh - 56px); /* Adjust for the footer height */
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem; /* Space for the fixed navbar */
+}
+
+/* Responsive adjustments, if needed */
+@media screen and (max-width: 600px) {
+  .content {
+    margin-top: 3.5rem; /* Adjust the top margin for the mobile navbar */
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .content {
+    margin-top: 4rem; /* Maintain the margin for larger screens */
+  }
+}

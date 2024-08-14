@@ -1,6 +1,7 @@
 :host {
   display: block;
   width: 100%;
+  padding-top: 64px;
 }
 
 .mat-toolbar {
@@ -12,34 +13,16 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.mat-toolbar,
-.mat-button {
-  background-color: var(--primary-color);
-  color: var(--text-color);
-}
-
-.mat-card {
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
 .logo {
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: bold;
-}
-
-.menu-item {
-  margin-left: 1rem;
 }
 
 .spacer {
   flex: 1 1 auto;
 }
 
-button {
-  margin-right: 10px;
-}
-
+.menu-item,
 button[mat-button] {
   display: flex;
   align-items: center;
@@ -61,4 +44,46 @@ button[mat-button] {
 .language-selection mat-icon {
   vertical-align: middle;
   font-size: 16px;
+}
+
+/* Hide the hamburger menu button by default */
+.menu-button {
+  display: none;
+}
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 600px) {
+  .mat-toolbar {
+    padding: 0 10px;
+  }
+
+  /* Hide the full menu and show the hamburger button on mobile */
+  .menu-item,
+  button[mat-button] {
+    display: none;
+  }
+
+  .menu-button {
+    display: inline-flex;
+  }
+
+  .logo {
+    font-size: 0.875rem;
+  }
+}
+
+/* Responsive Design for Larger Screens */
+@media screen and (min-width: 601px) {
+  .menu-button {
+    display: none;
+  }
+
+  .menu-item,
+  button[mat-button] {
+    display: inline-flex;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
 }
