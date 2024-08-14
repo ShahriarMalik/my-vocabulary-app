@@ -1,0 +1,110 @@
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.mat-mdc-card-header {
+  justify-content: center;
+}
+
+.title {
+  color: var(--accent-color);
+}
+
+.signup-card {
+  width: 100%;
+  max-width: 37.5rem; /* 600px */
+  margin: 1.25rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-form-field {
+  margin-bottom: 1.25rem;
+  color: var(--text-color);
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.25rem;
+}
+
+button[mat-raised-button] {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+button[mat-raised-button][disabled] {
+  background-color: var(--primary-color);
+  color: rgba(255, 255, 255, 0.3); /* Lighter color when disabled */
+}
+
+button[mat-raised-button]:hover {
+  background-color: darken(var(--primary-color), 10%);
+}
+
+.signup-card,
+.success-card {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.success-message {
+  color: green;
+  font-weight: bold;
+  padding: 0 0.5rem;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  padding: 0 0.5rem;
+}
+
+mat-card-header mat-icon {
+  font-size: 1.5rem;
+}
+
+.success-card mat-card-header mat-icon {
+  color: green;
+}
+
+.error-card mat-card-header mat-icon {
+  color: red;
+}
+
+/* Media Queries */
+@media (min-width: 320px) and (max-width: 480px) {
+  .success-message,
+  .error-message {
+    padding: 0px;
+  }
+
+  mat-card-header mat-icon {
+    display: none;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  /* Large Mobile */
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Tablet */
+}
+
+@media (min-width: 992px) {
+  /* Desktop */
+}

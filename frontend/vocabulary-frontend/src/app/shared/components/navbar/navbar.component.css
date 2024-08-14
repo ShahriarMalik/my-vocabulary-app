@@ -11,11 +11,25 @@
   right: 0;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.mat-card {
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 .logo {
-  font-size: 1rem;
-  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  margin-right: 10px;
 }
 
 .spacer {
@@ -26,11 +40,13 @@
 button[mat-button] {
   display: flex;
   align-items: center;
+  color: var(--text-color);
 }
 
 .language-selection {
   display: flex;
   align-items: center;
+  color: var(--text-color);
 }
 
 .language-selection img {
@@ -39,40 +55,60 @@ button[mat-button] {
 
 .language-selection span {
   margin-right: 4px;
+  color: var(--accent-color);
 }
 
 .language-selection mat-icon {
   vertical-align: middle;
   font-size: 16px;
+  color: var(--text-color);
 }
 
-/* Hide the hamburger menu button by default */
 .menu-button {
   display: none;
+  color: var(--text-color);
 }
 
-/* Responsive Design for Mobile */
+.mat-menu-panel {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.mat-menu .mat-menu-item {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.mat-menu .mat-menu-item:hover {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+/* Mobile Styles */
 @media screen and (max-width: 600px) {
   .mat-toolbar {
     padding: 0 10px;
+    background-color: var(--background-color);
+    color: var(--text-color);
   }
 
-  /* Hide the full menu and show the hamburger button on mobile */
   .menu-item,
-  button[mat-button] {
+  button[mat-button]:not(.language-button) {
     display: none;
   }
 
   .menu-button {
     display: inline-flex;
+    color: var(--text-color);
   }
 
-  .logo {
-    font-size: 0.875rem;
+  .logo img {
+    width: 30px;
+    height: 30px;
   }
 }
 
-/* Responsive Design for Larger Screens */
+/* Desktop Styles */
 @media screen and (min-width: 601px) {
   .menu-button {
     display: none;
@@ -83,7 +119,17 @@ button[mat-button] {
     display: inline-flex;
   }
 
-  .logo {
-    font-size: 1rem;
+  .logo img {
+    width: 40px;
+    height: 40px;
   }
+
+  .mat-toolbar {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+}
+
+.mat-icon {
+  color: var(--text-color);
 }

@@ -1,20 +1,83 @@
-<form [formGroup]="singUpForm">
-  <label for="user-name">User Name:</label>
-  <input
-    type="text"
-    name="user-name"
-    id="user-name"
-    formControlName="userName"
-  />
+<div class="signup-container">
+  <mat-card class="signup-card">
+    <mat-card-header>
+      <h2 class="title">Sign Up</h2>
+    </mat-card-header>
+    <mat-card-content>
+      <form
+        [formGroup]="signUpForm"
+        (ngSubmit)="onSubmit()"
+        class="signup-form"
+      >
+        <!-- User Name Field -->
+        <mat-form-field appearance="fill">
+          <mat-label>User Name</mat-label>
+          <input
+            matInput
+            type="text"
+            id="user-name"
+            formControlName="userName"
+          />
+          @if(userName?.invalid && userName?.dirty && userName?.touched){
+          <mat-error>
+            @if(userName?.errors?.['required']){
+            <small>User Name is required.</small>
+            } @if(userName?.errors?.['minlength']){
+            <small>User Name must be at least 3 characters long.</small>
+            }
+          </mat-error>
+          }
+        </mat-form-field>
 
-  <label for="email">Email:</label>
-  <input type="email" name="email" id="email" formControlName="email" />
+        <!-- Email Field -->
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" id="email" formControlName="email" />
+          @if(email?.invalid && email?.dirty && email?.touched){
+          <mat-error>
+            @if(email?.errors?.['required']){
+            <small>Email is required.</small>
+            } @if(email?.errors?.['email']){
+            <small>Invalid email address.</small>
+            } @if(email?.errors?.['uniqueEmail']){
+            <small>Email already exists.</small>
+            }
+          </mat-error>
+          }
+        </mat-form-field>
 
-  <label for="password">Password</label>
-  <input
-    type="password"
-    name="password"
-    id="password"
-    formControlName="password"
-  />
-</form>
+        <!-- Password Field -->
+        <mat-form-field appearance="fill">
+          <mat-label>Password</mat-label>
+          <input
+            matInput
+            type="password"
+            id="password"
+            formControlName="password"
+          />
+          @if(password?.invalid && password?.touched){
+          <mat-error>
+            @if(password?.errors?.['required']){
+            <small>Password is required.</small>
+            } @if(password?.errors?.['minlength']){
+            <small>Password must be at least 6 characters long.</small>
+            }
+          </mat-error>
+          }
+        </mat-form-field>
+
+        <!-- Submit Button -->
+        <div class="button-container">
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            [disabled]="signUpForm.invalid"
+          >
+            Sign Up
+          </button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

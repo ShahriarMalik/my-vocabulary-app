@@ -1,5 +1,5 @@
 .main-footer {
-  background-color: #303f9f; /* Dark Indigo */
+  background-color: #303f9f;
   padding: 16px;
   display: flex;
   flex-direction: column;
@@ -9,7 +9,7 @@
 }
 
 .main-footer span {
-  color: white;
+  color: var(--footer-text-color);
 }
 
 .main-footer__links {
@@ -26,13 +26,13 @@
 }
 
 .main-footer__link a {
-  color: white;
+  color: var(--footer-text-color);
   text-decoration: none;
 }
 
 .main-footer__link a:hover,
 .main-footer__link a:active {
-  color: #ccc;
+  color: var(--footer-link-hover-color);
 }
 
 .main-footer__link mat-icon {
