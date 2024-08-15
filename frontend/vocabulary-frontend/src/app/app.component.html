@@ -3,6 +3,13 @@
     <app-navbar></app-navbar>
 
     <div class="content">
+      @if(isLoading$ | async){
+      <mat-progress-bar
+        mode="indeterminate"
+        class="loading-bar"
+      ></mat-progress-bar>
+      }
+
       <router-outlet></router-outlet>
     </div>
   </mat-sidenav-content>

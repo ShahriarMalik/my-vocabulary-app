@@ -13,6 +13,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { UniqueEmailValidatorService } from '../../../core/services/unique-email-validator.service';
+import { AuthService } from '../../../core/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -32,12 +34,18 @@ import { UniqueEmailValidatorService } from '../../../core/services/unique-email
 })
 export class SignupComponent implements OnInit {
   signUpForm!: FormGroup;
+  errorMessage = '';
+  successMessage = '';
 
-  constructor(private uniqueEmailValidator: UniqueEmailValidatorService) {}
+  constructor(
+    private uniqueEmailValidator: UniqueEmailValidatorService,
+    private authService: AuthService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.signUpForm = new FormGroup({
-      userName: new FormControl('', [
+      username: new FormControl('', [
         Validators.required,
         Validators.minLength(3),
       ]),
@@ -58,17 +66,42 @@ export class SignupComponent implements OnInit {
   onSubmit() {
     if (this.signUpForm.valid) {
       console.log('Form Submitted', this.signUpForm.value);
+      this.authService.signUp(this.signUpForm.value).subscribe({
+        next: (response) => {
+          this.successMessage = response.message;
+          setTimeout(() => {
+            this.router.navigate(['/auth/login']);
+          }, 3000);
+        },
+        error: (error) => {
+          console.log(error);
 
+          if (error.status === 400) {
+            this.errorMessage = error.error?.message;
+          } else {
+            this.errorMessage =
+              'An unexpected error occurred. Please try again later.';
+          }
+        },
+      });
+
+      // Reset form and clear validation states
       this.signUpForm.reset();
-    } else {
-      console.log('Form is invalid');
+      Object.keys(this.signUpForm.controls).forEach((key) => {
+        this.signUpForm.get(key)?.setErrors(null);
+      });
+
+      setTimeout(() => {
+        this.errorMessage = '';
+        this.successMessage = '';
+      }, 3000);
     }
   }
 
   // Utility getter methods for the template
 
-  get userName() {
-    return this.signUpForm.get('userName');
+  get username() {
+    return this.signUpForm.get('username');
   }
 
   get email() {

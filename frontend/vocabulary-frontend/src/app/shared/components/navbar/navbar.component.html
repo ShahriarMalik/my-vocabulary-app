@@ -28,11 +28,19 @@
     <button mat-menu-item i18n="@@tipsButton">Tips</button>
     @if (isLoggedIn) {
     <button mat-menu-item i18n="@@myWordsButton">My Words</button>
-    }
-    <button mat-menu-item i18n="@@loginButton">Login</button>
-    <button mat-menu-item i18n="@@signUpButton" routerLink="/auth/signup">
+    } @if(!isLoggedIn){
+    <button mat-button i18n="@@loginButton" [routerLink]="['/auth/login']">
+      Login
+    </button>
+    } @if(!isLoggedIn){
+    <button mat-button i18n="@@signUpButton" [routerLink]="['/auth/signup']">
       Sign Up
     </button>
+    } @if(isLoggedIn){
+    <button mat-button i18n="@@signUpButton" (click)="onLogout()">
+      Logout
+    </button>
+    }
   </mat-menu>
 
   <!-- Full Menu for Larger Screens -->
@@ -140,6 +148,15 @@
     </button>
   </mat-menu>
 
-  <button mat-button i18n="@@loginButton">Login</button>
-  <button mat-button i18n="@@signUpButton">Sign Up</button>
+  @if(!isLoggedIn){
+  <button mat-button i18n="@@loginButton" [routerLink]="['/auth/login']">
+    Login
+  </button>
+  } @if(!isLoggedIn){
+  <button mat-button i18n="@@signUpButton" [routerLink]="['/auth/signup']">
+    Sign Up
+  </button>
+  } @if(isLoggedIn){
+  <button mat-button i18n="@@signUpButton" (click)="onLogout()">Logout</button>
+  }
 </mat-toolbar>

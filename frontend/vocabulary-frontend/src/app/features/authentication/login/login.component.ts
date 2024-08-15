@@ -5,35 +5,40 @@ import {
   Validators,
   ReactiveFormsModule,
 } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatCardModule } from '@angular/material/card';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatError, MatFormField, MatLabel } from '@angular/material/form-field';
+import { MatInput } from '@angular/material/input';
+import { MatButton } from '@angular/material/button';
+import { MatIcon } from '@angular/material/icon';
+import { MatCard, MatCardContent, MatCardHeader } from '@angular/material/card';
+import { MatProgressSpinner } from '@angular/material/progress-spinner';
 import { AuthService } from '../../../core/services/auth.service';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   standalone: true,
   imports: [
     ReactiveFormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatIconModule,
-    MatCardModule,
-    MatTooltipModule,
-    MatProgressSpinnerModule,
+    MatFormField,
+    MatInput,
+    MatButton,
+    MatIcon,
+    MatCard,
+    MatCardHeader,
+    MatCardContent,
+    MatError,
+    MatProgressSpinner,
+    MatLabel,
+    RouterLink,
   ],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
+  errorMessage = '';
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit(): void {
     this.loginForm = new FormGroup({
@@ -47,25 +52,37 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     if (this.loginForm.valid) {
-      this.authService.login(this.loginForm.value).subscribe(
-        (response) => {
-          console.log('Login successful', response);
-          // Handle successful login
+      this.errorMessage = '';
+      this.authService.login(this.loginForm.value).subscribe({
+        next: () => {
+          this.router.navigate(['/auth/home']);
         },
-        (error) => {
-          console.error('Login failed', error);
-          // Handle login error
-        }
-      );
-
-      this.loginForm.reset();
+        error: (error) => {
+          if (error.status === 400) {
+            this.errorMessage = error.error.message;
+          } else {
+            this.errorMessage =
+              'An unexpected error occurred. Please try again later.';
+          }
+        },
+        complete: () => console.log('Login request complete'),
+      });
     } else {
       console.log('Form is invalid');
     }
+
+    // Reset form and clear validation states
+    this.loginForm.reset();
+    Object.keys(this.loginForm.controls).forEach((key) => {
+      this.loginForm.get(key)?.setErrors(null);
+    });
+
+    setTimeout(() => {
+      this.errorMessage = '';
+    }, 3000);
   }
 
   // Utility getter methods for the template
-
   get email() {
     return this.loginForm.get('email');
   }

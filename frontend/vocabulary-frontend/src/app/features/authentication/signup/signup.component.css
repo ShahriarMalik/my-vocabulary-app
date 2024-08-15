@@ -17,7 +17,6 @@
   width: 100%;
   max-width: 37.5rem; /* 600px */
   margin: 1.25rem;
-  background-color: var(--background-color);
   color: var(--text-color);
 }
 
@@ -33,8 +32,7 @@ mat-form-field {
 
 .button-container {
   display: flex;
-  justify-content: flex-end;
-  margin-top: 1.25rem;
+  justify-content: center;
 }
 
 button[mat-raised-button] {
@@ -45,20 +43,24 @@ button[mat-raised-button] {
 
 button[mat-raised-button][disabled] {
   background-color: var(--primary-color);
-  color: rgba(255, 255, 255, 0.3); /* Lighter color when disabled */
+  color: rgba(255, 255, 255, 0.3);
 }
 
 button[mat-raised-button]:hover {
   background-color: darken(var(--primary-color), 10%);
+  color: var(--accent-color);
 }
 
 .signup-card,
 .success-card {
   width: 100%;
   max-width: 600px;
-  margin: 20px;
-  background-color: var(--background-color);
+  /* margin: 20px; */
   color: var(--text-color);
+}
+
+.success-card {
+  background-color: var(--background-color);
 }
 
 .success-message {
