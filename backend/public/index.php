@@ -1,21 +1,18 @@
 <?php
 
-use JetBrains\PhpStorm\NoReturn;
+require __DIR__ . '/../vendor/autoload.php';
 
-require '../vendor/autoload.php';
+use Shahr\Backend\Config\Database;
 
 // Load environment variables
-if (file_exists(__DIR__ . '/../.env')) {
-    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
-    $dotenv->load();
-}
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv->load();
 
-// Get the requested URI
-$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+// Initialize routes array
+$routes = [];
 
-// Remove trailing slashes and explode into segments
-$uri = rtrim($uri, '/');
-$segments = explode('/', $uri);
+// Include route definitions
+require '../app/Routes/web.php';
 
 // Helper function to send a JSON response
 function sendJsonResponse($data, $statusCode = 200): void {
@@ -25,38 +22,62 @@ function sendJsonResponse($data, $statusCode = 200): void {
     exit;
 }
 
-// Route the request to the appropriate controller
-if (isset($segments[1])) {
-    $controllerName = 'Shahr\\Backend\\Controllers\\' . ucfirst($segments[1]) . 'Controller';
-    if (class_exists($controllerName)) {
-        $controller = new $controllerName();
-        $method = $segments[2] ?? 'index'; // Default to 'index' method if none provided
+// Route the request using the defined routes
+function routeRequest($routes) {
+    $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    $uri = rtrim($uri, '/');
+    $method = $_SERVER['REQUEST_METHOD'];
 
-        if (method_exists($controller, $method)) {
-            // Check if the HTTP method is allowed for the requested endpoint
-            $allowedMethods = get_class_methods($controller);
-            $httpMethod = $_SERVER['REQUEST_METHOD'];
+    // Check if the route is defined
+    $routeFound = false;
 
-            // Define a mapping of HTTP methods to controller actions
-            $httpMethodMapping = [
-                'GET' => ['index', 'show'],
-                'POST' => ['create'],
-                'PUT' => ['update'],
-                'DELETE' => ['delete']
-            ];
+    foreach ($routes as $route) {
+        $routePattern = preg_replace('/{[^}]+}/', '([^/]+)', $route['path']);
+        $routePattern = '#^' . $routePattern . '$#';
 
-            if (in_array($method, $allowedMethods) && array_key_exists($httpMethod, $httpMethodMapping) && in_array($method, $httpMethodMapping[$httpMethod])) {
-                $params = array_slice($segments, 3);
-                call_user_func_array([$controller, $method], $params);
-            } else {
-                sendJsonResponse(['message' => 'Method Not Allowed'], 405);
+        if ($route['method'] === $method && preg_match($routePattern, $uri, $matches)) {
+            array_shift($matches); // Remove the full match from the beginning
+            [$controller, $action] = $route['handler'];
+            $controllerInstance = new $controller();
+            $response = new class {
+                public function withJson($data, $status = 200) {
+                    http_response_code($status);
+                    header('Content-Type: application/json');
+                    echo json_encode($data);
+                    exit;
+                }
+            };
+
+            // Extract dynamic segments from the route
+            $paramKeys = [];
+            if (preg_match_all('/{([^}]+)}/', $route['path'], $paramMatches)) {
+                $paramKeys = $paramMatches[1];
             }
-        } else {
-            sendJsonResponse(['message' => 'Method Not Found'], 404);
+
+            $request = [];
+            foreach ($matches as $index => $value) {
+                if (isset($paramKeys[$index])) {
+                    $request[$paramKeys[$index]] = $value;
+                }
+            }
+
+            if ($method === 'GET' || $method === 'DELETE') {
+                $request = array_merge($_GET, $request);
+            } elseif ($method === 'POST' || $method === 'PUT') {
+                $request = array_merge(json_decode(file_get_contents('php://input'), true), $request);
+            } else {
+                sendJsonResponse(['message' => 'Method not allowed'], 405);
+            }
+
+            $controllerInstance->$action($request, $response);
+            $routeFound = true;
+            break;
         }
-    } else {
-        sendJsonResponse(['message' => 'Controller Not Found'], 404);
     }
-} else {
-    sendJsonResponse(['message' => 'API Endpoint Not Specified'], 400);
+
+    if (!$routeFound) {
+        sendJsonResponse(['message' => 'API Endpoint Not Specified'], 400);
+    }
 }
+
+routeRequest($routes);
