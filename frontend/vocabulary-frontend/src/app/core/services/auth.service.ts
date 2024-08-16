@@ -1,15 +1,18 @@
 import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
+import { HttpClient, HttpContext } from '@angular/common/http';
+import { BehaviorSubject, Observable, of, throwError } from 'rxjs';
+import { catchError, filter, map, take, tap } from 'rxjs/operators';
 import { environment } from '../../../base-url.dev';
 import { isPlatformBrowser } from '@angular/common';
+import { jwtDecode } from 'jwt-decode';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
   private apiUrl = environment.apiUrl;
+  private refreshInProgress = false;
+  private refreshTokenSubject = new BehaviorSubject<string | null>(null);
 
   private loggedIn = new BehaviorSubject<boolean>(this.isLoggedIn());
 
@@ -87,5 +90,35 @@ export class AuthService {
       `${this.apiUrl}/register`,
       credentials
     );
+  }
+
+  // refreshToken(refresh_token: string): Observable<{ jwt: string }> {
+  //   return this.http.post<{ jwt: string }>(`${this.apiUrl}/refresh`, {
+  //     refresh_token,
+  //   });
+  // }
+
+  getValidToken(): string {
+    if (isPlatformBrowser(this.platformId)) {
+      const token = localStorage.getItem('jwt');
+
+      if (!token) {
+        return '';
+      }
+
+      const decodedToken: any = jwtDecode(token);
+      const expirationTime = decodedToken.exp * 1000;
+      const currentTime = Date.now();
+      const timeLeft = expirationTime - currentTime;
+
+      if (timeLeft > 0) {
+        return token;
+      } else {
+        this.logout();
+        return '';
+      }
+    } else {
+      return '';
+    }
   }
 }
