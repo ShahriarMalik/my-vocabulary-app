@@ -9,8 +9,6 @@ import { ThemeService } from '../../../core/services/theme.service';
 import { LanguageService } from '../../../core/services/language.service';
 import { AuthService } from '../../../core/services/auth.service';
 import { Router, RouterLink } from '@angular/router';
-import { platformBrowser } from '@angular/platform-browser';
-import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
@@ -30,6 +28,7 @@ import { isPlatformBrowser } from '@angular/common';
 export class NavbarComponent implements OnInit {
   isLoggedIn: boolean = true;
   currentLanguage!: string;
+  userRole!: 'admin' | 'user';
 
   private themeService = inject(ThemeService);
   private languageService = inject(LanguageService);
@@ -42,9 +41,13 @@ export class NavbarComponent implements OnInit {
     this.currentLanguage = this.languageService.getCurrentLanguage();
     this.authService.isLoggedIn$.subscribe((loggedIn) => {
       this.isLoggedIn = loggedIn;
+      this.userRole = this.authService.getUserRole();
     });
   }
 
+  get currentUserRole() {
+    return this.authService.getUserRole();
+  }
   setTheme(theme: string): void {
     if (theme === 'dark') {
       this.themeService.setDarkTheme();
@@ -66,7 +69,7 @@ export class NavbarComponent implements OnInit {
     this.authService.logout()?.subscribe({
       next: () => {
         console.log('Logged out successfully');
-        this.router.navigate(['/auth/home']);
+        this.router.navigate(['']); // to home component
       },
     });
   }

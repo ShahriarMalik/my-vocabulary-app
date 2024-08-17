@@ -55,7 +55,7 @@ export class LoginComponent implements OnInit {
       this.errorMessage = '';
       this.authService.login(this.loginForm.value).subscribe({
         next: () => {
-          this.router.navigate(['/auth/home']);
+          this.router.navigate(['/features/auth/home']);
         },
         error: (error) => {
           if (error.status === 400) {

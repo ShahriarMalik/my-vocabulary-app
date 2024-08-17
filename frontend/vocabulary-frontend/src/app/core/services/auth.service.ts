@@ -121,4 +121,14 @@ export class AuthService {
       return '';
     }
   }
+
+  getUserRole(): 'user' | 'admin' {
+    if (isPlatformBrowser(this.platformId)) {
+      const role = localStorage.getItem('role');
+      if (role) {
+        return role === 'admin' ? 'admin' : 'user';
+      }
+    }
+    return 'user';
+  }
 }

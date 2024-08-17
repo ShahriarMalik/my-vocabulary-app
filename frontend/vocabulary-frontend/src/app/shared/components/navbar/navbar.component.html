@@ -21,14 +21,41 @@
   </span>
 
   <mat-menu #mobileMenu="matMenu">
-    <button mat-menu-item [matMenuTriggerFor]="learnMenu" i18n="@@learnButton">
+    <button
+      mat-menu-item
+      [matMenuTriggerFor]="learnMenu"
+      i18n="@@learnButton"
+      [routerLink]="['/learn']"
+    >
       Learn
     </button>
-    <button mat-menu-item i18n="@@exercisesButton">Exercises</button>
-    <button mat-menu-item i18n="@@tipsButton">Tips</button>
+    <button
+      mat-menu-item
+      i18n="@@exercisesButton"
+      [routerLink]="['/exercises']"
+    >
+      Exercises
+    </button>
+    <button mat-menu-item i18n="@@tipsButton" [routerLink]="['/tips']">
+      Tips
+    </button>
     @if (isLoggedIn) {
-    <button mat-menu-item i18n="@@myWordsButton">My Words</button>
-    } @if(!isLoggedIn){
+    <button
+      mat-menu-item
+      i18n="@@myProgressButton"
+      [routerLink]="['/progress']"
+    >
+      My Progress
+    </button>
+    @if(currentUserRole === 'admin'){
+    <button
+      mat-menu-item
+      i18n="@@wordsManagementButton"
+      [routerLink]="['/words-management']"
+    >
+      Words Management
+    </button>
+    } } @if(!isLoggedIn){
     <button mat-button i18n="@@loginButton" [routerLink]="['/auth/login']">
       Login
     </button>
@@ -37,7 +64,7 @@
       Sign Up
     </button>
     } @if(isLoggedIn){
-    <button mat-button i18n="@@signUpButton" (click)="onLogout()">
+    <button mat-button i18n="@@logoutButton" (click)="onLogout()">
       Logout
     </button>
     }
@@ -49,23 +76,48 @@
     [matMenuTriggerFor]="learnMenu"
     class="menu-item"
     i18n="@@learnButton"
+    [routerLink]="['/learn']"
   >
     Learn
   </button>
   <mat-menu #learnMenu="matMenu">
-    <button mat-menu-item>A1</button>
-    <button mat-menu-item>A2</button>
-    <button mat-menu-item>B1</button>
-    <button mat-menu-item>B2</button>
-    <button mat-menu-item>C1</button>
-    <button mat-menu-item>C2</button>
+    <button mat-menu-item [routerLink]="['/learn/a1']" i18n="@@a1Button">
+      A1
+    </button>
+    <button mat-menu-item [routerLink]="['/learn/a2']" i18n="@@a2Button">
+      A2
+    </button>
+    <button mat-menu-item [routerLink]="['/learn/b1']" i18n="@@b1Button">
+      B1
+    </button>
+    <button mat-menu-item [routerLink]="['/learn/b2']" i18n="@@b2Button">
+      B2
+    </button>
+    <button mat-menu-item [routerLink]="['/learn/c1']" i18n="@@c1Button">
+      C1
+    </button>
+    <button mat-menu-item [routerLink]="['/learn/c2']" i18n="@@c2Button">
+      C2
+    </button>
   </mat-menu>
 
-  <button mat-button i18n="@@exercisesButton">Exercises</button>
-  <button mat-button i18n="@@tipsButton">Tips</button>
+  <button mat-button i18n="@@exercisesButton" [routerLink]="['/exercises']">
+    Exercises
+  </button>
+  <button mat-button i18n="@@tipsButton" [routerLink]="['/tips']">Tips</button>
 
   @if (isLoggedIn) {
-  <button mat-button i18n="@@myWordsButton">My Words</button>
+  <button mat-button i18n="@@myProgressButton" [routerLink]="['/progress']">
+    My Progress
+  </button>
+  } @if(currentUserRole === 'admin'){
+  <button
+    mat-button
+    i18n="@@wordsManagementButton"
+    [routerLink]="['/words-management']"
+  >
+    Words Management
+  </button>
   }
 
   <span class="spacer"></span>
@@ -110,7 +162,7 @@
           height="20"
           i18n-alt="@@englishFlagAlt"
         />
-        <span>EN</span>
+        <span i18n="@@languageEN">EN</span>
       </div>
     </button>
     <button mat-menu-item (click)="changeLanguage('de')">
@@ -122,7 +174,7 @@
           height="20"
           i18n-alt="@@germanFlagAlt"
         />
-        <span>DE</span>
+        <span i18n="@@languageDE">DE</span>
       </div>
     </button>
   </mat-menu>
@@ -157,6 +209,6 @@
     Sign Up
   </button>
   } @if(isLoggedIn){
-  <button mat-button i18n="@@signUpButton" (click)="onLogout()">Logout</button>
+  <button mat-button i18n="@@logoutButton" (click)="onLogout()">Logout</button>
   }
 </mat-toolbar>
