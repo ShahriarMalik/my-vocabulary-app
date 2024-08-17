@@ -17,26 +17,63 @@ export const featuresRoutes: Routes = [
   {
     path: 'learn',
     component: LearnComponent,
+    title: $localize`:6899134966533859260:Learn`,
     children: [
-      { path: 'a1', component: A1Component },
-      { path: 'a2', component: A2Component },
-      { path: 'b1', component: B1Component },
-      { path: 'b2', component: B2Component },
-      { path: 'c1', component: C1Component },
-      { path: 'c2', component: C2Component },
+      {
+        path: 'a1',
+        component: A1Component,
+        title: $localize`:6956850829747418160:Learn A1`,
+      },
+      {
+        path: 'a2',
+        component: A2Component,
+        title: $localize`:3444445563006094628:Learn A2`,
+      },
+      {
+        path: 'b1',
+        component: B1Component,
+        title: $localize`:817717124019791171:Learn B1`,
+      },
+      {
+        path: 'b2',
+        component: B2Component,
+        title: $localize`:1926908665342515051:Learn B2`,
+      },
+      {
+        path: 'c1',
+        component: C1Component,
+        title: $localize`:7096307349180277898:Learn C1`,
+      },
+      {
+        path: 'c2',
+        component: C2Component,
+        title: $localize`:1319065673635617669:Learn C2`,
+      },
     ],
   },
 
-  { path: 'exercises', component: ExercisesComponent },
+  {
+    path: 'exercises',
+    component: ExercisesComponent,
+    title: $localize`:5815398842801469550:Exercises`,
+  },
 
-  { path: 'words-management', component: WordManagementComponent },
+  {
+    path: 'words-management',
+    component: WordManagementComponent,
+    title: $localize`:141084884839689192:Words Management`,
+  },
 
-  { path: 'progress', component: ProgressComponent },
+  {
+    path: 'progress',
+    component: ProgressComponent,
+    title: $localize`:3419681791450150574:Progress`,
+  },
 
-  // Lazy load the TipsComponent to optimize initial load time
   {
     path: 'tips',
     loadComponent: () =>
       import('./tips/tips.component').then((m) => m.TipsComponent),
+    title: $localize`:3285315590661482349:Tips`,
   },
 ];
