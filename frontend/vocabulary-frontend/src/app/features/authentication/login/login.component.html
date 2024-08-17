@@ -15,7 +15,7 @@
 
       <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
         <!-- Email Field -->
-        <mat-form-field appearance="fill">
+        <mat-form-field appearance="outline">
           <mat-label i18n="@@emailLabel">Email</mat-label>
           <input matInput type="email" id="email" formControlName="email" />
           @if (email?.invalid && email?.touched) {
@@ -30,7 +30,7 @@
         </mat-form-field>
 
         <!-- Password Field -->
-        <mat-form-field appearance="fill">
+        <mat-form-field appearance="outline">
           <mat-label i18n="@@passwordLabel">Password</mat-label>
           <input
             matInput

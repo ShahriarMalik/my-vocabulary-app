@@ -1,1 +1,83 @@
-<p>word-management works!</p>
+<div class="word-management-container">
+  <mat-card class="word-management-card">
+    <mat-card-header>
+      <h4 class="title">Word Management</h4>
+    </mat-card-header>
+    <mat-card-content class="word-management-content">
+      <form [formGroup]="wordForm">
+        <!-- Word Search Field -->
+        <mat-form-field appearance="outline">
+          <mat-label>Search Word</mat-label>
+          <input
+            type="text"
+            matInput
+            formControlName="searchWord"
+            placeholder="Enter word to fetch"
+          />
+        </mat-form-field>
+        <span class="button-container">
+          <button
+            mat-stroked-button
+            color="primary"
+            (click)="onFetchWord()"
+            [disabled]="!searchWord"
+          >
+            Fetch Word
+          </button>
+        </span>
+        <!-- Display Fetched Data -->
+        @if (wordForm.controls['translation'].value) {
+        <mat-form-field appearance="outline">
+          <mat-label>Word</mat-label>
+          <input type="text" matInput formControlName="german_word" />
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>CEFR Level</mat-label>
+          <mat-select formControlName="cefr_level">
+            @for (level of cefrLevels; track $index) {
+            <mat-option [value]="level">{{ level }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Emoji</mat-label>
+          <input type="text" matInput formControlName="emoji" />
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Example</mat-label>
+          <input type="text" matInput formControlName="example" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Translation</mat-label>
+          <input type="text" matInput formControlName="translation" />
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Translated Language</mat-label>
+          <input type="text" matInput formControlName="translated_language" />
+        </mat-form-field>
+
+        <!-- Audio Player for Pronunciation -->
+        <div class="container">
+          @if (pronunciationUrl) {
+          <audio controls>
+            <source [src]="pronunciationUrl" type="audio/mp3" />
+            Your browser does not support the audio element.
+          </audio>
+          }
+          <!-- Save button -->
+          <span class="button-container">
+            <button
+              type="button"
+              mat-stroked-button
+              color="accent"
+              (click)="onSaveWord()"
+            >
+              Save
+            </button>
+          </span>
+        </div>
+        }
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
