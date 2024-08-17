@@ -61,8 +61,7 @@ export class LoginComponent implements OnInit {
           if (error.status === 400) {
             this.errorMessage = error.error.message;
           } else {
-            this.errorMessage =
-              'An unexpected error occurred. Please try again later.';
+            this.errorMessage = $localize`:7158033106518253277:An unexpected error occurred. Please try again later`; // An unexpected error occurred. Please try again later.
           }
         },
         complete: () => console.log('Login request complete'),

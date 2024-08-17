@@ -45,9 +45,8 @@
       i18n="@@myProgressButton"
       [routerLink]="['/progress']"
     >
-      My Progress
-    </button>
-    @if(currentUserRole === 'admin'){
+      My Progress</button
+    >} @if(currentUserRole === 'admin'){
     <button
       mat-menu-item
       i18n="@@wordsManagementButton"
@@ -55,16 +54,16 @@
     >
       Words Management
     </button>
-    } } @if(!isLoggedIn){
-    <button mat-button i18n="@@loginButton" [routerLink]="['/auth/login']">
+    } @if(!isLoggedIn){
+    <button mat-menu-item i18n="@@loginButton" [routerLink]="['/auth/login']">
       Login
     </button>
     } @if(!isLoggedIn){
-    <button mat-button i18n="@@signUpButton" [routerLink]="['/auth/signup']">
+    <button mat-menu-item i18n="@@signUpButton" [routerLink]="['/auth/signup']">
       Sign Up
     </button>
     } @if(isLoggedIn){
-    <button mat-button i18n="@@logoutButton" (click)="onLogout()">
+    <button mat-menu-item i18n="@@logoutButton" (click)="onLogout()">
       Logout
     </button>
     }

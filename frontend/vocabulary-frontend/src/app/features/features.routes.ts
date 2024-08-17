@@ -10,6 +10,7 @@ import { ExercisesComponent } from './exercises/exercises.component';
 import { WordManagementComponent } from './admin/word-management/word-management.component';
 import { ProgressComponent } from './progress/progress.component';
 import { authRoutes } from './authentication/auth.routes';
+import { adminGuard } from '../core/guards/admin.guard';
 
 export const featuresRoutes: Routes = [
   { path: 'auth', children: authRoutes },
@@ -62,6 +63,7 @@ export const featuresRoutes: Routes = [
     path: 'words-management',
     component: WordManagementComponent,
     title: $localize`:141084884839689192:Words Management`,
+    canActivate: [adminGuard],
   },
 
   {
