@@ -26,7 +26,7 @@
       >
         <!-- User Name Field -->
         <mat-form-field appearance="outline">
-          <mat-label i18n="@@usernameLabel">User Name</mat-label>
+          <mat-label label i18n="@@usernameLabel">User Name</mat-label>
           <input
             matInput
             type="text"
@@ -48,7 +48,7 @@
 
         <!-- Email Field -->
         <mat-form-field appearance="outline">
-          <mat-label i18n="@@emailLabel">Email</mat-label>
+          <mat-label label i18n="@@emailLabel">Email</mat-label>
           <input matInput type="email" id="email" formControlName="email" />
           @if(email?.invalid && email?.dirty && email?.touched){
           <mat-error>
@@ -65,7 +65,7 @@
 
         <!-- Password Field -->
         <mat-form-field appearance="outline">
-          <mat-label i18n="@@passwordLabel">Password</mat-label>
+          <mat-label label i18n="@@passwordLabel">Password</mat-label>
           <input
             matInput
             type="password"

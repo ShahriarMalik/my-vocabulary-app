@@ -22,7 +22,7 @@
         <!-- Word Search Field -->
         <div class="search-container">
           <mat-form-field appearance="outline">
-            <mat-label i18n="@@searchWordLabel">Search Word</mat-label>
+            <mat-label label i18n="@@searchWordLabel">Search Word</mat-label>
             <input
               type="text"
               matInput
@@ -46,11 +46,11 @@
         <!-- Display Fetched Data -->
         @if (wordForm.controls['translation'].value) {
         <mat-form-field appearance="outline">
-          <mat-label i18n="@@wordLabel">Word</mat-label>
+          <mat-label label i18n="@@wordLabel">Word</mat-label>
           <input type="text" matInput formControlName="german_word" />
         </mat-form-field>
         <mat-form-field appearance="outline" class="form-field">
-          <mat-label i18n="@@cefrLevelLabel">CEFR Level</mat-label>
+          <mat-label label i18n="@@cefrLevelLabel">CEFR Level</mat-label>
           <mat-select formControlName="cefr_level">
             @for (level of cefrLevels; track $index) {
             <mat-option [value]="level">{{ level }}</mat-option>
@@ -58,19 +58,19 @@
           </mat-select>
         </mat-form-field>
         <mat-form-field appearance="outline" class="emoji-form-field">
-          <mat-label i18n="@@emojiLabel">Emoji</mat-label>
+          <mat-label label i18n="@@emojiLabel">Emoji</mat-label>
           <input type="text" matInput formControlName="emoji" />
         </mat-form-field>
         <mat-form-field appearance="outline" class="example-form-field">
-          <mat-label i18n="@@exampleLabel">Example</mat-label>
+          <mat-label label i18n="@@exampleLabel">Example</mat-label>
           <textarea type="text" matInput formControlName="example"></textarea>
         </mat-form-field>
         <mat-form-field appearance="outline">
-          <mat-label i18n="@@translationLabel">Translation</mat-label>
+          <mat-label label i18n="@@translationLabel">Translation</mat-label>
           <input type="text" matInput formControlName="translation" />
         </mat-form-field>
         <mat-form-field appearance="outline" class="form-field">
-          <mat-label i18n="@@translatedLanguageLabel"
+          <mat-label label i18n="@@translatedLanguageLabel"
             >Translated Language</mat-label
           >
           <input type="text" matInput formControlName="translated_language" />
