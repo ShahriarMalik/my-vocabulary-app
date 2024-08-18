@@ -31,6 +31,8 @@ export class WordManagementComponent {
   wordForm!: FormGroup;
   cefrLevels: string[] = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
   pronunciationUrl: string | null = null;
+  errorMessage = '';
+  successMessage = '';
 
   constructor(
     private fb: FormBuilder,
@@ -39,7 +41,7 @@ export class WordManagementComponent {
     this.wordForm = this.fb.group({
       searchWord: ['', Validators.required],
       german_word: [''],
-      cefr_level: [''],
+      cefr_level: ['A1'],
       pronunciation_url: [''],
       emoji: [''],
       example: [''],
@@ -56,6 +58,7 @@ export class WordManagementComponent {
 
         this.wordForm.patchValue({
           german_word: response.word,
+          cefr_level: 'A1', // Change this line for other level
           pronunciation_url: response.pronunciation_url,
           emoji: response.emoji,
           translation: response.translations.join(', '),
@@ -79,12 +82,27 @@ export class WordManagementComponent {
       const wordData: Word = this.wordForm.value;
       this.wordService.saveWord(wordData).subscribe({
         next: (response) => {
+          this.successMessage = response.message;
           console.log('Word saved successfully!', response);
         },
-        error: (err) => {
-          console.error('Failed to save word', err);
+        error: (error) => {
+          if (error.status === 400) {
+            this.errorMessage = error.error?.message;
+          } else {
+            this.errorMessage = $localize`:7158033106518253277:An unexpected error occurred. Please try again later`;
+          }
+          console.error('Failed to save word', error);
         },
       });
+
+      this.wordForm.reset();
+      Object.keys(this.wordForm.controls).forEach((key) => {
+        this.wordForm.get(key)?.setErrors(null);
+      });
+      setTimeout(() => {
+        this.successMessage = '';
+        this.errorMessage = '';
+      }, 2000);
     }
   }
 

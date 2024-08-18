@@ -86,7 +86,7 @@ audio {
 
 /* Success and Error Messages */
 .message-card {
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
   display: block;
 }
 mat-card .message-card {
@@ -94,13 +94,13 @@ mat-card .message-card {
 }
 
 .success-message {
-  color: var(--accent-color);
+  color: green;
   font-weight: bold;
   padding: 0 0.5rem;
 }
 
 .error-message {
-  color: var(--accent-color);
+  color: red;
   font-weight: bold;
   padding: 0 0.5rem;
 }
