@@ -1,0 +1,187 @@
+/* Hero Section */
+.hero-section {
+  background-image: url("https://via.placeholder.com/1200x600");
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--accent-color);
+  padding: 15px 30px;
+  border: 2px solid var(--accent-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Key Features Section */
+.features-section {
+  padding: 50px 20px;
+  background-color: var(--background-color);
+}
+
+.mat-card {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.mat-card-header mat-icon {
+  font-size: 40px;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.mat-card-title {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.mat-card-content p {
+  font-size: 1rem;
+  color: var(--text-secondary-color);
+}
+
+/* Interactive Demo Section */
+.interactive-demo-section {
+  background-color: var(--background-color);
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.interactive-demo-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.mat-card {
+  padding: 30px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.mat-card-content {
+  text-align: center;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  background-color: var(--background-color);
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.testimonial {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+}
+
+.testimonial p {
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.testimonial mat-card-footer {
+  font-size: 0.9rem;
+  color: var(--text-secondary-color);
+}
+
+/* FAQ Section */
+.faq-section {
+  background-color: var(--background-color);
+  padding: 50px 20px;
+}
+
+.faq-section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--text-color);
+}
+
+.mat-accordion {
+  width: 100%;
+}
+
+mat-expansion-panel {
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+mat-expansion-panel-header {
+  font-size: 1.3rem;
+  color: var(--text-color);
+}
+
+mat-expansion-panel .mat-expansion-panel-content p {
+  font-size: 1rem;
+  color: var(--text-secondary-color);
+}
+
+/* Placeholder Label Color */
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-floating-label {
+  color: var(--text-color) !important;
+}
+
+/* General Styles */
+mat-card {
+  margin: 20px auto;
+  width: 90%;
+  max-width: 600px;
+}
+
+.mat-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mat-card-header mat-icon {
+  margin-right: 10px;
+}

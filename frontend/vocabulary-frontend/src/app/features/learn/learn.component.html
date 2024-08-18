@@ -1,2 +1,15 @@
-<p>learn works!</p>
+@if(!isChildRouteActive){
+<div class="learn-container">
+  <h1 i18n="@@learnTitle">Select Your Learning Level</h1>
+
+  <div class="level-grid">
+    <a routerLink="/learn/a1" class="level-card" i18n="@@a1Button"> A1 </a>
+    <a routerLink="/learn/a2" class="level-card" i18n="@@a2Button"> A2 </a>
+    <a routerLink="/learn/b1" class="level-card" i18n="@@b1Button"> B1 </a>
+    <a routerLink="/learn/b2" class="level-card" i18n="@@b2Button"> B2 </a>
+    <a routerLink="/learn/c1" class="level-card" i18n="@@c1Button"> C1 </a>
+    <a routerLink="/learn/c2" class="level-card" i18n="@@c2Button"> C2 </a>
+  </div>
+</div>
+}
 <router-outlet></router-outlet>

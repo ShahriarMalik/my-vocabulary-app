@@ -4,22 +4,19 @@
   padding-top: 64px;
 }
 
+/* Navbar Styling */
 .mat-toolbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: var(--background-color);
+  background-color: var(--background-color-darker);
   color: var(--text-color);
+  box-shadow: 0 2px 4px var(--shadow-color);
 }
 
-.mat-card {
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
+/* Logo Styling */
 .logo {
   display: flex;
   align-items: center;
@@ -30,12 +27,15 @@
   height: 40px;
   vertical-align: middle;
   margin-right: 10px;
+  cursor: pointer;
 }
 
+/* Spacer for layout */
 .spacer {
   flex: 1 1 auto;
 }
 
+/* Menu and Button Styling */
 .menu-item,
 button[mat-button] {
   display: flex;
@@ -43,6 +43,7 @@ button[mat-button] {
   color: var(--text-color);
 }
 
+/* Language Selection Styling */
 .language-selection {
   display: flex;
   align-items: center;
@@ -64,11 +65,13 @@ button[mat-button] {
   color: var(--text-color);
 }
 
+/* Mobile Menu Button */
 .menu-button {
   display: none;
   color: var(--text-color);
 }
 
+/* Menu Panel Styling */
 .mat-menu-panel {
   background-color: var(--background-color);
   color: var(--text-color);
@@ -81,6 +84,11 @@ button[mat-button] {
 
 .mat-menu .mat-menu-item:hover {
   background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+/* Icon Styling */
+.mat-icon {
   color: var(--text-color);
 }
 
@@ -125,11 +133,7 @@ button[mat-button] {
   }
 
   .mat-toolbar {
-    background-color: var(--background-color);
+    background-color: var(--background-color-lighter);
     color: var(--text-color);
   }
-}
-
-.mat-icon {
-  color: var(--text-color);
 }

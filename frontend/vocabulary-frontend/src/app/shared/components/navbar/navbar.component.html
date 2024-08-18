@@ -13,22 +13,20 @@
   <span class="logo" i18n="@@appLogo">
     <img
       src="assets/images/logo.png"
+      mat-icon-button
       alt="Logo"
       width="40"
       height="40"
       i18n-alt="@@logoAlt"
+      [routerLink]="['/']"
     />
   </span>
 
   <mat-menu #mobileMenu="matMenu">
-    <button
-      mat-menu-item
-      [matMenuTriggerFor]="learnMenu"
-      i18n="@@learnButton"
-      [routerLink]="['/learn']"
-    >
+    <button mat-menu-item [matMenuTriggerFor]="learnMenu" i18n="@@learnButton">
       Learn
     </button>
+
     <button
       mat-menu-item
       i18n="@@exercisesButton"
@@ -75,7 +73,6 @@
     [matMenuTriggerFor]="learnMenu"
     class="menu-item"
     i18n="@@learnButton"
-    [routerLink]="['/learn']"
   >
     Learn
   </button>

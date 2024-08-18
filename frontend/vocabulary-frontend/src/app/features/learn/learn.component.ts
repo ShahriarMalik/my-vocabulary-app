@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-learn',
@@ -8,4 +8,12 @@ import { RouterModule } from '@angular/router';
   templateUrl: './learn.component.html',
   styleUrl: './learn.component.css',
 })
-export class LearnComponent {}
+export class LearnComponent {
+  isChildRouteActive: boolean = false;
+
+  constructor(private router: Router, private route: ActivatedRoute) {
+    this.router.events.subscribe(() => {
+      this.isChildRouteActive = this.route.firstChild !== null;
+    });
+  }
+}

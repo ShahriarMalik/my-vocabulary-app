@@ -1,0 +1,45 @@
+.learn-container {
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+h1 {
+  margin-bottom: 2rem;
+  color: var(--accent-color);
+}
+
+.level-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.level-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.level-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px var(--shadow-color);
+}
+
+@media (max-width: 768px) {
+  .learn-container {
+    padding: 1rem;
+  }
+  .level-card {
+    padding: 1rem;
+  }
+}
