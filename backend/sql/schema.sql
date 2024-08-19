@@ -39,6 +39,7 @@ CREATE TABLE exercises (
     exercise_type VARCHAR(50) NOT NULL,
     word_id INTEGER REFERENCES words(id) ON DELETE CASCADE NOT NULL,
     lesson_id INTEGER REFERENCES lessons(id),
+    cefr_level VARCHAR(10) NOT NULL,
     question TEXT,
     options TEXT[], -- Array of options for multiple-choice questions
     correct_option TEXT, -- Correct answer for the exercise

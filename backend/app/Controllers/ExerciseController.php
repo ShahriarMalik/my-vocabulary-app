@@ -1,11 +1,12 @@
 <?php
 namespace Shahr\Backend\Controllers;
 
+use AllowDynamicProperties;
 use Shahr\Backend\Config\Database;
 use Shahr\Backend\Gateways\ExerciseGateway;
 use Shahr\Backend\Models\Exercise;
 
-class ExerciseController {
+#[AllowDynamicProperties] class ExerciseController {
     private $db;
     private ExerciseGateway $exerciseGateway;
 
@@ -29,6 +30,7 @@ class ExerciseController {
         $exercise->exercise_type = $data['exercise_type'];
         $exercise->word_id = $data['word_id'];
         $exercise->lesson_id = $data['lesson_id'];
+        $exercise->cefr_level = $data['cefr_level'];
         $exercise->question = $data['question'];
         $exercise->options = $data['options'];
         $exercise->correct_option = $data['correct_option'];
@@ -55,6 +57,7 @@ class ExerciseController {
         $exercise->exercise_type = $data['exercise_type'];
         $exercise->word_id = $data['word_id'];
         $exercise->lesson_id = $data['lesson_id'];
+        $exercise->cefr_level = $data['cefr_level'];
         $exercise->question = $data['question'];
         $exercise->options = $data['options'];
         $exercise->correct_option = $data['correct_option'];
@@ -123,6 +126,27 @@ class ExerciseController {
         $lesson_id = $request['lesson_id'];
 
         $exercises = Exercise::findByLessonId($lesson_id);
+        if (!$exercises) {
+            return $response->withJson(['message' => 'No exercises found for this lesson'], 404);
+        }
+
+        return $response->withJson(['exercises' => $exercises]);
+    }
+
+    /**
+     * Get exercises by Cefr Level
+     *
+     * @param array $request
+     * @param object $response
+     * @return object
+     */
+    public function getLessonByCefrLevel(array $request, object $response): object {
+        $cefrLevel = $request['cefr_level'];
+        $lessonNumber = $request['lesson_number'];
+        $limit = $request['limit'] ?? 20;
+        $offset = $request['offset'] ?? 0;
+
+        $exercises = Exercise::findByCefrLevel($cefrLevel, $lessonNumber, $limit, $offset);
         if (!$exercises) {
             return $response->withJson(['message' => 'No exercises found for this lesson'], 404);
         }

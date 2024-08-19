@@ -97,4 +97,22 @@ class ExerciseGateway implements ExerciseGatewayInterface {
         $stmt->setFetchMode(PDO::FETCH_CLASS, Exercise::class);
         return $stmt->fetchAll();
     }
+
+
+    /**
+     * Find exercises by Cefr Level and lesson ID
+     *
+     * @param int $lesson_id
+     * @return Exercise[]
+     */
+    public function findByCefrLevel(string $cefr_level,int $lesson_id, int $limit, int $offset): array {
+        $stmt = $this->db->prepare("SELECT * FROM exercises WHERE cefr_level = :cefr_level AND lesson_id = :lesson_id  LIMIT :limit OFFSET :offset");
+        $stmt->bindParam(':cefr_level', $cefr_level);
+        $stmt->bindParam(':lesson_id', $lesson_id);
+        $stmt->bindParam(":limit", $limit, PDO::PARAM_INT);
+        $stmt->bindParam(":offset", $offset, PDO::PARAM_INT);
+        $stmt->execute();
+        $stmt->setFetchMode(PDO::FETCH_CLASS, Exercise::class);
+        return $stmt->fetchAll();
+    }
 }

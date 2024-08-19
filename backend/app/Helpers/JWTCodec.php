@@ -49,7 +49,7 @@ class JWTCodec {
     public static function encode(array $payload): string {
         $header = json_encode(['typ' => 'JWT', 'alg' => self::$algorithm]);
         $payload['iat'] = time();
-        $payload['exp'] = time() + 3600; // JWT valid for one hour
+        $payload['exp'] = time() + 86400; // JWT valid for twenty-four hour
 
         $base64UrlHeader = self::base64UrlEncode($header);
         $base64UrlPayload = self::base64UrlEncode(json_encode($payload));

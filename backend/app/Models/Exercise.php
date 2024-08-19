@@ -8,6 +8,7 @@ class Exercise {
     public string $exercise_type;
     public int $word_id;
     public int $lesson_id;
+    public string $cefr_level;
     public string $question;
     public array $options;
     public string $correct_option;
@@ -78,6 +79,20 @@ class Exercise {
      * @return Exercise[]
      */
     public static function findByLessonId(int $lesson_id): array {
+        return self::$gateway->findByLessonId($lesson_id);
+    }
+
+    /**
+     * Find exercises by CEFR level.
+     *
+     * * @param string $cefr_level
+     * * @param int $lesson_id
+     * * @param int $limit
+     * * @param int $offset
+     * * @return array
+ * @return Exercise[]
+     */
+    public static function findByCefrLevel(string $cefr_level,int $lesson_id, int $limit, int $offset): array {
         return self::$gateway->findByLessonId($lesson_id);
     }
 }

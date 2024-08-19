@@ -50,4 +50,15 @@ interface ExerciseGatewayInterface {
      * @return Exercise[]
      */
     public function findByLessonId(int $lesson_id): array;
+
+    /**
+     * Get words by CEFR level and lesson ID with pagination.
+     *
+     * @param string $cefr_level
+     * @param int $lesson_id
+     * @param int $limit
+     * @param int $offset
+     * @return array
+     */
+    public function findByCefrLevel(string $cefr_level,int $lesson_id, int $limit, int $offset):array;
 }

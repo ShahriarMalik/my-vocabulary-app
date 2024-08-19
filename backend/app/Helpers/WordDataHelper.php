@@ -107,10 +107,10 @@ class WordDataHelper {
                 return $result[0]['character'];
             }
 
-            return "❓";
+            return "";
         } catch (\Exception $e) {
             file_put_contents(__DIR__ . '/../../public/fetchEmoji_debug.txt', 'Error: ' . $e->getMessage());
-            return "❓";
+            return "";
         }
     }
 

@@ -24,7 +24,7 @@ route('POST', '/check-email', [AuthController::class, 'checkEmailExists']);
 
 // Define WordController routes
 route('GET', '/word/fetch', [WordController::class, 'fetchWordData']);
-route('POST', '/word/save', [WordController::class, 'saveWord']);
+route('POST', '/word', [WordController::class, 'saveWord']);
 route('GET', '/words', [WordController::class, 'index']);
 route('GET', '/words/{id}', [WordController::class, 'show']);
 route('PUT', '/words/{id}', [WordController::class, 'update']);
@@ -43,6 +43,7 @@ route('DELETE', '/exercises', [ExerciseController::class, 'delete']);
 route('GET', '/exercises/{id}', [ExerciseController::class, 'show']);
 route('GET', '/exercises', [ExerciseController::class, 'index']);
 route('GET', '/exercises/lesson/{lesson_id}', [ExerciseController::class, 'getByLesson']);
+route('GET', '/exercises/{cefr_level}', [ExerciseController::class, 'getLessonByCefrLevel']);
 
 
 // Define LessonController routes

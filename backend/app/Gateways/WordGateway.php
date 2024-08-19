@@ -39,12 +39,20 @@ class WordGateway implements WordGatewayInterface {
             $stmt = $this->db->prepare("INSERT INTO words (german_word, cefr_level, pronunciation_url, emoji, example, lesson_id) VALUES (:german_word, :cefr_level, :pronunciation_url, :emoji, :example, :lesson_id) RETURNING id");
         }
 
-        $stmt->bindParam(":german_word", $word->german_word);
-        $stmt->bindParam(":cefr_level", $word->cefr_level);
-        $stmt->bindParam(":pronunciation_url", $word->pronunciation_url);
-        $stmt->bindParam(":emoji", $word->emoji);
-        $stmt->bindParam(":example", $word->example);
+        $germanWord = trim($word->german_word);
+        $cefrLevel = trim($word->cefr_level);
+        $pronunciationUrl = trim($word->pronunciation_url);
+        $emoji = trim($word->emoji);
+        $example = ucfirst(trim($word->example));
+
+        $stmt->bindParam(":german_word", $germanWord);
+        $stmt->bindParam(":cefr_level", $cefrLevel);
+        $stmt->bindParam(":pronunciation_url", $pronunciationUrl);
+        $stmt->bindParam(":emoji", $emoji);
+        $stmt->bindParam(":example", $example);
         $stmt->bindParam(":lesson_id", $word->lesson_id);
+
+
 
         $stmt->execute();
 
