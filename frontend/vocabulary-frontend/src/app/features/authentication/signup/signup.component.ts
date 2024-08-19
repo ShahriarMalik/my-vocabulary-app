@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -32,10 +38,11 @@ import { Router } from '@angular/router';
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css'],
 })
-export class SignupComponent implements OnInit {
+export class SignupComponent implements OnInit, AfterViewInit {
   signUpForm!: FormGroup;
   errorMessage = '';
   successMessage = '';
+  @ViewChild('usernameInput') usernameInput!: ElementRef;
 
   constructor(
     private uniqueEmailValidator: UniqueEmailValidatorService,
@@ -63,6 +70,11 @@ export class SignupComponent implements OnInit {
     });
   }
 
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.usernameInput.nativeElement.focus();
+    });
+  }
   onSubmit() {
     if (this.signUpForm.valid) {
       console.log('Form Submitted', this.signUpForm.value);

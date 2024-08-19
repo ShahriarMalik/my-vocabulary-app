@@ -7,10 +7,11 @@ import { B2Component } from './learn/b2/b2.component';
 import { C1Component } from './learn/c1/c1.component';
 import { C2Component } from './learn/c2/c2.component';
 import { ExercisesComponent } from './exercises/exercises.component';
-import { WordManagementComponent } from './admin/word-management/word-management.component';
+import { WordsManagementComponent } from './admin/words-management/words-management.component';
 import { ProgressComponent } from './progress/progress.component';
 import { authRoutes } from './authentication/auth.routes';
 import { adminGuard } from '../core/guards/admin.guard';
+import { ExercisesManagementComponent } from './admin/exercises-management/exercises-management.component';
 
 export const featuresRoutes: Routes = [
   { path: 'auth', children: authRoutes },
@@ -61,9 +62,15 @@ export const featuresRoutes: Routes = [
 
   {
     path: 'words-management',
-    component: WordManagementComponent,
+    component: WordsManagementComponent,
     title: $localize`:141084884839689192:Words Management`,
     canActivate: [adminGuard],
+  },
+
+  {
+    path: 'exercises-management',
+    component: ExercisesManagementComponent,
+    title: $localize`:exercisesManagement: Exercises Management`,
   },
 
   {

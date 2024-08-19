@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WordManagementComponent } from './word-management.component';
+import { WordManagementComponent } from './words-management.component';
 
 describe('WordManagementComponent', () => {
   let component: WordManagementComponent;
@@ -8,9 +8,8 @@ describe('WordManagementComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [WordManagementComponent]
-    })
-    .compileComponents();
+      imports: [WordManagementComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(WordManagementComponent);
     component = fixture.componentInstance;

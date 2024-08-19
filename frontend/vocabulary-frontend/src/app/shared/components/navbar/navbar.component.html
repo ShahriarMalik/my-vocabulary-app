@@ -47,11 +47,27 @@
     >} @if(currentUserRole === 'admin'){
     <button
       mat-menu-item
-      i18n="@@wordsManagementButton"
-      [routerLink]="['/words-management']"
+      [matMenuTriggerFor]="managementMenuMobile"
+      i18n="@@adminButton"
     >
-      Words Management
+      Admin
     </button>
+    <mat-menu #managementMenuMobile="matMenu">
+      <button
+        mat-menu-item
+        [routerLink]="['/words-management']"
+        i18n="@@wordsManagementButton"
+      >
+        Words Management
+      </button>
+      <button
+        mat-menu-item
+        [routerLink]="['/exercises-management']"
+        i18n="@@exercisesManagementButton"
+      >
+        Exercises Management
+      </button>
+    </mat-menu>
     } @if(!isLoggedIn){
     <button mat-menu-item i18n="@@loginButton" [routerLink]="['/auth/login']">
       Login
@@ -71,11 +87,15 @@
   <button
     mat-button
     [matMenuTriggerFor]="learnMenu"
-    class="menu-item"
+    class="menu-item button-content-center"
     i18n="@@learnButton"
   >
-    Learn
+    <div class="button-content-center">
+      <span>Learn</span>
+      <mat-icon>keyboard_arrow_down</mat-icon>
+    </div>
   </button>
+
   <mat-menu #learnMenu="matMenu">
     <button mat-menu-item [routerLink]="['/learn/a1']" i18n="@@a1Button">
       A1
@@ -107,13 +127,29 @@
     My Progress
   </button>
   } @if(currentUserRole === 'admin'){
-  <button
-    mat-button
-    i18n="@@wordsManagementButton"
-    [routerLink]="['/words-management']"
-  >
-    Words Management
+  <button mat-button [matMenuTriggerFor]="managementMenu" i18n="@@adminButton">
+    <div class="button-content-center">
+      <span>Admin</span>
+      <mat-icon>keyboard_arrow_down</mat-icon>
+    </div>
   </button>
+
+  <mat-menu #managementMenu="matMenu">
+    <button
+      mat-menu-item
+      [routerLink]="['/words-management']"
+      i18n="@@wordsManagementButton"
+    >
+      Words Management
+    </button>
+    <button
+      mat-menu-item
+      [routerLink]="['/exercises-management']"
+      i18n="@@exercisesManagementButton"
+    >
+      Exercises Management
+    </button>
+  </mat-menu>
   }
 
   <span class="spacer"></span>
@@ -125,7 +161,7 @@
 
   <!-- Language Toggle -->
   <button mat-button [matMenuTriggerFor]="languageMenu" class="language-button">
-    <div class="language-selection">
+    <div class="button-content-center language-selection">
       @if(currentLanguage == 'en'){
       <img
         src="assets/images/en.png"

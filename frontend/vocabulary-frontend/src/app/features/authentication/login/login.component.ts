@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -34,9 +40,10 @@ import { Router, RouterLink } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, AfterViewInit {
   loginForm!: FormGroup;
   errorMessage = '';
+  @ViewChild('emailInput') emailInput!: ElementRef;
 
   constructor(private authService: AuthService, private router: Router) {}
 
@@ -47,6 +54,12 @@ export class LoginComponent implements OnInit {
         Validators.required,
         Validators.minLength(6),
       ]),
+    });
+  }
+
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.emailInput.nativeElement.focus();
     });
   }
 

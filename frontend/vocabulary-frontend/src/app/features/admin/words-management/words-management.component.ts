@@ -5,7 +5,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { WordManagementService } from '../../../core/services/word-management-service.service';
+import { WordManagementService } from '../../../core/services/word-management.service';
 import { Word } from '../../../core/models/word.model';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -24,10 +24,10 @@ import { MatButtonModule } from '@angular/material/button';
     MatSelectModule,
     MatButtonModule,
   ],
-  templateUrl: './word-management.component.html',
-  styleUrls: ['./word-management.component.css'],
+  templateUrl: './words-management.component.html',
+  styleUrls: ['./words-management.component.css'],
 })
-export class WordManagementComponent {
+export class WordsManagementComponent {
   wordForm!: FormGroup;
   cefrLevels: string[] = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
   pronunciationUrl: string | null = null;

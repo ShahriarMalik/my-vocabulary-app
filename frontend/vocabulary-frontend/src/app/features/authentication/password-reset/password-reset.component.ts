@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -31,15 +37,22 @@ import { MatInput } from '@angular/material/input';
   templateUrl: './password-reset.component.html',
   styleUrls: ['./password-reset.component.css'],
 })
-export class PasswordResetComponent implements OnInit {
+export class PasswordResetComponent implements OnInit, AfterViewInit {
   resetForm!: FormGroup;
   message = '';
+  @ViewChild('emailInput') emailInput!: ElementRef;
 
   constructor(private authService: AuthService) {}
 
   ngOnInit(): void {
     this.resetForm = new FormGroup({
       email: new FormControl('', [Validators.required, Validators.email]),
+    });
+  }
+
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.emailInput.nativeElement.focus();
     });
   }
 

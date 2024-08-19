@@ -35,6 +35,12 @@
   flex: 1 1 auto;
 }
 
+.button-content-center {
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+}
+
 /* Menu and Button Styling */
 .menu-item,
 button[mat-button] {
@@ -44,11 +50,6 @@ button[mat-button] {
 }
 
 /* Language Selection Styling */
-.language-selection {
-  display: flex;
-  align-items: center;
-  color: var(--text-color);
-}
 
 .language-selection img {
   margin-right: 8px;
@@ -57,12 +58,6 @@ button[mat-button] {
 .language-selection span {
   margin-right: 4px;
   color: var(--accent-color);
-}
-
-.language-selection mat-icon {
-  vertical-align: middle;
-  font-size: 16px;
-  color: var(--text-color);
 }
 
 /* Mobile Menu Button */

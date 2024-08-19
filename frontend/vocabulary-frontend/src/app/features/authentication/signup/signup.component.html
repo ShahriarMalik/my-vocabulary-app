@@ -32,6 +32,7 @@
             type="text"
             id="user-name"
             formControlName="username"
+            #usernameInput
           />
           @if(username?.invalid && username?.dirty && username?.touched){
           <mat-error>
