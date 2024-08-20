@@ -1,1 +1,183 @@
-<p>exercises-management works!</p>
+<div class="exercises-management-container">
+  <mat-card class="exercises-management-card">
+    <mat-card-header>
+      <h4 class="title" i18n="@@exercisesManagementTitle">
+        Exercises Management
+      </h4>
+    </mat-card-header>
+    <!-- Display message  -->
+    @if (successMessage) {
+    <mat-card class="message-card">
+      <mat-card-header>
+        <p class="success-message" i18n="@@successMessage">
+          {{ successMessage }}
+        </p>
+      </mat-card-header>
+    </mat-card>
+    }@else if (errorMessage) {
+    <mat-card class="message-card">
+      <mat-card-header>
+        <p class="error-message" i18n="@@errorMessage">{{ errorMessage }}</p>
+      </mat-card-header>
+    </mat-card>
+    }
+    <mat-card-content class="exercises-management-content">
+      <div class="level-lesson-container">
+        <!-- Step 1: Select CEFR Level -->
+        <div class="level-container">
+          <mat-form-field appearance="outline">
+            <mat-label label i18n="@@cefrLevelLabel">CEFR Level</mat-label>
+            <mat-select
+              [(value)]="selectedCefrLevel"
+              (selectionChange)="loadLessons()"
+            >
+              @for(level of cefrLevels; track $index){
+              <mat-option [value]="level">
+                {{ level }}
+              </mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <!-- Step 2: Select Lesson -->
+        <div class="lesson-container">
+          @if(lessons.length){
+          <mat-form-field appearance="outline">
+            <mat-label label i18n="@@selectLessonLabel"
+              >Select Lesson</mat-label
+            >
+            <mat-select (selectionChange)="onLessonSelect($event.value)">
+              @for(lesson of lessons; track $index){
+              <mat-option [value]="lesson">
+                <span i18n="@@selectLessonNumber">Lesson </span>
+                {{ lesson.lesson_number }}
+              </mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+          }
+        </div>
+      </div>
+
+      @if (!selectedLesson) {
+      <p class="title notice" i18n="@@selectCefrLessonNotice">
+        Please Select CEFR Level and Lesson to proceed
+      </p>
+      } @if(selectedLesson){
+      <!-- Step 3: Display Words and Create Exercises -->
+      <div class="excercise-container mat-elevation-z8">
+        <div class="excercise-table-container">
+          <table mat-table [dataSource]="dataSource" class="excercise-table">
+            <!-- Word Column -->
+            <ng-container matColumnDef="wordId">
+              <th mat-header-cell *matHeaderCellDef i18n="@@wordIdHeader">
+                ID
+              </th>
+              <td mat-cell *matCellDef="let row">{{ row.wordId }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="word">
+              <th mat-header-cell *matHeaderCellDef i18n="@@wordHeader">
+                Word
+              </th>
+              <td mat-cell *matCellDef="let row">{{ row.word }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="exerciseType">
+              <th mat-header-cell *matHeaderCellDef i18n="@@exerciseTypeHeader">
+                Exercise Type
+              </th>
+              <td mat-cell *matCellDef="let row">
+                <input
+                  matInput
+                  [(ngModel)]="row.exerciseType"
+                  placeholder="Enter type"
+                  i18n-placeholder="@@enterTypePlaceholder"
+                />
+              </td>
+            </ng-container>
+
+            <!-- Question Column with more width -->
+            <ng-container matColumnDef="question">
+              <th
+                mat-header-cell
+                *matHeaderCellDef
+                class="wide-column"
+                i18n="@@questionHeader"
+              >
+                Question
+              </th>
+              <td mat-cell *matCellDef="let row">
+                <input
+                  matInput
+                  [(ngModel)]="row.question"
+                  placeholder="Enter question"
+                  class="wide-column-input"
+                  i18n-placeholder="@@enterQuestionPlaceholder"
+                />
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="options">
+              <th
+                mat-header-cell
+                *matHeaderCellDef
+                class="wide-column"
+                i18n="@@optionsHeader"
+              >
+                Options
+              </th>
+              <td mat-cell *matCellDef="let row" class="wide-column">
+                <input
+                  matInput
+                  [(ngModel)]="row.options"
+                  placeholder="Enter options"
+                  class="wide-column-input"
+                  i18n-placeholder="@@enterOptionsPlaceholder"
+                />
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="answer">
+              <th mat-header-cell *matHeaderCellDef i18n="@@answerHeader">
+                Answer
+              </th>
+              <td mat-cell *matCellDef="let row">
+                <input
+                  matInput
+                  [(ngModel)]="row.answer"
+                  placeholder="Enter answer"
+                  i18n-placeholder="@@enterAnswerPlaceholder"
+                />
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="actions">
+              <th mat-header-cell *matHeaderCellDef i18n="@@actionsHeader">
+                Actions
+              </th>
+              <td mat-cell *matCellDef="let row">
+                <button
+                  mat-raised-button
+                  color="primary"
+                  (click)="saveOrUpdateExercise(row)"
+                >
+                  {{ row.isUpdate ? "Update" : "Add" }}
+                </button>
+              </td>
+            </ng-container>
+
+            <!-- Header Row -->
+            <tr
+              mat-header-row
+              *matHeaderRowDef="displayedColumns; sticky: true"
+            ></tr>
+            <!-- Data Rows -->
+            <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+          </table>
+        </div>
+      </div>
+      }
+    </mat-card-content>
+  </mat-card>
+</div>

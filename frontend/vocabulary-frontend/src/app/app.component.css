@@ -10,9 +10,24 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  margin-top: 1rem; /* Space for the fixed navbar */
-  background-color: var(--background-color); /* Apply background color */
-  color: var(--text-color); /* Apply text color */
+  margin-top: 1rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding-bottom: 1rem;
+}
+
+/* Loading Bar Styles */
+.loading-bar-container {
+  height: 4px; /* Reserve space for the progress bar */
+}
+
+.loading-bar {
+  height: 4px; /* Ensure the progress bar height matches */
+  visibility: hidden; /* Hide by default */
+}
+
+.loading-bar.active {
+  visibility: visible; /* Show when active */
 }
 
 /* Responsive adjustments, if needed */

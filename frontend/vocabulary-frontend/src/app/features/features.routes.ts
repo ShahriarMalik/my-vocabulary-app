@@ -11,7 +11,7 @@ import { WordsManagementComponent } from './admin/words-management/words-managem
 import { ProgressComponent } from './progress/progress.component';
 import { authRoutes } from './authentication/auth.routes';
 import { adminGuard } from '../core/guards/admin.guard';
-import { ExercisesManagementComponent } from './admin/exercises-management/exercises-management.component';
+import { ExerciseManagementComponent } from './admin/exercises-management/exercises-management.component';
 
 export const featuresRoutes: Routes = [
   { path: 'auth', children: authRoutes },
@@ -69,7 +69,7 @@ export const featuresRoutes: Routes = [
 
   {
     path: 'exercises-management',
-    component: ExercisesManagementComponent,
+    component: ExerciseManagementComponent,
     title: $localize`:exercisesManagement: Exercises Management`,
   },
 

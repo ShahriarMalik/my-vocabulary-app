@@ -2,14 +2,16 @@
   <mat-sidenav-content>
     <app-navbar></app-navbar>
 
-    <div class="content">
-      @if(isLoading$ | async){
+    @if(isLoading$ | async){
+    <div class="loading-bar-container">
       <mat-progress-bar
         mode="indeterminate"
         class="loading-bar"
+        [class.active]="isLoading$ | async"
       ></mat-progress-bar>
-      }
-
+    </div>
+    }
+    <div class="content">
       <router-outlet></router-outlet>
     </div>
   </mat-sidenav-content>

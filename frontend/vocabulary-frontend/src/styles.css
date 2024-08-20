@@ -33,8 +33,3 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
 }
-
-/* Placeholder Input Label Color - Overriding Angular Material Defaults */
-.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-floating-label {
-  color: red !important;
-}

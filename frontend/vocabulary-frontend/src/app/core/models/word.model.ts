@@ -1,4 +1,5 @@
 export interface Word {
+  id: number;
   word: string;
   translations: string[];
   emoji: string;
