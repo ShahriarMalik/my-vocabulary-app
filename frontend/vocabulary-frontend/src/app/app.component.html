@@ -2,7 +2,6 @@
   <mat-sidenav-content>
     <app-navbar></app-navbar>
 
-    @if(isLoading$ | async){
     <div class="loading-bar-container">
       <mat-progress-bar
         mode="indeterminate"
@@ -10,7 +9,6 @@
         [class.active]="isLoading$ | async"
       ></mat-progress-bar>
     </div>
-    }
     <div class="content">
       <router-outlet></router-outlet>
     </div>

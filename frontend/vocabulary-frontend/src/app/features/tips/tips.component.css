@@ -1,0 +1,74 @@
+.tips-page {
+  padding: 2rem 1rem;
+  background-color: var(--background-color-lighter);
+  color: var(--text-color);
+}
+
+.tips-page h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.tip-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tip {
+  background-color: var(--background-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tip:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.tip h3 {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  margin-bottom: 0.8rem;
+}
+
+.tip p {
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .tips-page {
+    padding: 1.5rem 1rem;
+  }
+
+  .tip {
+    padding: 1rem;
+  }
+
+  .tip h3 {
+    font-size: 1.3rem;
+  }
+
+  .tip p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .tip-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .tips-page h2 {
+    font-size: 2.5rem;
+  }
+}

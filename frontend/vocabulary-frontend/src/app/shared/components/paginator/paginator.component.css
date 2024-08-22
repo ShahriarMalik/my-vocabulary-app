@@ -1,0 +1,58 @@
+.paginator-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--background-color-lighter);
+  color: var(--text-color);
+  padding: 0.625rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.3125rem var(--shadow-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
+}
+
+button:disabled {
+  background-color: var(--border-color);
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: var(--accent-color);
+}
+
+select {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: 0.0625rem solid var(--border-color);
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+/* For small screens (portrait phones) */
+@media (max-width: 30rem) {
+  .paginator-container {
+    flex-direction: column;
+  }
+}
+
+/* For medium screens (tablets and smaller laptops) */
+@media (min-width: 30.0625rem) and (max-width: 48rem) {
+}
+
+/* For large screens (desktops and larger tablets) */
+@media (min-width: 48.0625rem) and (max-width: 64rem) {
+}
+
+/* For extra large screens (large desktops) */
+@media (min-width: 64.0625rem) {
+}

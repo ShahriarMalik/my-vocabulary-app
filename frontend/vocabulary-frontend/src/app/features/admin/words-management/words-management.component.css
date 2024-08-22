@@ -43,6 +43,9 @@ mat-form-field mat-label[label] {
   color: var(--text-color);
   opacity: 0.7;
 }
+.mat-mdc-select {
+  color: var(--text-color);
+}
 
 mat-form-field input[matInput] {
   color: var(--text-color);

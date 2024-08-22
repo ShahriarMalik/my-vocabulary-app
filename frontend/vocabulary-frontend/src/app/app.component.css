@@ -16,29 +16,36 @@
   padding-bottom: 1rem;
 }
 
+.mat-mdc-progress-color.mat-accent {
+  --mdc-linear-progress-active-indicator-color: var(--primary-color);
+
+  --mdc-linear-progress-track-height: 7px !important;
+
+  border-radius: 5px !important;
+}
+
 /* Loading Bar Styles */
 .loading-bar-container {
-  height: 4px; /* Reserve space for the progress bar */
+  height: 8px;
 }
 
 .loading-bar {
-  height: 4px; /* Ensure the progress bar height matches */
-  visibility: hidden; /* Hide by default */
+  height: 8px;
+  visibility: hidden;
 }
 
 .loading-bar.active {
-  visibility: visible; /* Show when active */
+  visibility: visible;
 }
 
-/* Responsive adjustments, if needed */
 @media screen and (max-width: 600px) {
   .content {
-    margin-top: 1.5rem; /* Adjust the top margin for the mobile navbar */
+    margin-top: 1.5rem;
   }
 }
 
 @media screen and (min-width: 601px) {
   .content {
-    margin-top: 1rem; /* Maintain the margin for larger screens */
+    margin-top: 1rem;
   }
 }

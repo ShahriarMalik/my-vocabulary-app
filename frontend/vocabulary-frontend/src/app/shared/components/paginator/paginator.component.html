@@ -1,0 +1,42 @@
+<div class="paginator-container">
+  <!-- Previous Button -->
+  <button
+    (click)="onPreviousPage()"
+    [disabled]="currentPage === 0"
+    i18n="@@previousButton"
+    aria-label="Previous page"
+  >
+    Previous
+  </button>
+
+  <!-- Page Range Display -->
+  <span i18n="@@pageRangeDisplay">
+    {{ currentPage + 1 }} / {{ totalPages }}
+  </span>
+
+  <!-- Next Button -->
+  <button
+    (click)="onNextPage()"
+    [disabled]="currentPage === totalPages - 1"
+    i18n="@@nextButton"
+    aria-label="Next page"
+  >
+    Next
+  </button>
+
+  <!-- Page Size Dropdown -->
+  <select
+    (change)="onPageSizeChange($event)"
+    [value]="pageSize"
+    i18n-aria-label="@@pageSizeAriaLabel"
+    aria-label="Select page size"
+  >
+    <option
+      *ngFor="let size of pageSizeOptions"
+      [value]="size"
+      i18n="@@pageSizeOption"
+    >
+      {{ size }} per page
+    </option>
+  </select>
+</div>
