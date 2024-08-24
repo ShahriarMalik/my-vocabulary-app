@@ -16,6 +16,14 @@
     />
   </head>
   <body class="mat-typography">
+    <script>
+      (function () {
+        const savedTheme = window.localStorage.getItem("savedTheme") || "light";
+        document.body.classList.add(
+          savedTheme === "dark" ? "dark-theme" : "light-theme"
+        );
+      })();
+    </script>
     <app-root></app-root>
   </body>
 </html>

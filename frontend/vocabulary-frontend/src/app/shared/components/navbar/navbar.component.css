@@ -4,6 +4,13 @@
   padding-top: 64px;
 }
 
+button.router-link-active {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+button.router-link-active:hover {
+  color: var(--accent-color);
+}
 /* Navbar Styling */
 .mat-toolbar {
   position: fixed;

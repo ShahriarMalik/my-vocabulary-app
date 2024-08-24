@@ -111,13 +111,13 @@ export class ExercisesComponent {
           // If lessons are available, select the first lesson by default
           if (this.lessons.length > 0) {
             this.selectedLesson = this.lessons[0];
-            this.loadExercises();
           } else {
             this.errorMessage = $localize`:@@noDataAvailableMessage:No data available for the selected CEFR level`;
             setTimeout(() => {
               this.errorMessage = '';
             }, 4000);
           }
+          this.loadExercises();
         },
         error: (err) => {
           console.warn('Error fetching lessons:', err);

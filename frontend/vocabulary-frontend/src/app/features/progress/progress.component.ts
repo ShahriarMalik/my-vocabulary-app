@@ -65,38 +65,41 @@ export class ProgressComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (!this.authService.getUserIdFromToken()) {
-      this.successMessage = $localize`:@@logInToSeeProgress:You need to log in to view your progress. Please log in to continue.`;
+    if (this.isBrowser) {
+      // Only perform these actions on the client-side
+      if (!this.authService.getUserIdFromToken()) {
+        this.successMessage = $localize`:@@logInToSeeProgress:You need to log in to view your progress. Please log in to continue.`;
+
+        setTimeout(() => {
+          this.successMessage = '';
+          this.router.navigate(['/auth/login']);
+        }, 5000);
+        return;
+      } else {
+        this.userId = Number(this.authService.getUserIdFromToken());
+      }
 
       setTimeout(() => {
-        this.successMessage = '';
-        this.router.navigate(['/auth/login']);
-      }, 5000);
-      return;
-    } else {
-      this.userId = Number(this.authService.getUserIdFromToken());
-    }
+        this.progressService.getCefrProgress(this.userId).subscribe({
+          next: (response) => {
+            console.log('getCefrProgress: ', response);
+            this.cefrProgress = response.cefr_levels;
+            this.setupCefrLineChart();
+            this.applyThemeToCharts();
+          },
+          error: (error) => {
+            console.error(error);
+          },
+        });
+      }, 0);
 
-    setTimeout(() => {
-      this.progressService.getCefrProgress(this.userId).subscribe({
-        next: (response) => {
-          console.log('getCefrProgress: ', response);
-          this.cefrProgress = response.cefr_levels;
-          this.setupCefrLineChart();
+      // Subscribe to theme changes and update chart options accordingly
+      this.themeSubscription = this.themeService
+        .getThemeObservable()
+        .subscribe(() => {
           this.applyThemeToCharts();
-        },
-        error: (error) => {
-          console.error(error);
-        },
-      });
-    }, 0);
-
-    // Subscribe to theme changes and update chart options accordingly
-    this.themeSubscription = this.themeService
-      .getThemeObservable()
-      .subscribe(() => {
-        this.applyThemeToCharts();
-      });
+        });
+    }
   }
 
   ngOnDestroy(): void {

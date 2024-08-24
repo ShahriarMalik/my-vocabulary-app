@@ -18,33 +18,46 @@
       width="40"
       height="40"
       i18n-alt="@@logoAlt"
+      routerLinkActive="router-link-active"
       [routerLink]="['/']"
     />
   </span>
 
   <mat-menu #mobileMenu="matMenu">
-    <button mat-menu-item i18n="@@learnButton" [routerLink]="['/learn']">
+    <button
+      mat-menu-item
+      i18n="@@learnButton"
+      [routerLink]="['/learn']"
+      routerLinkActive="router-link-active"
+    >
       Learn
     </button>
 
     <button
       mat-menu-item
       i18n="@@exercisesButton"
+      routerLinkActive="router-link-active"
       [routerLink]="['/exercises']"
     >
       Exercises
     </button>
-    <button mat-menu-item i18n="@@tipsButton" [routerLink]="['/tips']">
+    <button
+      mat-menu-item
+      i18n="@@tipsButton"
+      [routerLink]="['/tips']"
+      routerLinkActive="router-link-active"
+    >
       Tips
     </button>
+    @if (isLoggedIn) {
     <button
       mat-menu-item
       i18n="@@myProgressButton"
       [routerLink]="['/progress']"
+      routerLinkActive="router-link-active"
     >
-      My Progress
-    </button>
-    @if(currentUserRole === 'admin'){
+      My Progress</button
+    >} @if(currentUserRole === 'admin'){
     <button
       mat-menu-item
       [matMenuTriggerFor]="managementMenuMobile"
@@ -56,24 +69,36 @@
       <button
         mat-menu-item
         [routerLink]="['/words-management']"
+        routerLinkActive="router-link-active"
         i18n="@@wordsManagementButton"
       >
         Words Management
       </button>
       <button
         mat-menu-item
-        [routerLink]="['/exercises-management']"
+        routerLinkActive="router-link-active"
         i18n="@@exercisesManagementButton"
+        [routerLink]="['/exercises-management']"
       >
         Exercises Management
       </button>
     </mat-menu>
     } @if(!isLoggedIn){
-    <button mat-menu-item i18n="@@loginButton" [routerLink]="['/auth/login']">
+    <button
+      mat-menu-item
+      i18n="@@loginButton"
+      [routerLink]="['/auth/login']"
+      routerLinkActive="router-link-active"
+    >
       Login
     </button>
     } @if(!isLoggedIn){
-    <button mat-menu-item i18n="@@signUpButton" [routerLink]="['/auth/signup']">
+    <button
+      mat-menu-item
+      i18n="@@signUpButton"
+      [routerLink]="['/auth/signup']"
+      routerLinkActive="router-link-active"
+    >
       Sign Up
     </button>
     } @if(isLoggedIn){
@@ -89,6 +114,7 @@
     class="menu-item button-content-center"
     i18n="@@learnButton"
     [routerLink]="['/learn']"
+    routerLinkActive="router-link-active"
   >
     <div class="button-content-center">
       <span>Learn</span>
@@ -96,32 +122,79 @@
   </button>
 
   <mat-menu #learnMenu="matMenu">
-    <button mat-menu-item [routerLink]="['/learn/a1']" i18n="@@a1Button">
+    <button
+      mat-menu-item
+      [routerLink]="['/learn/a1']"
+      routerLinkActive="router-link-active"
+      i18n="@@a1Button"
+    >
       A1
     </button>
-    <button mat-menu-item [routerLink]="['/learn/a2']" i18n="@@a2Button">
+    <button
+      mat-menu-item
+      [routerLink]="['/learn/a2']"
+      routerLinkActive="router-link-active"
+      i18n="@@a2Button"
+    >
       A2
     </button>
-    <button mat-menu-item [routerLink]="['/learn/b1']" i18n="@@b1Button">
+    <button
+      mat-menu-item
+      [routerLink]="['/learn/b1']"
+      routerLinkActive="router-link-active"
+      i18n="@@b1Button"
+    >
       B1
     </button>
-    <button mat-menu-item [routerLink]="['/learn/b2']" i18n="@@b2Button">
+    <button
+      mat-menu-item
+      [routerLink]="['/learn/b2']"
+      routerLinkActive="router-link-active"
+      i18n="@@b2Button"
+    >
       B2
     </button>
-    <button mat-menu-item [routerLink]="['/learn/c1']" i18n="@@c1Button">
+    <button
+      mat-menu-item
+      [routerLink]="['/learn/c1']"
+      routerLinkActive="router-link-active"
+      i18n="@@c1Button"
+    >
       C1
     </button>
-    <button mat-menu-item [routerLink]="['/learn/c2']" i18n="@@c2Button">
+    <button
+      mat-menu-item
+      [routerLink]="['/learn/c2']"
+      routerLinkActive="router-link-active"
+      i18n="@@c2Button"
+    >
       C2
     </button>
   </mat-menu>
 
-  <button mat-button i18n="@@exercisesButton" [routerLink]="['/exercises']">
+  <button
+    mat-button
+    i18n="@@exercisesButton"
+    [routerLink]="['/exercises']"
+    routerLinkActive="router-link-active"
+  >
     Exercises
   </button>
-  <button mat-button i18n="@@tipsButton" [routerLink]="['/tips']">Tips</button>
+  <button
+    mat-button
+    i18n="@@tipsButton"
+    [routerLink]="['/tips']"
+    routerLinkActive="router-link-active"
+  >
+    Tips
+  </button>
 
-  <button mat-button i18n="@@myProgressButton" [routerLink]="['/progress']">
+  <button
+    mat-button
+    i18n="@@myProgressButton"
+    [routerLink]="['/progress']"
+    routerLinkActive="router-link-active"
+  >
     My Progress
   </button>
   @if(currentUserRole === 'admin'){
@@ -135,15 +208,17 @@
   <mat-menu #managementMenu="matMenu">
     <button
       mat-menu-item
-      [routerLink]="['/words-management']"
+      routerLinkActive="router-link-active"
       i18n="@@wordsManagementButton"
+      [routerLink]="['/words-management']"
     >
       Words Management
     </button>
     <button
       mat-menu-item
-      [routerLink]="['/exercises-management']"
+      routerLinkActive="router-link-active"
       i18n="@@exercisesManagementButton"
+      [routerLink]="['/exercises-management']"
     >
       Exercises Management
     </button>
@@ -231,11 +306,21 @@
   </mat-menu>
 
   @if(!isLoggedIn){
-  <button mat-button i18n="@@loginButton" [routerLink]="['/auth/login']">
+  <button
+    mat-button
+    i18n="@@loginButton"
+    [routerLink]="['/auth/login']"
+    routerLinkActive="router-link-active"
+  >
     Login
   </button>
   } @if(!isLoggedIn){
-  <button mat-button i18n="@@signUpButton" [routerLink]="['/auth/signup']">
+  <button
+    mat-button
+    i18n="@@signUpButton"
+    [routerLink]="['/auth/signup']"
+    routerLinkActive="router-link-active"
+  >
     Sign Up
   </button>
   } @if(isLoggedIn){

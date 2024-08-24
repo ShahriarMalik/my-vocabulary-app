@@ -51,12 +51,14 @@
   <!-- Display lesson progress if there are lessons available -->
   @if(lessonProgress.length > 0){
   <div class="lesson-progress">
+    @if(isBrowser){
     <canvas
       baseChart
       [data]="lessonBarChartData"
       [options]="lessonBarChartOptions"
       [type]="lessonBarChartType"
     ></canvas>
+    }
   </div>
   }
 </div>
