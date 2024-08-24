@@ -17,8 +17,8 @@ export const unsavedChangesGuard: CanDeactivateFn<SignupComponent> = (
   if (component.signUpForm && component.signUpForm.dirty) {
     const dialogRef = dialog.open(ConfirmDialogComponent, {
       data: {
-        title: $localize`:unsavedChanges:Unsaved Changes`,
-        message: $localize`:unsavedMessage:You have unsaved changes. Do you really want to leave this page?`,
+        title: $localize`:@@unsavedChanges:Unsaved Changes`,
+        message: $localize`:@@unsavedMessage:You have unsaved changes. Do you really want to leave this page?`,
       },
     });
 

@@ -12,6 +12,7 @@ import {
 import { loadingInterceptor } from './core/interceptors/loading.interceptor';
 import { tokenInterceptor } from './core/interceptors/token.interceptor';
 import { PageTitleStrategy } from './core/strategies/page-title-strategy';
+import { provideCharts, withDefaultRegisterables } from 'ng2-charts';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -24,5 +25,6 @@ export const appConfig: ApplicationConfig = {
       withFetch(),
       withInterceptors([loadingInterceptor, tokenInterceptor])
     ),
+    provideCharts(withDefaultRegisterables()),
   ],
 };

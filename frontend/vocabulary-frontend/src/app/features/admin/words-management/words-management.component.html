@@ -79,10 +79,7 @@
         <!-- Audio Player for Pronunciation -->
         <div class="container">
           @if (pronunciationUrl) {
-          <audio controls i18n-title="@@audioTitle" title="Audio Player">
-            <source [src]="pronunciationUrl" type="audio/mp3" />
-            Your browser does not support the audio element.
-          </audio>
+          <app-audio-player [audioSrc]="pronunciationUrl"></app-audio-player>
           }
           <!-- Save button -->
           <span class="button-container">

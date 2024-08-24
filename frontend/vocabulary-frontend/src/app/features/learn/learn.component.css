@@ -1,237 +1,151 @@
-/* .learn-container {
-  padding: 2rem;
-  text-align: center;
+.cefr-lesson-selector {
+  padding: 1rem;
   background-color: var(--background-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.3125rem var(--shadow-color);
   color: var(--text-color);
+  text-align: left;
+  width: 100%;
+  max-width: 38rem;
+  margin: 0 auto;
 }
 
-h1 {
-  margin-bottom: 2rem;
-  color: var(--accent-color);
-}
-
-.level-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-}
-
-.level-card {
+.cefr-selectors {
   display: flex;
-  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
   justify-content: center;
-  padding: 1.5rem;
-  background-color: var(--primary-color);
-  color: var(--text-color);
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 4px 8px var(--shadow-color);
-  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.level-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px var(--shadow-color);
+.cefr-lesson-selector label {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary-color);
 }
 
-@media (max-width: 768px) {
-  .learn-container {
-    padding: 1rem;
-  }
-  .level-card {
-    padding: 1rem;
-  }
-} */
-
-/* Learn Page */
-.learn-page {
-  padding: 2rem 1rem;
+.cefr-lesson-selector select {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.3125rem;
+  border: 0.0625rem solid var(--border-color);
   background-color: var(--background-color-lighter);
   color: var(--text-color);
-}
-
-.learn-page h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  text-align: center;
-  color: var(--primary-color);
-}
-
-.learn-intro {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.learn-intro p {
-  font-size: 1.2rem;
-  color: var(--text-color);
-}
-
-/* Level Selection Section */
-.level-selection h3 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  color: var(--accent-color);
-}
-
-.level-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
-}
-
-.level-card {
-  background-color: var(--background-color);
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px var(--shadow-color);
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-}
-
-.level-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px var(--shadow-color);
-}
-
-.level-card h4 {
-  font-size: 1.5rem;
-  color: var(--primary-color);
-  margin-bottom: 0.8rem;
-}
-
-.level-card p {
-  font-size: 1rem;
-  color: var(--text-color);
-}
-
-/* Lessons and Exercises Section */
-.lessons-section {
-  margin-top: 2rem;
-}
-
-.lesson-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
-}
-
-.lesson-card {
-  background-color: var(--background-color);
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px var(--shadow-color);
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-}
-
-.lesson-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px var(--shadow-color);
-}
-
-.lesson-card h4 {
-  font-size: 1.5rem;
-  color: var(--accent-color);
-  margin-bottom: 0.8rem;
-}
-
-.lesson-card p {
-  font-size: 1rem;
-  color: var(--text-color);
-}
-
-/* Interactive Exercises Section */
-.exercises-section {
-  margin-top: 2rem;
-}
-
-.exercise-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.exercise-question {
-  font-size: 1.5rem;
-  color: var(--primary-color);
+  transition: border-color 0.3s ease;
   margin-bottom: 1rem;
 }
 
-.options-form {
+.cefr-selectors select {
+  flex: 1;
+  min-width: 45%;
+}
+
+.cefr-lesson-selector select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.cefr-lesson-selector option {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  min-width: 14rem;
+}
+
+.notice-container {
+  margin-top: 0.125rem;
+}
+
+/* Word Container */
+.words-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    4,
+    1fr
+  ); /* Adjust the columns based on screen size */
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--background-color-lighter);
+  border-radius: 0.5rem;
+}
+
+.word-card {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: space-between;
+  background-color: var(--background-color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.0625rem 0.1875rem var(--shadow-color);
+  transition: transform 0.2s ease-in-out;
 }
 
-.option {
-  margin: 10px 0;
-  display: flex;
-  align-items: flex-start;
-}
-
-.option label {
-  margin-left: 10px;
-  font-size: 1.1rem;
+.word-card h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
   color: var(--text-color);
 }
 
-input[type="radio"] {
-  accent-color: var(--primary-color);
+.word-card p {
+  margin: 0.5rem 0;
+  color: var(--text-secondary-color);
 }
 
-.submit-button {
-  background-color: var(--primary-color);
+.word-card audio {
+  width: 70%;
+  max-width: 70%;
+  height: 40px;
+  background-color: var(--background-color);
   color: var(--text-color);
-  border: none;
-  padding: 10px 20px;
-  margin-top: 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1.1rem;
-  transition: background-color 0.3s ease;
+  border: 1px solid var(--accent-color);
+  border-radius: 22px;
 }
 
-.submit-button[disabled] {
-  cursor: not-allowed;
-  background-color: var(--primary-color);
-}
-
-.submit-button:hover {
-  background-color: var(--accent-color);
-}
-
-.feedback {
-  margin-top: 20px;
-  font-size: 1.2rem;
+/* Customize controls for WebKit-based browsers (e.g., Chrome, Safari) */
+audio::-webkit-media-controls-panel {
+  background-color: var(--background-color);
   color: var(--text-color);
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-  .learn-page {
-    padding: 1.5rem 1rem;
-  }
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-pause-button {
+  color: var(--accent-color); /* To do */
+}
 
-  .level-card,
-  .lesson-card {
-    padding: 1rem;
-  }
+audio::-webkit-media-controls-timeline {
+  background-color: var(--border-color);
+}
 
-  .exercise-container {
-    margin-top: 1.5rem;
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+  color: var(--text-color);
+}
+
+audio::-webkit-media-controls-volume-slider {
+  background-color: var(--input-background-color);
+}
+
+/* Responsive Design */
+
+@media (max-width: 30rem) {
+  .words-grid {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
-@media (min-width: 1024px) {
-  .level-cards,
-  .lesson-list {
+@media (min-width: 30.0625rem) and (max-width: 48rem) {
+  .words-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 48.0625rem) and (max-width: 64rem) {
+  .words-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 64.0625rem) {
+  .words-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }

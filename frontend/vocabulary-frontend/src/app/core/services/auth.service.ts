@@ -171,4 +171,25 @@ export class AuthService {
     }
     return 'user';
   }
+
+  /**
+   * Retrieves the user ID from the JWT stored in local storage
+   * @returns The user ID as a string or null if the token is invalid or missing.
+   */
+
+  getUserIdFromToken(): string | null {
+    if (isPlatformBrowser(this.platformId)) {
+      const token = this.getValidToken();
+      if (token) {
+        try {
+          const decodedToken: any = jwtDecode(token);
+          return decodedToken.user_id || null;
+        } catch (error) {
+          console.error('Error decoding JWT:', error);
+          return null;
+        }
+      }
+    }
+    return null;
+  }
 }

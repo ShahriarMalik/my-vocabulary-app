@@ -1,0 +1,97 @@
+/* General container styling */
+.card {
+  max-width: 55%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--background-color-lighter);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+.title {
+  color: var(--accent-color);
+  text-align: center;
+}
+.progress-container {
+  margin-bottom: 1rem;
+}
+
+/* CEFR Progress Section */
+.cefr-progress {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.cefr-progress h2 {
+  font-size: 1.8rem;
+  color: var(--text-color);
+  margin-bottom: 15px;
+}
+
+/* Dropdown Container */
+.dropdown-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.dropdown-container label {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-right: 10px;
+}
+
+.dropdown-container select {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+  background-color: var(--background-color-lighter);
+  color: var(--text-color);
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.dropdown-container select:hover {
+  border-color: var(--primary-color);
+}
+
+/* Lesson Progress Section */
+.lesson-progress {
+  text-align: center;
+}
+
+.lesson-progress h3 {
+  font-size: 1.6rem;
+  color: var(--text-color);
+  margin-bottom: 15px;
+}
+
+/* Canvas Chart Styling */
+canvas {
+  max-width: 100%;
+  height: auto !important;
+}
+
+/* Media Queries */
+@media (min-width: 320px) and (max-width: 480px) {
+  .card {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  /* Large Mobile */
+  .card {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Tablet */
+  .card {
+    max-width: 75%;
+  }
+}
+
+@media (min-width: 992px) {
+  /* Desktop */
+}

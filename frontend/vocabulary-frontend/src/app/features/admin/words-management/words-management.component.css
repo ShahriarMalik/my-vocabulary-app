@@ -71,7 +71,7 @@ mat-form-field {
 .container {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .button-container {
@@ -96,40 +96,6 @@ button[mat-stroked-button][disabled] {
 button[mat-stroked-button]:hover {
   background-color: darken(var(--primary-color), 10%);
   color: var(--accent-color);
-}
-
-audio {
-  width: 50%;
-  max-width: 50%;
-  height: 40px;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  border: 1px solid var(--accent-color);
-  border-radius: 22px;
-}
-
-/* Customize controls for WebKit-based browsers (e.g., Chrome, Safari) */
-audio::-webkit-media-controls-panel {
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-audio::-webkit-media-controls-play-button,
-audio::-webkit-media-controls-pause-button {
-  color: var(--accent-color); /* To do */
-}
-
-audio::-webkit-media-controls-timeline {
-  background-color: var(--border-color);
-}
-
-audio::-webkit-media-controls-current-time-display,
-audio::-webkit-media-controls-time-remaining-display {
-  color: var(--text-color);
-}
-
-audio::-webkit-media-controls-volume-slider {
-  background-color: var(--input-background-color);
 }
 
 /* Success and Error Messages */
@@ -203,26 +169,18 @@ mat-card-header mat-icon {
   .container {
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-  }
-
-  .container audio {
-    margin-bottom: 1.25rem;
-  }
-  audio {
-    width: 65%;
-    max-width: 65%;
+    justify-content: center;
   }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
   /* Large Mobile */
-  .button-container {
+  /* .button-container {
     margin-left: 0rem;
   }
   .button-container button {
     margin-bottom: 1.25rem;
-  }
+  } */
 
   .search-container {
     justify-content: space-around;
@@ -240,14 +198,6 @@ mat-card-header mat-icon {
   .container {
     align-items: flex-start;
     flex-direction: column;
-  }
-
-  .container audio {
-    margin-bottom: 1.25rem;
-  }
-  audio {
-    width: 65%;
-    max-width: 65%;
   }
 }
 

@@ -23,7 +23,7 @@
   </span>
 
   <mat-menu #mobileMenu="matMenu">
-    <button mat-menu-item [matMenuTriggerFor]="learnMenu" i18n="@@learnButton">
+    <button mat-menu-item i18n="@@learnButton" [routerLink]="['/learn']">
       Learn
     </button>
 
@@ -37,14 +37,14 @@
     <button mat-menu-item i18n="@@tipsButton" [routerLink]="['/tips']">
       Tips
     </button>
-    @if (isLoggedIn) {
     <button
       mat-menu-item
       i18n="@@myProgressButton"
       [routerLink]="['/progress']"
     >
-      My Progress</button
-    >} @if(currentUserRole === 'admin'){
+      My Progress
+    </button>
+    @if(currentUserRole === 'admin'){
     <button
       mat-menu-item
       [matMenuTriggerFor]="managementMenuMobile"
@@ -86,13 +86,12 @@
   <!-- Full Menu for Larger Screens -->
   <button
     mat-button
-    [matMenuTriggerFor]="learnMenu"
     class="menu-item button-content-center"
     i18n="@@learnButton"
+    [routerLink]="['/learn']"
   >
     <div class="button-content-center">
       <span>Learn</span>
-      <mat-icon>keyboard_arrow_down</mat-icon>
     </div>
   </button>
 
@@ -122,11 +121,10 @@
   </button>
   <button mat-button i18n="@@tipsButton" [routerLink]="['/tips']">Tips</button>
 
-  @if (isLoggedIn) {
   <button mat-button i18n="@@myProgressButton" [routerLink]="['/progress']">
     My Progress
   </button>
-  } @if(currentUserRole === 'admin'){
+  @if(currentUserRole === 'admin'){
   <button mat-button [matMenuTriggerFor]="managementMenu" i18n="@@adminButton">
     <div class="button-content-center">
       <span>Admin</span>
@@ -155,9 +153,9 @@
   <span class="spacer"></span>
 
   <!-- Search -->
-  <button mat-icon-button aria-label="search" i18n-aria-label="@@searchButton">
+  <!-- <button mat-icon-button aria-label="search" i18n-aria-label="@@searchButton">
     <mat-icon>search</mat-icon>
-  </button>
+  </button> -->
 
   <!-- Language Toggle -->
   <button mat-button [matMenuTriggerFor]="languageMenu" class="language-button">

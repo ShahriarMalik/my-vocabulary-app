@@ -6,6 +6,7 @@ import { ProgressComponent } from './progress/progress.component';
 import { authRoutes } from './authentication/auth.routes';
 import { adminGuard } from '../core/guards/admin.guard';
 import { ExerciseManagementComponent } from './admin/exercises-management/exercises-management.component';
+import { loginGuard } from '../core/guards/login.guard';
 
 export const featuresRoutes: Routes = [
   { path: 'auth', children: authRoutes },
@@ -24,21 +25,30 @@ export const featuresRoutes: Routes = [
 
   {
     path: 'words-management',
-    component: WordsManagementComponent,
+    loadComponent: () =>
+      import('./admin/words-management/words-management.component').then(
+        (m) => m.WordsManagementComponent
+      ),
     title: $localize`:141084884839689192:Words Management`,
     canActivate: [adminGuard],
   },
 
   {
     path: 'exercises-management',
-    component: ExerciseManagementComponent,
+    loadComponent: () =>
+      import(
+        './admin/exercises-management/exercises-management.component'
+      ).then((m) => m.ExerciseManagementComponent),
     title: $localize`:exercisesManagement: Exercises Management`,
+    canActivate: [adminGuard],
   },
 
   {
     path: 'progress',
-    component: ProgressComponent,
+    loadComponent: () =>
+      import('./progress/progress.component').then((m) => m.ProgressComponent),
     title: $localize`:3419681791450150574:Progress`,
+    canActivate: [loginGuard],
   },
 
   {

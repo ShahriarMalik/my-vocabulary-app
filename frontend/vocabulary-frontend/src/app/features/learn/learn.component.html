@@ -1,95 +1,86 @@
-<!-- @if(!isChildRouteActive){
-<div class="learn-container">
-  <h1 i18n="@@learnTitle">Select Your Learning Level</h1>
+<div class="cefr-lesson-selector">
+  <!-- CEFR LEVEL and Lesson Dropdowns -->
+  <div class="cefr-selectors">
+    <!-- CEFR LEVEL Dropdown -->
+    <div>
+      <label for="cefrLevel" i18n="@@cefrLevelLabel">Select CEFR Level:</label>
+      <select
+        id="cefrLevel"
+        (change)="onCefrLevelSelect($event)"
+        [value]="selectedCefrLevel"
+        i18n-aria-label="@@cefrLevelAriaLabel"
+        aria-label="Select CEFR Level"
+      >
+        @for(level of cefrLevels; track $index){
+        <option [value]="level">{{ level }}</option>
+        }
+      </select>
+    </div>
 
-  <div class="level-grid">
-    <a routerLink="/learn/a1" class="level-card" i18n="@@a1Button"> A1 </a>
-    <a routerLink="/learn/a2" class="level-card" i18n="@@a2Button"> A2 </a>
-    <a routerLink="/learn/b1" class="level-card" i18n="@@b1Button"> B1 </a>
-    <a routerLink="/learn/b2" class="level-card" i18n="@@b2Button"> B2 </a>
-    <a routerLink="/learn/c1" class="level-card" i18n="@@c1Button"> C1 </a>
-    <a routerLink="/learn/c2" class="level-card" i18n="@@c2Button"> C2 </a>
+    <!-- Lessons Dropdown -->
+    <div>
+      <label for="lesson" i18n="@@lessonLabel">Select Lesson:</label>
+      <select
+        id="lesson"
+        (change)="onLessonSelect($event)"
+        [disabled]="lessons.length === 0"
+        i18n-aria-label="@@lessonAriaLabel"
+        aria-label="Select Lesson"
+      >
+        @if(lessons.length === 0){
+        <option value="0"></option>
+        } @for(lesson of lessons; track lesson.lesson_number){
+        <option [value]="lesson.lesson_number">
+          <span i18n="@@lessonNumber">Lesson</span>
+          {{ lesson.lesson_number }}
+        </option>
+        }
+      </select>
+    </div>
+  </div>
+
+  <!-- Message -->
+  <div class="notice-container">
+    @if(errorMessage || successMessage){
+    <app-notice
+      [message]="errorMessage"
+      [isError]="true"
+      i18n-aria-label="@@errorMessageAriaLabel"
+      aria-label="Error message"
+    ></app-notice>
+    <app-notice
+      [message]="successMessage"
+      [isError]="false"
+      i18n-aria-label="@@successMessageAriaLabel"
+      aria-label="Success message"
+    ></app-notice>
+    }
   </div>
 </div>
-}
-<router-outlet></router-outlet> -->
 
-<!-- <div class="learn-page">
-  <h2 i18n="@@learnTitle">Start Your Learning Journey with VokabelProfi</h2> -->
-
-<!-- Intro Section -->
-<!-- <div class="learn-intro">
-    <p i18n="@@learnIntro">
-      VokabelProfi offers a structured learning path tailored to your current
-      language proficiency level. Whether you're a beginner or an advanced
-      learner, our exercises are designed to help you master German vocabulary
-      effectively. Select your level, explore lessons, and start practicing!
-    </p>
-  </div> -->
-
-<!-- Level Selection Section -->
-<!-- <div class="level-selection">
-    <h3 i18n="@@selectLevelTitle">Select Your Level</h3>
-    <div class="level-cards">
-      <div
-        class="level-card"
-        *ngFor="let level of cefrLevels"
-        (click)="selectLevel(level)"
-      >
-        <h4>{{ level }}</h4>
-        <p i18n="@@levelCardDescription">
-          Explore exercises tailored for {{ level }}
-        </p>
-      </div>
-    </div>
-  </div> -->
-
-<!-- Lessons and Exercises Section -->
-<!-- <div class="lessons-section" *ngIf="selectedLevel">
-    <h3 i18n="@@selectedLevelTitle">Lessons for {{ selectedLevel }}</h3>
-    <div class="lesson-list">
-      <div
-        class="lesson-card"
-        *ngFor="let lesson of lessons"
-        (click)="selectLesson(lesson)"
-      >
-        <h4>{{ lesson.title }}</h4>
-        <p i18n="@@lessonCardDescription">Explore exercises in this lesson</p>
-      </div>
-    </div>
-  </div> -->
-
-<!-- Interactive Exercises Section -->
-<!-- <div class="exercises-section" *ngIf="selectedLesson">
-    <h3 i18n="@@exercisesTitle">Exercises for {{ selectedLesson.title }}</h3>
-    <p i18n="@@exercisesIntro">
-      Complete the exercises below to improve your German vocabulary.
-    </p>
-
-    <div class="exercise-container">
-      <h4 class="exercise-question">{{ currentExercise.question }}</h4>
-      <form [formGroup]="exerciseForm" class="options-form">
-        <div *ngFor="let option of currentExercise.options" class="option">
-          <input
-            type="radio"
-            [id]="option"
-            formControlName="exerciseOption"
-            [value]="option"
-          />
-          <label [for]="option">{{ option }}</label>
-        </div>
-      </form>
-      <button
-        class="submit-button"
-        (click)="submitAnswer()"
-        [disabled]="!exerciseForm.valid || exerciseForm.pristine"
-        title="Please select an answer"
-      >
-        Submit Answer
-      </button>
-      <p [ngStyle]="{ color: feedbackColor }" class="feedback">
-        {{ feedbackMessage }}
-      </p>
-    </div>
+<!-- word container -->
+@if(paginatedWords.length > 0){
+<div class="words-grid">
+  @for(word of paginatedWords; track word.id){
+  <div class="word-card">
+    <h3>
+      {{ word.german_word }}
+    </h3>
+    <p><strong>Translation:</strong> {{ word.translation }}</p>
+    <p><strong>Example:</strong> {{ word.example }}</p>
+    @if (word.pronunciation_url) {
+    <app-audio-player [audioSrc]="word.pronunciation_url"></app-audio-player>
+    }
   </div>
-</div> -->
+  }
+</div>
+<app-paginator
+  [length]="allWords.length"
+  [pageSize]="pageSize"
+  [pageSizeOptions]="[4, 8, 12, 16, 20]"
+  (pageChange)="onPageChange($event)"
+  (pageSizeChange)="onPageSizeChange($event)"
+  i18n-aria-label="@@paginatorAriaLabel"
+  aria-label="Pagination control"
+></app-paginator>
+}

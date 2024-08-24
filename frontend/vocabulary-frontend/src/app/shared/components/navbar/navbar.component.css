@@ -57,7 +57,7 @@ button[mat-button] {
 
 .language-selection span {
   margin-right: 4px;
-  color: var(--accent-color);
+  /* color: var(--accent-color); */
 }
 
 /* Mobile Menu Button */

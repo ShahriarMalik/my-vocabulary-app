@@ -12,6 +12,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
+import { AudioPlayerComponent } from '../../../shared/components/audio-player/audio-player.component';
 
 @Component({
   selector: 'app-word-management',
@@ -23,6 +24,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatInputModule,
     MatSelectModule,
     MatButtonModule,
+    AudioPlayerComponent,
   ],
   templateUrl: './words-management.component.html',
   styleUrls: ['./words-management.component.css'],

@@ -1,1 +1,62 @@
-<p>progress works!</p>
+<div class="progress-container card">
+  <div class="cefr-progress">
+    <h4 class="title" i18n="@@cefrProgressTitle">Your CEFR Level Progress</h4>
+    @if(isBrowser){
+    <canvas
+      baseChart
+      [data]="cefrLineChartData"
+      [options]="cefrLineChartOptions"
+      [type]="cefrLineChartType"
+    ></canvas>
+    }
+  </div>
+</div>
+<div class="lesson-container card">
+  <h4 class="title" i18n="@@lessonProgressTitle">
+    Lesson Progress for Selected CEFR Level
+  </h4>
+  <div class="dropdown-container">
+    <!-- Dropdown for selecting CEFR Level -->
+    <label for="cefr-level" i18n="@@selectCefrLevelLabel"
+      >Select CEFR Level:</label
+    >
+    <select id="cefr-level" (change)="onSelectCefrLevel($event)">
+      <option value="" i18n="@@selectEmptyOption"></option>
+      @for(cefr of cefrProgress; track cefr.cefr_level){
+      <option [value]="cefr.cefr_level">
+        {{ cefr.cefr_level }}
+      </option>
+      }
+    </select>
+  </div>
+
+  <!-- Message -->
+  <div>
+    @if(successMessage){
+    <app-notice
+      [message]="successMessage"
+      [isError]="false"
+      i18n-aria-label="@@successMessageAriaLabel"
+      aria-label="Success message"
+    ></app-notice>
+    } @if(errorMessage){
+    <app-notice
+      [message]="errorMessage"
+      [isError]="true"
+      i18n-aria-label="@@errorMessageAriaLabel"
+      aria-label="Error message"
+    ></app-notice>
+    }
+  </div>
+  <!-- Display lesson progress if there are lessons available -->
+  @if(lessonProgress.length > 0){
+  <div class="lesson-progress">
+    <canvas
+      baseChart
+      [data]="lessonBarChartData"
+      [options]="lessonBarChartOptions"
+      [type]="lessonBarChartType"
+    ></canvas>
+  </div>
+  }
+</div>

@@ -21,6 +21,9 @@ import { Lesson } from '../../core/models/lesson.model';
 import { NoticeComponent } from '../../shared/components/notice/notice.component';
 import { CefrLessonSelectorComponent } from '../../shared/components/cefr-lesson-selector/cefr-lesson-selector.component';
 import { PaginatorComponent } from '../../shared/components/paginator/paginator.component';
+import { AuthService } from '../../core/services/auth.service';
+import { ProgressService } from '../../core/services/progress.service';
+import { UserProgress } from '../../core/models/user-progress.model';
 
 @Component({
   selector: 'app-exercises',
@@ -55,9 +58,13 @@ export class ExercisesComponent {
   selectedLesson: Lesson | null = null;
   limit = 40;
   offset = 0;
+  userId!: number;
 
   exercises: {
     id: number;
+    word_id: number;
+    cefr_level: string;
+    lesson_id: number;
     question: string;
     options: string[];
     correctOption: string;
@@ -67,6 +74,9 @@ export class ExercisesComponent {
   // This is the array that will store the exercises to show on the current page
   exercisesToShow: {
     id: number;
+    word_id: number;
+    cefr_level: string;
+    lesson_id: number;
     question: string;
     options: string[];
     correctOption: string;
@@ -81,7 +91,9 @@ export class ExercisesComponent {
 
   constructor(
     private lessonService: LessonService,
-    private exerciseService: ExercisesManagementService
+    private exerciseService: ExercisesManagementService,
+    private authService: AuthService,
+    private progressService: ProgressService
   ) {}
 
   ngOnInit() {}
@@ -91,6 +103,8 @@ export class ExercisesComponent {
       .fetchLessonsByLevel(this.selectedCefrLevel, this.limit, this.offset)
       .subscribe({
         next: (response) => {
+          this.exercises = [];
+
           console.log('Received lessons:', response.lessons);
           this.lessons = response.lessons;
 
@@ -146,20 +160,22 @@ export class ExercisesComponent {
         .subscribe({
           next: (response) => {
             if (!response) {
-              this.errorMessage =
-                'No exercise available for the selection at this moment';
+              this.errorMessage = $localize`:@@noExerise:No exercise available for the selection at this moment`;
               setTimeout(() => {
                 this.errorMessage = '';
               }, 3000);
               this.exercises = [];
-              return;
+            } else {
+              this.exercises = response.exercises.map((exercise) => ({
+                id: Number(exercise.id),
+                word_id: exercise.word_id,
+                cefr_level: exercise.cefr_level,
+                lesson_id: exercise.lesson_id,
+                question: exercise.question.split(' ').pop() || '',
+                options: exercise.options,
+                correctOption: exercise.correct_option,
+              }));
             }
-            this.exercises = response.exercises.map((exercise) => ({
-              id: Number(exercise.id),
-              question: exercise.question.split(' ').pop() || '',
-              options: exercise.options,
-              correctOption: exercise.correct_option,
-            }));
 
             // Paginate the exercises
             this.paginateExercises();
@@ -187,8 +203,8 @@ export class ExercisesComponent {
 
     exercise.answerSubmitted = true;
 
-    // Log the status of all exercises
-    this.logExerciseStatus();
+    // Save progress for this specific exercise
+    this.saveExerciseProgress(exercise);
 
     setTimeout(() => {
       exercise.feedbackMessage = '';
@@ -209,8 +225,35 @@ export class ExercisesComponent {
       }
     });
   }
+  saveExerciseProgress(exercise: any): void {
+    if (exercise.answerSubmitted && this.authService.getUserIdFromToken()) {
+      this.userId = Number(this.authService.getUserIdFromToken());
 
-  // Method to paginate the exercises
+      const userProgress: UserProgress = {
+        user_id: this.userId,
+        cefr_level: this.selectedCefrLevel,
+        lesson_id: this.selectedLesson?.id ?? 0,
+        word_id: exercise.word_id,
+        word_score: exercise.isCorrect ? 1 : 0,
+        word_completed: exercise.isCorrect ? true : false,
+        exercise_id: exercise.id,
+        exercise_score: exercise.isCorrect ? 1 : 0,
+        exercise_completed: exercise.isCorrect ? true : false,
+      };
+      console.log('userProgress: ', userProgress);
+
+      this.progressService.saveProgress(userProgress).subscribe({
+        next: (response) => {
+          console.log('Progress saved:', response);
+        },
+        error: (err) => {
+          console.log(err);
+        },
+      });
+    }
+  }
+
+  // Method to paginate
   paginateExercises(): void {
     const start = this.currentPage * this.pageSize;
     const end = start + this.pageSize;

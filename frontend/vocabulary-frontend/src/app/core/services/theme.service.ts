@@ -1,11 +1,13 @@
 import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ThemeService {
   private darkTheme: boolean = false;
+  private themeSubject = new BehaviorSubject<boolean>(this.darkTheme);
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {
     if (isPlatformBrowser(this.platformId)) {
@@ -29,6 +31,7 @@ export class ThemeService {
       this.applyTheme();
       window.localStorage.setItem('savedTheme', 'dark');
       document.cookie = 'theme=dark; path=/';
+      this.themeSubject.next(this.darkTheme);
     }
   }
 
@@ -38,6 +41,7 @@ export class ThemeService {
       this.applyTheme();
       window.localStorage.setItem('savedTheme', 'light');
       document.cookie = 'theme=light; path=/';
+      this.themeSubject.next(this.darkTheme);
     }
   }
 
@@ -49,6 +53,7 @@ export class ThemeService {
         'savedTheme',
         this.darkTheme ? 'dark' : 'light'
       );
+      this.themeSubject.next(this.darkTheme);
     }
   }
 
@@ -68,5 +73,9 @@ export class ThemeService {
 
   isDarkTheme(): boolean {
     return this.darkTheme;
+  }
+
+  getThemeObservable() {
+    return this.themeSubject.asObservable();
   }
 }

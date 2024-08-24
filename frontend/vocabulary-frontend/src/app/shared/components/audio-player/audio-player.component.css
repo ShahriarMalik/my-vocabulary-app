@@ -1,0 +1,41 @@
+.audio-player {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--background-color-lighter);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px var(--shadow-color);
+  border: 1px solid var(--border-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--background-color-lighter);
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px; /* Adjust for the icon size */
+  width: 40px; /* Set a fixed width appropriate for icons */
+  height: 40px; /* Set a fixed height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover {
+  background-color: var(--accent-color);
+}
+
+input[type="range"] {
+  flex-grow: 1;
+  margin: 0 10px;
+  background-color: var(--background-color-darker);
+  color: var(--text-color);
+}
+
+span {
+  font-size: 14px;
+  color: var(--text-color);
+}
