@@ -79,19 +79,17 @@ export class ProgressComponent implements OnInit {
         this.userId = Number(this.authService.getUserIdFromToken());
       }
 
-      setTimeout(() => {
-        this.progressService.getCefrProgress(this.userId).subscribe({
-          next: (response) => {
-            console.log('getCefrProgress: ', response);
-            this.cefrProgress = response.cefr_levels;
-            this.setupCefrLineChart();
-            this.applyThemeToCharts();
-          },
-          error: (error) => {
-            console.error(error);
-          },
-        });
-      }, 0);
+      this.progressService.getCefrProgress(this.userId).subscribe({
+        next: (response) => {
+          console.log('getCefrProgress: ', response);
+          this.cefrProgress = response.cefr_levels;
+          this.setupCefrLineChart();
+          this.applyThemeToCharts();
+        },
+        error: (error) => {
+          console.error(error);
+        },
+      });
 
       // Subscribe to theme changes and update chart options accordingly
       this.themeSubscription = this.themeService

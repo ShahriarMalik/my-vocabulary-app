@@ -1,574 +1,636 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en-US" target-language="de-DE" datatype="plaintext" original="ng2.template">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="2821179408673282599" datatype="html">
-        <source>Home</source>
-        <target>Startseite</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/app.routes.ts</context>
-          <context context-type="linenumber">10</context>
-        </context-group>
-        <note priority="1" from="description">homeTitle</note>  
-      </trans-unit>
-      <trans-unit id="1737753151350322492" datatype="html">
-        <source><x id="PH" equiv-text="title"/></source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/core/strategies/page-title-strategy.ts</context>
-          <context context-type="linenumber">15</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="1466012768716286509" datatype="html">
-        <source>Sign Up</source>
-        <target>Registrieren</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/authentication/auth.routes.ts</context>
-          <context context-type="linenumber">10</context>
-        </context-group>
-        <note priority="1" from="description">signupTitle</note>
-      </trans-unit>
-      <trans-unit id="2454050363478003966" datatype="html">
-        <source>Login</source>
-        <target>Anmelden</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/authentication/auth.routes.ts</context>
-          <context context-type="linenumber">15</context>
-        </context-group>
-        <note priority="1" from="description">loginTitle</note>
-      </trans-unit>
-      <trans-unit id="1527095269431550693" datatype="html">
-        <source>Password Reset</source>
-        <target>Passwort zurücksetzen</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/authentication/auth.routes.ts</context>
-          <context context-type="linenumber">20</context>
-        </context-group>
-        <note priority="1" from="description">passwordResetTitle</note>
-      </trans-unit>
-      <trans-unit id="loginTitle" datatype="html">
-        <source>Login</source>
-        <target>Anmelden</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/authentication/login/login.component.html</context>
-          <context context-type="linenumber">4,5</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="emailLabel" datatype="html">
-        <source>Email</source>
-        <target>E-Mail</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/authentication/login/login.component.html</context>
-          <context context-type="linenumber">19,20</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/authentication/password-reset/password-reset.component.html</context>
-          <context context-type="linenumber">19,20</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
-          <context context-type="linenumber">51,52</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="emailRequired" datatype="html">
-        <source>Email is required.</source>
-        <target>E-Mail ist erforderlich.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/authentication/login/login.component.html</context>
-          <context context-type="linenumber">24,25</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/authentication/password-reset/password-reset.component.html</context>
-          <context context-type="linenumber">24,25</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
-          <context context-type="linenumber">56,57</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="invalidEmail" datatype="html">
-        <source>Invalid email address.</source>
-        <target>Ungültige E-Mail-Adresse.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/authentication/login/login.component.html</context>
-          <context context-type="linenumber">26,28</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/authentication/password-reset/password-reset.component.html</context>
-          <context context-type="linenumber">26,28</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
-          <context context-type="linenumber">58,59</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="passwordLabel" datatype="html">
-        <source>Password</source>
-        <target>Passwort</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/authentication/login/login.component.html</context>
-          <context context-type="linenumber">34,35</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
-          <context context-type="linenumber">68,69</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="passwordRequired" datatype="html">
-        <source>Password is required.</source>
-        <target>Passwort ist erforderlich.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/authentication/login/login.component.html</context>
-          <context context-type="linenumber">44,45</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
-          <context context-type="linenumber">78,79</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="passwordMinLength" datatype="html">
-        <source>Password must be at least 6 characters long.</source>
-        <target>Das Passwort muss mindestens 6 Zeichen lang sein.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/authentication/login/login.component.html</context>
-          <context context-type="linenumber">47,49</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
-          <context context-type="linenumber">81,83</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="loginButton" datatype="html">
-        <source> Login </source>
-        <target> Anmelden </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/authentication/login/login.component.html</context>
-          <context context-type="linenumber">63,64</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">60,62</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">205,207</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="forgotPasswordButton" datatype="html">
-        <source> Forgot Password? </source>
-        <target> Passwort vergessen? </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/authentication/login/login.component.html</context>
-          <context context-type="linenumber">73,75</context>
-        </context-group>
-      </trans-unit>
-       <trans-unit id="7158033106518253277" datatype="html">
-        <source>An unexpected error occurred. Please try again later.</source>
-        <target>Ein unerwarteter Fehler ist aufgetreten. Bitte versuchen Sie es später noch einmal.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/authentication/login/login.component.ts</context>
-          <context context-type="linenumber">64</context>
-        </context-group>
-        <note priority="1" from="description">unexpectedError</note>
-      </trans-unit>
-      <trans-unit id="passwordResetTitle" datatype="html">
-        <source>Password Reset</source>
-        <target>Passwort zurücksetzen</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/authentication/password-reset/password-reset.component.html</context>
-          <context context-type="linenumber">4,6</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="resetPasswordButton" datatype="html">
-        <source> Reset Password </source>
-        <target> Passwort zurücksetzen </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/authentication/password-reset/password-reset.component.html</context>
-          <context context-type="linenumber">40,41</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="signUpTitle" datatype="html">
-        <source>Sign Up</source>
-        <target>Registrieren</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
-          <context context-type="linenumber">4,5</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="usernameLabel" datatype="html">
-        <source>User Name</source>
-        <target>Benutzername</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
-          <context context-type="linenumber">29,30</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="usernameRequired" datatype="html">
-        <source>User Name is required.</source>
-        <target>Benutzername ist erforderlich.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
-          <context context-type="linenumber">39,40</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="usernameMinLength" datatype="html">
-        <source>User Name must be at least 3 characters long.</source>
-        <target>Benutzername muss mindestens 3 Zeichen lang sein.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
-          <context context-type="linenumber">42,44</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="emailExists" datatype="html">
-        <source>Email already exists.</source>
-        <target>E-Mail existiert bereits.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
-          <context context-type="linenumber">60,62</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="signUpButton" datatype="html">
-        <source> Sign Up </source>
-        <target> Registrieren </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
-          <context context-type="linenumber">97,98</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">64,66</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">209,211</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="6899134966533859260" datatype="html">
-        <source>Learn</source>
-        <target>Lernen</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/features.routes.ts</context>
-          <context context-type="linenumber">20</context>
-        </context-group>
-        <note priority="1" from="description">learnTitle</note>
-      </trans-unit>
-      <trans-unit id="6956850829747418160" datatype="html">
-        <source>Learn A1</source>
-        <target>Lernen A1</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/features.routes.ts</context>
-          <context context-type="linenumber">25</context>
-        </context-group>
-        <note priority="1" from="description">learnA1Title</note>
-      </trans-unit>
-      <trans-unit id="3444445563006094628" datatype="html">
-        <source>Learn A2</source>
-        <target>Lernen A2</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/features.routes.ts</context>
-          <context context-type="linenumber">30</context>
-        </context-group>
-        <note priority="1" from="description">learnA2Title</note>
-      </trans-unit>
-      <trans-unit id="817717124019791171" datatype="html">
-        <source>Learn B1</source>
-        <target>Lernen B1</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/features.routes.ts</context>
-          <context context-type="linenumber">35</context>
-        </context-group>
-        <note priority="1" from="description">learnB1Title</note>
-      </trans-unit>
-      <trans-unit id="1926908665342515051" datatype="html">
-        <source>Learn B2</source>
-        <target>Lernen B2</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/features.routes.ts</context>
-          <context context-type="linenumber">40</context>
-        </context-group>
-        <note priority="1" from="description">learnB2Title</note>
-      </trans-unit>
-      <trans-unit id="7096307349180277898" datatype="html">
-        <source>Learn C1</source>
-        <target>Lernen C1</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/features.routes.ts</context>
-          <context context-type="linenumber">45</context>
-        </context-group>
-        <note priority="1" from="description">learnC1Title</note>
-      </trans-unit>
-      <trans-unit id="1319065673635617669" datatype="html">
-        <source>Learn C2</source>
-        <target>Lernen C2</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/features.routes.ts</context>
-          <context context-type="linenumber">50</context>
-        </context-group>
-        <note priority="1" from="description">learnC2Title</note>
-      </trans-unit>
-      <trans-unit id="5815398842801469550" datatype="html">
-        <source>Exercises</source>
-        <target>Übungen</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/features.routes.ts</context>
-          <context context-type="linenumber">58</context>
-        </context-group>
-        <note priority="1" from="description">exercisesTitle</note>
-      </trans-unit>
-      <trans-unit id="141084884839689192" datatype="html">
-        <source>Words Management</source>
-        <target>Wörterverwaltung</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/features.routes.ts</context>
-          <context context-type="linenumber">64</context>
-        </context-group>
-        <note priority="1" from="description">wordsManagementTitle</note>
-      </trans-unit>
-      <trans-unit id="3419681791450150574" datatype="html">
-        <source>Progress</source>
-        <target>Fortschritt</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/features.routes.ts</context>
-          <context context-type="linenumber">70</context>
-        </context-group>
-        <note priority="1" from="description">progressTitle</note>
-      </trans-unit>
-      <trans-unit id="3285315590661482349" datatype="html">
-        <source>Tips</source>
-        <target>Tipps</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/features.routes.ts</context>
-          <context context-type="linenumber">77</context>
-        </context-group>
-        <note priority="1" from="description">tipsTitle</note>
-      </trans-unit>
-      <trans-unit id="menuButton" datatype="html">
-        <source>Menu</source>
-        <target>Menü</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">6</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="appLogo" datatype="html">
-        <source><x id="TAG_IMG" ctype="image" equiv-text="&lt;img
+<trans-unit id="2821179408673282599" datatype="html">
+  <source>Home</source>
+  <target state="translated">Startseite</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/app.routes.ts</context>
+    <context context-type="linenumber">10</context>
+  </context-group>
+  <note priority="1" from="description">2821179408673282599</note>
+</trans-unit>
+
+<trans-unit id="1466012768716286509" datatype="html">
+  <source>Sign Up</source>
+  <target state="translated">Registrieren</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/authentication/auth.routes.ts</context>
+    <context context-type="linenumber">10</context>
+  </context-group>
+  <note priority="1" from="description">1466012768716286509</note>
+</trans-unit>
+
+<trans-unit id="2454050363478003966" datatype="html">
+  <source>Login</source>
+  <target state="translated">Anmelden</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/authentication/auth.routes.ts</context>
+    <context context-type="linenumber">15</context>
+  </context-group>
+  <note priority="1" from="description">2454050363478003966</note>
+</trans-unit>
+
+<trans-unit id="1527095269431550693" datatype="html">
+  <source>Password Reset</source>
+  <target state="translated">Passwort zurücksetzen</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/authentication/auth.routes.ts</context>
+    <context context-type="linenumber">20</context>
+  </context-group>
+  <note priority="1" from="description">1527095269431550693</note>
+</trans-unit>
+
+<trans-unit id="loginTitle" datatype="html">
+  <source>Login</source>
+  <target state="translated">Anmelden</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/authentication/login/login.component.html</context>
+    <context context-type="linenumber">4,5</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="emailLabel" datatype="html">
+  <source>Email</source>
+  <target state="translated">E-Mail</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/authentication/login/login.component.html</context>
+    <context context-type="linenumber">19,20</context>
+  </context-group>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/authentication/password-reset/password-reset.component.html</context>
+    <context context-type="linenumber">19,20</context>
+  </context-group>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
+    <context context-type="linenumber">51,52</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="emailRequired" datatype="html">
+  <source>Email is required.</source>
+  <target state="translated">E-Mail ist erforderlich.</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/authentication/login/login.component.html</context>
+    <context context-type="linenumber">24,25</context>
+  </context-group>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/authentication/password-reset/password-reset.component.html</context>
+    <context context-type="linenumber">24,25</context>
+  </context-group>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
+    <context context-type="linenumber">56,57</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="invalidEmail" datatype="html">
+  <source>Invalid email address.</source>
+  <target state="translated">Ungültige E-Mail-Adresse.</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/authentication/login/login.component.html</context>
+    <context context-type="linenumber">26,28</context>
+  </context-group>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/authentication/password-reset/password-reset.component.html</context>
+    <context context-type="linenumber">26,28</context>
+  </context-group>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
+    <context context-type="linenumber">58,59</context>
+  </context-group>
+</trans-unit>
+
+
+
+<trans-unit id="passwordLabel" datatype="html">
+  <source>Password</source>
+  <target state="translated">Passwort</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/authentication/login/login.component.html</context>
+    <context context-type="linenumber">34,35</context>
+  </context-group>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
+    <context context-type="linenumber">68,69</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="passwordRequired" datatype="html">
+  <source>Password is required.</source>
+  <target state="translated">Passwort ist erforderlich.</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/authentication/login/login.component.html</context>
+    <context context-type="linenumber">44,45</context>
+  </context-group>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
+    <context context-type="linenumber">78,79</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="passwordMinLength" datatype="html">
+  <source>Password must be at least 6 characters long.</source>
+  <target state="translated">Das Passwort muss mindestens 6 Zeichen lang sein.</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/authentication/login/login.component.html</context>
+    <context context-type="linenumber">47,49</context>
+  </context-group>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
+    <context context-type="linenumber">81,83</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="loginButton" datatype="html">
+  <source> Login </source>
+  <target state="translated"> Anmelden </target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/authentication/login/login.component.html</context>
+    <context context-type="linenumber">63,64</context>
+  </context-group>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">60,62</context>
+  </context-group>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">205,207</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="forgotPasswordButton" datatype="html">
+  <source> Forgot Password? </source>
+  <target state="translated"> Passwort vergessen? </target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/authentication/login/login.component.html</context>
+    <context context-type="linenumber">73,75</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="7158033106518253277" datatype="html">
+  <source>An unexpected error occurred. Please try again later.</source>
+  <target state="translated">Ein unerwarteter Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/authentication/login/login.component.ts</context>
+    <context context-type="linenumber">64</context>
+  </context-group>
+  <note priority="1" from="description">unexpectedError</note>
+</trans-unit>
+
+<trans-unit id="passwordResetTitle" datatype="html">
+  <source>Password Reset</source>
+  <target state="translated">Passwort zurücksetzen</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/authentication/password-reset/password-reset.component.html</context>
+    <context context-type="linenumber">4,6</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="resetPasswordButton" datatype="html">
+  <source> Reset Password </source>
+  <target state="translated"> Passwort zurücksetzen </target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/authentication/password-reset/password-reset.component.html</context>
+    <context context-type="linenumber">40,41</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="signUpTitle" datatype="html">
+  <source>Sign Up</source>
+  <target state="translated">Registrieren</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
+    <context context-type="linenumber">4,5</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="usernameLabel" datatype="html">
+  <source>User Name</source>
+  <target state="translated">Benutzername</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
+    <context context-type="linenumber">29,30</context>
+  </context-group>
+</trans-unit>
+
+
+
+
+<trans-unit id="usernameRequired" datatype="html">
+  <source>User Name is required.</source>
+  <target state="translated">Benutzername ist erforderlich.</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
+    <context context-type="linenumber">39,40</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="usernameMinLength" datatype="html">
+  <source>User Name must be at least 3 characters long.</source>
+  <target state="translated">Benutzername muss mindestens 3 Zeichen lang sein.</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
+    <context context-type="linenumber">42,44</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="emailExists" datatype="html">
+  <source>Email already exists.</source>
+  <target state="translated">E-Mail existiert bereits.</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
+    <context context-type="linenumber">60,62</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="signUpButton" datatype="html">
+  <source> Sign Up </source>
+  <target state="translated"> Registrieren </target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
+    <context context-type="linenumber">97,98</context>
+  </context-group>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">64,66</context>
+  </context-group>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">209,211</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="6899134966533859260" datatype="html">
+  <source>Learn</source>
+  <target state="translated">Lernen</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/features.routes.ts</context>
+    <context context-type="linenumber">20</context>
+  </context-group>
+  <note priority="1" from="description">6899134966533859260</note>
+</trans-unit>
+
+<trans-unit id="6956850829747418160" datatype="html">
+  <source>Learn A1</source>
+  <target state="translated">Lernen A1</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/features.routes.ts</context>
+    <context context-type="linenumber">25</context>
+  </context-group>
+  <note priority="1" from="description">6956850829747418160</note>
+</trans-unit>
+
+<trans-unit id="3444445563006094628" datatype="html">
+  <source>Learn A2</source>
+  <target state="translated">Lernen A2</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/features.routes.ts</context>
+    <context context-type="linenumber">30</context>
+  </context-group>
+  <note priority="1" from="description">3444445563006094628</note>
+</trans-unit>
+
+<trans-unit id="817717124019791171" datatype="html">
+  <source>Learn B1</source>
+  <target state="translated">Lernen B1</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/features.routes.ts</context>
+    <context context-type="linenumber">35</context>
+  </context-group>
+  <note priority="1" from="description">817717124019791171</note>
+</trans-unit>
+
+<trans-unit id="1926908665342515051" datatype="html">
+  <source>Learn B2</source>
+  <target state="translated">Lernen B2</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/features.routes.ts</context>
+    <context context-type="linenumber">40</context>
+  </context-group>
+  <note priority="1" from="description">1926908665342515051</note>
+</trans-unit>
+
+<trans-unit id="7096307349180277898" datatype="html">
+  <source>Learn C1</source>
+  <target state="translated">Lernen C1</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/features.routes.ts</context>
+    <context context-type="linenumber">45</context>
+  </context-group>
+  <note priority="1" from="description">7096307349180277898</note>
+</trans-unit>
+
+<trans-unit id="1319065673635617669" datatype="html">
+  <source>Learn C2</source>
+  <target state="translated">Lernen C2</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/features.routes.ts</context>
+    <context context-type="linenumber">50</context>
+  </context-group>
+  <note priority="1" from="description">1319065673635617669</note>
+</trans-unit>
+
+<trans-unit id="5815398842801469550" datatype="html">
+  <source>Exercises</source>
+  <target state="translated">Übungen</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/features.routes.ts</context>
+    <context context-type="linenumber">58</context>
+  </context-group>
+  <note priority="1" from="description">5815398842801469550</note>
+</trans-unit>
+
+<trans-unit id="141084884839689192" datatype="html">
+  <source>Words Management</source>
+  <target state="translated">Wörterverwaltung</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/features.routes.ts</context>
+    <context context-type="linenumber">64</context>
+  </context-group>
+  <note priority="1" from="description">141084884839689192</note>
+</trans-unit>
+
+<trans-unit id="3419681791450150574" datatype="html">
+  <source>Progress</source>
+  <target state="translated">Fortschritt</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/features.routes.ts</context>
+    <context context-type="linenumber">70</context>
+  </context-group>
+  <note priority="1" from="description">3419681791450150574</note>
+</trans-unit>
+
+
+
+<trans-unit id="3285315590661482349" datatype="html">
+  <source>Tips</source>
+  <target state="translated">Tipps</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/features/features.routes.ts</context>
+    <context context-type="linenumber">77</context>
+  </context-group>
+  <note priority="1" from="description">3285315590661482349</note>
+</trans-unit>
+
+<trans-unit id="menuButton" datatype="html">
+  <source>Menu</source>
+  <target state="translated">Menü</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">6</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="appLogo" datatype="html">
+  <source><x id="TAG_IMG" ctype="image" equiv-text="&lt;img
       src=&quot;assets/images/logo.png&quot;
       alt=&quot;Logo&quot;
       width=&quot;40&quot;
       height=&quot;40&quot;
       i18n-alt=&quot;@@logoAlt&quot;
     /&gt;"/></source>
-        <target><x id="TAG_IMG" ctype="image" equiv-text="&lt;img
+  <target state="translated"><x id="TAG_IMG" ctype="image" equiv-text="&lt;img
       src=&quot;assets/images/logo.png&quot;
       alt=&quot;Logo&quot;
       width=&quot;40&quot;
       height=&quot;40&quot;
       i18n-alt=&quot;@@logoAlt&quot;
     /&gt;"/></target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">15,21</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="logoAlt" datatype="html">
-        <source>Logo</source>
-        <target>Logo</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">17,18</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="learnButton" datatype="html">
-        <source> Learn </source>
-        <target> Lernen </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">30,32</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">81,83</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="exercisesButton" datatype="html">
-        <source> Exercises </source>
-        <target> Übungen </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">37,39</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">105,107</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="tipsButton" datatype="html">
-        <source> Tips </source>
-        <target> Tipps </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">40,42</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">107,109</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="myProgressButton" datatype="html">
-        <source> My Progress </source>
-        <target> Mein Fortschritt </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">48,50</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">111,113</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="wordsManagementButton" datatype="html">
-        <source> Words Management </source>
-        <target> Wörterverwaltung </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">56,58</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">119,123</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="logoutButton" datatype="html">
-        <source> Logout </source>
-        <target> Abmelden </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">68,70</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">212,214</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="a1Button" datatype="html">
-        <source> A1 </source>
-        <target> A1 </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">85,87</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="a2Button" datatype="html">
-        <source> A2 </source>
-        <target> A2 </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">88,90</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="b1Button" datatype="html">
-        <source> B1 </source>
-        <target> B1 </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">91,93</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="b2Button" datatype="html">
-        <source> B2 </source>
-        <target> B2 </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">94,96</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="c1Button" datatype="html">
-        <source> C1 </source>
-        <target> C1 </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">97,99</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="c2Button" datatype="html">
-        <source> C2 </source>
-        <target> C2 </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">100,102</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="searchButton" datatype="html">
-        <source>search</source>
-        <target>suchen</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">126</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="englishFlagAlt" datatype="html">
-        <source>English Flag</source>
-        <target>Englische Flagge</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">136,138</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">160,162</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="germanFlagAlt" datatype="html">
-        <source>German Flag</source>
-        <target>Deutsche Flagge</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">144,146</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">172,174</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="languageEN" datatype="html">
-        <source>EN</source>
-        <target>EN</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">165,167</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="languageDE" datatype="html">
-        <source>DE</source>
-        <target>DE</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">177,179</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="toggleThemeButton" datatype="html">
-        <source>Toggle Theme</source>
-        <target>Thema wechseln</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">186,187</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="darkMode" datatype="html">
-        <source>Dark</source>
-        <target>Dunkel</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">195,196</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="lightMode" datatype="html">
-        <source>Light</source>
-        <target>Hell</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">199,201</context>
-        </context-group>
-      </trans-unit>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">15,21</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="logoAlt" datatype="html">
+  <source>Logo</source>
+  <target state="translated">Logo</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">17,18</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="learnButton" datatype="html">
+  <source> Learn </source>
+  <target state="translated"> Lernen </target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">30,32</context>
+  </context-group>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">81,83</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="exercisesButton" datatype="html">
+  <source> Exercises </source>
+  <target state="translated"> Übungen </target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">37,39</context>
+  </context-group>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">105,107</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="tipsButton" datatype="html">
+  <source> Tips </source>
+  <target state="translated"> Tipps </target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">40,42</context>
+  </context-group>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">107,109</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="myProgressButton" datatype="html">
+  <source> My Progress </source>
+  <target state="translated"> Mein Fortschritt </target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">48,50</context>
+  </context-group>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">111,113</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="wordsManagementButton" datatype="html">
+  <source> Words Management </source>
+  <target state="translated"> Wörterverwaltung </target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">56,58</context>
+  </context-group>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">119,123</context>
+  </context-group>
+</trans-unit>
+
+
+
+
+<trans-unit id="logoutButton" datatype="html">
+  <source> Logout </source>
+  <target state="translated"> Abmelden </target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">68,70</context>
+  </context-group>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">212,214</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="a1Button" datatype="html">
+  <source> A1 </source>
+  <target state="translated"> A1 </target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">85,87</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="a2Button" datatype="html">
+  <source> A2 </source>
+  <target state="translated"> A2 </target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">88,90</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="b1Button" datatype="html">
+  <source> B1 </source>
+  <target state="translated"> B1 </target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">91,93</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="b2Button" datatype="html">
+  <source> B2 </source>
+  <target state="translated"> B2 </target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">94,96</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="c1Button" datatype="html">
+  <source> C1 </source>
+  <target state="translated"> C1 </target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">97,99</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="c2Button" datatype="html">
+  <source> C2 </source>
+  <target state="translated"> C2 </target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">100,102</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="searchButton" datatype="html">
+  <source>search</source>
+  <target state="translated">Suche</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">126</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="englishFlagAlt" datatype="html">
+  <source>English Flag</source>
+  <target state="translated">Englische Flagge</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">136,138</context>
+  </context-group>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">160,162</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="germanFlagAlt" datatype="html">
+  <source>German Flag</source>
+  <target state="translated">Deutsche Flagge</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">144,146</context>
+  </context-group>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">172,174</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="languageEN" datatype="html">
+  <source>EN</source>
+  <target state="translated">EN</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">165,167</context>
+  </context-group>
+</trans-unit>
+
+
+
+
+<trans-unit id="languageDE" datatype="html">
+  <source>DE</source>
+  <target state="translated">DE</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">177,179</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="toggleThemeButton" datatype="html">
+  <source>Toggle Theme</source>
+  <target state="translated">Thema umschalten</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">186,187</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="darkMode" datatype="html">
+  <source>Dark</source>
+  <target state="translated">Dunkel</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">195,196</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="lightMode" datatype="html">
+  <source>Light</source>
+  <target state="translated">Hell</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+    <context context-type="linenumber">199,201</context>
+  </context-group>
+</trans-unit>
+
     </body>
   </file>
 </xliff>
