@@ -1,5 +1,9 @@
 <?php
-header("Access-Control-Allow-Origin: http://localhost:4200");
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
 // Handle preflight (OPTIONS) request
@@ -7,19 +11,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     http_response_code(200);
     exit();
 }
-require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 use Shahr\Backend\Config\Database;
 
 // Load environment variables
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
 // Initialize routes array
 $routes = [];
 
 // Include route definitions
-require '../app/Routes/web.php';
+require __DIR__ . '/app/Routes/web.php';
 
 // Helper function to send a JSON response
 function sendJsonResponse($data, $statusCode = 200): void {

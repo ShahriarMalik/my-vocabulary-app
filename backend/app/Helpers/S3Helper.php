@@ -51,4 +51,26 @@ class S3Helper {
             return null;
         }
     }
+
+    /**
+     * Upload content directly to S3.
+     *
+     * @param string $content
+     * @param string $fileName
+     * @return string|null
+     */
+    public function uploadFileFromContent(string $content, string $fileName): ?string {
+        $keyName = 'audio/' . $fileName;
+        try {
+            $result = $this->s3Client->putObject([
+                'Bucket' => $this->bucketName,
+                'Key'    => $keyName,
+                'Body'   => $content,
+            ]);
+            return $result['ObjectURL'];
+        } catch (AwsException $e) {
+            echo $e->getMessage() . "\n";
+            return null;
+        }
+    }
 }

@@ -53,7 +53,7 @@ class WordDataHelper {
             curl_close($ch);
 
             // Log the response for debugging
-            file_put_contents(__DIR__ . '/../../public/fetchTranslations_debug.txt', 'Response: ' . $response);
+            // file_put_contents(__DIR__ . '/../../public/fetchTranslations_debug.txt', 'Response: ' . $response);
 
             $result = json_decode($response, true);
 
@@ -65,7 +65,7 @@ class WordDataHelper {
 
             return [];
         } catch (\Exception $e) {
-            file_put_contents(__DIR__ . '/../../public/fetchTranslations_debug.txt', 'Error: ' . $e->getMessage());
+           // file_put_contents(__DIR__ . '/../../fetchTranslations_debug.txt', 'Error: ' . $e->getMessage());
             return [];
         }
     }
@@ -79,37 +79,37 @@ class WordDataHelper {
     public static function fetchEmoji(string $word): string {
         try {
             $url = "https://emoji-api.com/emojis?search=" . urlencode($word) . "&access_key=" . $_ENV['EMOJI_API_KEY'];
-
-            $options = [
-                CURLOPT_URL => $url,
-                CURLOPT_RETURNTRANSFER => true,
-                CURLOPT_HTTPHEADER => [
-                    'Content-Type: application/json'
-                ],
-            ];
-
-            $ch = curl_init();
-            curl_setopt_array($ch, $options);
-
-            $response = curl_exec($ch);
-
-            if (curl_errno($ch)) {
-                $error_msg = curl_error($ch);
-                curl_close($ch);
-                throw new \Exception("cURL error: $error_msg");
-            }
-
-            curl_close($ch);
-
-            $result = json_decode($response, true);
-
-            if (isset($result[0]['character'])) {
-                return $result[0]['character'];
-            }
-
+//
+//            $options = [
+//                CURLOPT_URL => $url,
+//                CURLOPT_RETURNTRANSFER => true,
+//                CURLOPT_HTTPHEADER => [
+//                    'Content-Type: application/json'
+//                ],
+//            ];
+//
+//            $ch = curl_init();
+//            curl_setopt_array($ch, $options);
+//
+//            $response = curl_exec($ch);
+//
+//            if (curl_errno($ch)) {
+//                $error_msg = curl_error($ch);
+//                curl_close($ch);
+//                throw new \Exception("cURL error: $error_msg");
+//            }
+//
+//            curl_close($ch);
+//
+//            $result = json_decode($response, true);
+//
+//            if (isset($result[0]['character'])) {
+//                return $result[0]['character'];
+//            }
+//
             return "";
         } catch (\Exception $e) {
-            file_put_contents(__DIR__ . '/../../public/fetchEmoji_debug.txt', 'Error: ' . $e->getMessage());
+            file_put_contents(__DIR__ . '/../../fetchEmoji_debug.txt', 'Error: ' . $e->getMessage());
             return "";
         }
     }
@@ -122,32 +122,36 @@ class WordDataHelper {
      */
     public static function fetchPronunciationUrl(string $word): ?string {
         try {
-            putenv('GOOGLE_APPLICATION_CREDENTIALS=D:\Expert\my-vocabulary-app\backend\fluent-justice-431711-m6-a1aefe34f6ad.json');
+            // Set the path to the Google Cloud credentials file in the root folder
+            putenv('GOOGLE_APPLICATION_CREDENTIALS=' . __DIR__ . '/../../fluent-justice-431711-m6-a1aefe34f6ad.json');
 
+            // Initialize the TextToSpeechClient
             $client = new TextToSpeechClient();
             $input = new SynthesisInput();
             $input->setText($word);
 
+            // Set voice parameters
             $voice = new VoiceSelectionParams();
             $voice->setLanguageCode('de-DE');
             $voice->setSsmlGender(SsmlVoiceGender::NEUTRAL);
 
+            // Configure audio output format
             $audioConfig = new AudioConfig();
             $audioConfig->setAudioEncoding(AudioEncoding::MP3);
 
+            // Generate the speech synthesis response
             $response = $client->synthesizeSpeech($input, $voice, $audioConfig);
 
-            $filePath = __DIR__ . '/../../public/audio/' . $word . '.mp3';
-            file_put_contents($filePath, $response->getAudioContent());
-
-            // Upload to S3
+            // Upload audio content directly to S3 without saving locally
             $s3Helper = new S3Helper();
-            $s3Url = $s3Helper->uploadFile($filePath, $word . '.mp3');
+            $s3Url = $s3Helper->uploadFileFromContent($response->getAudioContent(), $word . '.mp3');
 
             return $s3Url;
         } catch (\Exception $e) {
-            file_put_contents(__DIR__ . '/../../public/fetchPronunciationUrl_debug.txt', 'Error: ' . $e->getMessage());
+            // Log any errors that occur
+            // file_put_contents(__DIR__ . '/../../public/fetchPronunciationUrl_debug.txt', 'Error: ' . $e->getMessage());
             return null;
         }
     }
+
 }
