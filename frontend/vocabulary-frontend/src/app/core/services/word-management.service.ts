@@ -1,3 +1,8 @@
+/**
+ * WordManagementService handles fetching and saving word data,
+ * as well as retrieving words and its related information by CEFR level and lesson number.
+ */
+
 import { Injectable } from '@angular/core';
 import { environment } from '../../../base-url.dev';
 import { HttpClient } from '@angular/common/http';

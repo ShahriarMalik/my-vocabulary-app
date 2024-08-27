@@ -67,8 +67,7 @@ export class PasswordResetComponent implements OnInit, AfterViewInit {
             this.message = response.message;
           },
           error: () => {
-            this.message =
-              'An unexpected error occurred. Please try again later.';
+            this.message = $localize`:@@7158033106518253277:An unexpected error occurred. Please try again later.`;
           },
         });
 

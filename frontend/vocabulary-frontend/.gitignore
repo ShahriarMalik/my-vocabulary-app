@@ -43,3 +43,4 @@ Thumbs.db
 
 # Base URL
 src/base-url.prod.ts
+src/base-url.dev.ts

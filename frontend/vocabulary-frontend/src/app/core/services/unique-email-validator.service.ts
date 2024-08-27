@@ -1,3 +1,7 @@
+/**
+ * UniqueEmailValidatorService is an asynchronous validator that checks if an email is already taken.
+ * It uses AuthService to verify the email and returns a validation error if the email is not unique.
+ */
 import { Injectable } from '@angular/core';
 import {
   AbstractControl,

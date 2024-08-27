@@ -1,3 +1,11 @@
+/**
+ * ThemeService handles the application's theme (light or dark) based on user preference.
+ *
+ * - On initialization, it loads the saved theme from localStorage or defaults to the light theme.
+ * - Provides methods to toggle between light and dark themes, persist the user's preference,
+ *   and apply the appropriate theme classes to the document body.
+ * - Exposes an observable for components to subscribe to theme changes.
+ */
 import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { BehaviorSubject } from 'rxjs';

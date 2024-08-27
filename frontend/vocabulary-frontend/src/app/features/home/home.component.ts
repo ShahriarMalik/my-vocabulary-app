@@ -11,10 +11,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { MatToolbarModule } from '@angular/material/toolbar'; // If you need a toolbar
-import { MatSidenavModule } from '@angular/material/sidenav'; // If you're using sidenav
-import { MatListModule } from '@angular/material/list'; // If you're using list items
-import { CommonModule } from '@angular/common'; // Import this for ngIf and other common directives
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { CommonModule } from '@angular/common';
 import { NoticeComponent } from '../../shared/components/notice/notice.component';
 
 @Component({

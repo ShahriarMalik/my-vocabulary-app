@@ -14,8 +14,8 @@ class UserProgress {
     public ?int $exercise_id = null;
     public int $exercise_score = 0;
     public bool $exercise_completed = false;
-    public bool $lesson_completed = false; // New property
-    public bool $cefr_level_completed = false; // New property
+    public bool $lesson_completed = false;
+    public bool $cefr_level_completed = false;
     public string $created_at;
 
     private static UserProgressGatewayInterface $gateway;

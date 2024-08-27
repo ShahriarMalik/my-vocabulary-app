@@ -1,5 +1,9 @@
+/**
+ * ProgressService handles the saving, updating, and fetching of user progress data
+ * related to CEFR levels and lessons from the server.
+ */
 import { Injectable } from '@angular/core';
-import { environment } from '../../../base-url.dev'; // Adjust based on your environment setup
+import { environment } from '../../../base-url.dev';
 import { HttpClient } from '@angular/common/http';
 import { map, Observable } from 'rxjs';
 import { UserProgress } from '../models/user-progress.model';

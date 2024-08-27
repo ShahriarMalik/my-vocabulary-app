@@ -1,9 +1,9 @@
 .sidenav-container {
-  min-height: calc(100vh - 56px); /* Adjust for the footer height */
+  min-height: calc(100vh - 56px); /* For the footer height */
   display: flex;
   flex-direction: column;
-  background-color: var(--background-color); /* Apply background color */
-  color: var(--text-color); /* Apply text color */
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 .content {

@@ -29,8 +29,8 @@ export class LearnComponent implements OnInit {
   selectedCefrLevel: string = '';
   limit = 40;
   offset = 0;
-  allWords: any[] = []; // Store all words here
-  paginatedWords: any[] = []; // Store the paginated words here
+  allWords: any[] = []; // Store all words
+  paginatedWords: any[] = []; // Store the paginated words
   currentPage = 0;
   pageSize = 4;
 
@@ -74,12 +74,11 @@ export class LearnComponent implements OnInit {
             this.allWords = [];
             this.paginatedWords = [];
 
-            this.errorMessage =
-              'No lessons available for the selected CEFR level';
+            this.errorMessage = $localize`:@@noLessonCEFR:No lessons available for the selected CEFR level`;
           }
         },
         error: (err) => {
-          this.errorMessage = 'Something went wrong. Please try again later.';
+          this.errorMessage = $localize`:@@wentWrong:Something went wrong. Please try again later.`;
         },
       });
 
@@ -138,7 +137,7 @@ export class LearnComponent implements OnInit {
 
   onPageSizeChange(size: number): void {
     this.pageSize = size;
-    this.currentPage = 0; // Reset to first page when page size changes
-    this.paginateWords(); // Update paginatedWords when page size changes
+    this.currentPage = 0;
+    this.paginateWords();
   }
 }

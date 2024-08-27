@@ -16,9 +16,9 @@ button {
   padding: 8px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px; /* Adjust for the icon size */
-  width: 40px; /* Set a fixed width appropriate for icons */
-  height: 40px; /* Set a fixed height */
+  font-size: 16px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;

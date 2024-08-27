@@ -1,11 +1,8 @@
 import { Routes } from '@angular/router';
 import { LearnComponent } from './learn/learn.component';
 import { ExercisesComponent } from './exercises/exercises.component';
-import { WordsManagementComponent } from './admin/words-management/words-management.component';
-import { ProgressComponent } from './progress/progress.component';
 import { authRoutes } from './authentication/auth.routes';
 import { adminGuard } from '../core/guards/admin.guard';
-import { ExerciseManagementComponent } from './admin/exercises-management/exercises-management.component';
 import { loginGuard } from '../core/guards/login.guard';
 
 export const featuresRoutes: Routes = [

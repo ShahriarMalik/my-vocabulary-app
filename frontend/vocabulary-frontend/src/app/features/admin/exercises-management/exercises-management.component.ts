@@ -159,7 +159,7 @@ export class ExerciseManagementComponent implements OnInit {
         console.warn('Error fetching data:', err);
       },
     });
-    this.cdr.detectChanges();
+    this.cdr.detectChanges(); // Ensure the view is updated
 
     // Clear success and error messages after a delay
     setTimeout(() => {
@@ -200,7 +200,6 @@ export class ExerciseManagementComponent implements OnInit {
         },
       });
     } else {
-      // Add logic
       this.exerciseService.create(exerciseData).subscribe({
         next: (response) => {
           row.isUpdate = !!response.exercise.id;
