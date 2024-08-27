@@ -1,0 +1,199 @@
+.cefr-lesson-selector {
+  padding: 1rem;
+  background-color: var(--background-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.3125rem var(--shadow-color);
+  color: var(--text-color);
+  text-align: left;
+  width: 100%;
+  max-width: 38rem;
+  margin: 0 auto;
+}
+
+.cefr-selectors {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cefr-lesson-selector label {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary-color);
+}
+
+.cefr-lesson-selector select {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.3125rem;
+  border: 0.0625rem solid var(--border-color);
+  background-color: var(--background-color-lighter);
+  color: var(--text-color);
+  transition: border-color 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.cefr-selectors select {
+  flex: 1;
+  min-width: 45%;
+}
+
+.cefr-lesson-selector select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.cefr-lesson-selector option {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  min-width: 14rem;
+}
+
+.notice-container {
+  margin-top: 1rem;
+}
+
+.exercise-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--background-color-lighter);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.3125rem var(--shadow-color);
+}
+
+.exercise-card {
+  position: relative;
+  padding: 1rem;
+  background-color: var(--background-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.0625rem 0.1875rem var(--shadow-color);
+  transition: transform 0.2s ease-in-out;
+}
+
+.exercise-question {
+  font-size: 1rem !important;
+  color: var(--text-color);
+}
+
+.options-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.625rem 0;
+}
+
+input[type="radio"] {
+  accent-color: var(--primary-color);
+}
+
+.submit-button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: var(--accent-color);
+}
+
+.feedback-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(20px);
+  z-index: 1;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  width: 90%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.feedback-message.show {
+  opacity: 1; /* Fade in */
+  transform: translate(-50%, -50%) translateY(0); /* Slide up to the center */
+}
+
+.correct {
+  background-color: var(--success-background-color);
+  color: var(--success-text-color);
+}
+
+.incorrect {
+  background-color: var(--error-background-color);
+  color: var(--error-text-color);
+}
+
+.correct-option {
+  background-color: var(--success-background-color);
+  color: var(--success-text-color);
+  border: 2px solid var(--success-border-color);
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+}
+
+.incorrect-option {
+  background-color: var(--error-background-color);
+  color: var(--error-text-color);
+  border: 2px solid var(--error-border-color);
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+}
+
+/* For small screens (portrait phones) */
+@media (max-width: 30rem) {
+  .cefr-lesson-selector {
+    max-width: 22rem;
+    margin: 0 auto;
+  }
+  .exercise-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* For medium screens (tablets and smaller laptops) */
+@media (min-width: 30.0625rem) and (max-width: 48rem) {
+  .cefr-lesson-selector {
+    max-width: 23rem;
+    margin: 0 auto;
+  }
+  .cefr-lesson-selector {
+    padding: 0rem;
+    margin: 0;
+  }
+  .exercise-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* For large screens (desktops and larger tablets) */
+@media (min-width: 48.0625rem) and (max-width: 64rem) {
+  .exercise-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* For extra large screens (large desktops) */
+@media (min-width: 64.0625rem) {
+  .exercise-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

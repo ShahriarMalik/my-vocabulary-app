@@ -1,0 +1,14 @@
+Request URL: https://emoji-api.com/emojis?search=Alarm&access_key=246c2926d5f89214562432f3c9089972efa07fd3
+Response: Array
+(
+    [0] => Array
+        (
+            [slug] => e0-6-alarm-clock
+            [character] => ⏰
+            [unicodeName] => E0.6 alarm clock
+            [codePoint] => 23F0
+            [group] => travel-places
+            [subGroup] => time
+        )
+
+)

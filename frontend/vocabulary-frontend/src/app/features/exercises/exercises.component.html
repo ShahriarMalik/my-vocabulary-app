@@ -1,0 +1,140 @@
+<div class="cefr-lesson-selector">
+  <!-- CEFR LEVEL and Lesson Dropdowns -->
+  <div class="cefr-selectors">
+    <!-- CEFR LEVEL Dropdown -->
+    <div>
+      <label for="cefrLevel" i18n="@@cefrLevelLabel">Select CEFR Level:</label>
+      <select
+        id="cefrLevel"
+        (change)="onCefrLevelSelect($event)"
+        [value]="selectedCefrLevel"
+        i18n-aria-label="@@cefrLevelAriaLabel"
+        aria-label="Select CEFR Level"
+      >
+        @for(level of cefrLevels; track $index){
+        <option [value]="level">{{ level }}</option>
+        }
+      </select>
+    </div>
+
+    <!-- Lessons Dropdown -->
+    <div>
+      <label for="lesson" i18n="@@lessonLabel">Select Lesson:</label>
+      <select
+        id="lesson"
+        (change)="onLessonSelect($event)"
+        [disabled]="lessons.length === 0"
+        i18n-aria-label="@@lessonAriaLabel"
+        aria-label="Select Lesson"
+      >
+        @if(lessons.length === 0){
+        <option value="0"></option>
+        } @for(lesson of lessons; track lesson.lesson_number){
+        <option [value]="lesson.lesson_number">
+          <span i18n="@@lessonNumber">Lesson</span>
+          {{ lesson.lesson_number }}
+        </option>
+        }
+      </select>
+    </div>
+  </div>
+
+  <!-- Message -->
+  <div class="notice-container">
+    @if(errorMessage || successMessage){
+    <app-notice
+      [message]="errorMessage"
+      [isError]="true"
+      i18n-aria-label="@@errorMessageAriaLabel"
+      aria-label="Error message"
+    ></app-notice>
+    <app-notice
+      [message]="successMessage"
+      [isError]="false"
+      i18n-aria-label="@@successMessageAriaLabel"
+      aria-label="Success message"
+    ></app-notice>
+    }
+  </div>
+</div>
+
+@if(exercisesToShow.length > 0){
+<div class="exercise-container">
+  @for(exercise of exercisesToShow; track exercise.correctOption){
+  <div
+    class="exercise-card"
+    [style.backgroundColor]="
+      exercise.isCorrect === undefined
+        ? 'inherit'
+        : exercise.isCorrect
+        ? 'var(--success-background-color)'
+        : 'var(--error-background-color)'
+    "
+  >
+    <h5 class="exercise-question">
+      <span i18n="@@questionPrefix">What is the meaning of </span>
+      <em>{{ exercise.question }}</em
+      ><span i18n="@@questionSuffix"> ?</span>
+    </h5>
+    <form class="options-form">
+      @for(option of exercise.options; track $index){
+      <div
+        class="option"
+        [class]="{
+          'correct-option':
+            exercise.answerSubmitted && option === exercise.correctOption,
+          'incorrect-option':
+            exercise.answerSubmitted &&
+            option === exercise.selectedOption &&
+            option !== exercise.correctOption
+        }"
+      >
+        <input
+          type="radio"
+          name="{{ exercise.question }}"
+          id="{{ option }}-{{ $index }}"
+          value="{{ option }}"
+          (change)="onOptionSelect($event, exercise)"
+          i18n-aria-label="@@optionAriaLabel"
+          [attr.aria-label]="'Option ' + option"
+          [disabled]="exercise.answerSubmitted"
+        />
+        <label for="{{ option }}-{{ $index }}">{{ option }}</label>
+      </div>
+      }
+    </form>
+    <button
+      class="submit-button"
+      (click)="submitAnswer(exercise)"
+      i18n="@@submitButton"
+      aria-label="Submit Answer"
+      [disabled]="exercise.answerSubmitted"
+      [style.cursor]="exercise.answerSubmitted ? 'not-allowed' : 'pointer'"
+    >
+      Submit Answer
+    </button>
+    <!-- Feedback message, positioned absolutely -->
+    @if(exercise.feedbackMessage){
+    <div
+      class="feedback-message"
+      [class.show]="exercise.feedbackMessage"
+      [class]="exercise.isCorrect ? 'correct' : 'incorrect'"
+    >
+      {{ exercise.feedbackMessage }}
+    </div>
+    }
+  </div>
+  }
+</div>
+
+<app-paginator
+  [length]="exercises.length"
+  [pageSize]="pageSize"
+  [currentPage]="currentPage"
+  [pageSizeOptions]="[4, 8, 12, 16, 20]"
+  (pageChange)="onPageChange($event)"
+  (pageSizeChange)="onPageSizeChange($event)"
+  i18n-aria-label="@@paginatorAriaLabel"
+  aria-label="Pagination control"
+></app-paginator>
+}

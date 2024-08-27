@@ -1,0 +1,9 @@
+<div
+  [style.opacity]="message ? 1 : 0"
+  [style.height]="message ? 'auto' : '0px'"
+  [style.overflow]="message ? 'visible' : 'hidden'"
+  [class]="{ error: isError, success: !isError }"
+  class="message"
+>
+  {{ message }}
+</div>

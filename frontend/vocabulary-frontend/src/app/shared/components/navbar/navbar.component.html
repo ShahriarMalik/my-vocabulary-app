@@ -1,0 +1,329 @@
+<mat-toolbar color="primary">
+  <!-- Mobile Menu Icon -->
+  <button
+    mat-icon-button
+    aria-label="Menu"
+    i18n-aria-label="@@menuButton"
+    class="menu-button"
+    [matMenuTriggerFor]="mobileMenu"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <span class="logo" i18n="@@appLogo">
+    <img
+      src="assets/images/logo.png"
+      mat-icon-button
+      alt="Logo"
+      width="40"
+      height="40"
+      i18n-alt="@@logoAlt"
+      routerLinkActive="router-link-active"
+      [routerLink]="['/']"
+    />
+  </span>
+
+  <mat-menu #mobileMenu="matMenu">
+    <button
+      mat-menu-item
+      i18n="@@learnButton"
+      [routerLink]="['/learn']"
+      routerLinkActive="router-link-active"
+    >
+      Learn
+    </button>
+
+    <button
+      mat-menu-item
+      i18n="@@exercisesButton"
+      routerLinkActive="router-link-active"
+      [routerLink]="['/exercises']"
+    >
+      Exercises
+    </button>
+    <button
+      mat-menu-item
+      i18n="@@tipsButton"
+      [routerLink]="['/tips']"
+      routerLinkActive="router-link-active"
+    >
+      Tips
+    </button>
+    @if (isLoggedIn) {
+    <button
+      mat-menu-item
+      i18n="@@myProgressButton"
+      [routerLink]="['/progress']"
+      routerLinkActive="router-link-active"
+    >
+      My Progress</button
+    >} @if(currentUserRole === 'admin'){
+    <button
+      mat-menu-item
+      [matMenuTriggerFor]="managementMenuMobile"
+      i18n="@@adminButton"
+    >
+      Admin
+    </button>
+    <mat-menu #managementMenuMobile="matMenu">
+      <button
+        mat-menu-item
+        [routerLink]="['/words-management']"
+        routerLinkActive="router-link-active"
+        i18n="@@wordsManagementButton"
+      >
+        Words Management
+      </button>
+      <button
+        mat-menu-item
+        routerLinkActive="router-link-active"
+        i18n="@@exercisesManagementButton"
+        [routerLink]="['/exercises-management']"
+      >
+        Exercises Management
+      </button>
+    </mat-menu>
+    } @if(!isLoggedIn){
+    <button
+      mat-menu-item
+      i18n="@@loginButton"
+      [routerLink]="['/auth/login']"
+      routerLinkActive="router-link-active"
+    >
+      Login
+    </button>
+    } @if(!isLoggedIn){
+    <button
+      mat-menu-item
+      i18n="@@signUpButton"
+      [routerLink]="['/auth/signup']"
+      routerLinkActive="router-link-active"
+    >
+      Sign Up
+    </button>
+    } @if(isLoggedIn){
+    <button mat-menu-item i18n="@@logoutButton" (click)="onLogout()">
+      Logout
+    </button>
+    }
+  </mat-menu>
+
+  <!-- Full Menu for Larger Screens -->
+  <button
+    mat-button
+    class="menu-item button-content-center"
+    i18n="@@learnButton"
+    [routerLink]="['/learn']"
+    routerLinkActive="router-link-active"
+  >
+    <div class="button-content-center">
+      <span>Learn</span>
+    </div>
+  </button>
+
+  <mat-menu #learnMenu="matMenu">
+    <!-- <button
+      mat-menu-item
+      [routerLink]="['/learn/a1']"
+      routerLinkActive="router-link-active"
+      i18n="@@a1Button"
+    >
+      A1
+    </button>
+    <button
+      mat-menu-item
+      [routerLink]="['/learn/a2']"
+      routerLinkActive="router-link-active"
+      i18n="@@a2Button"
+    >
+      A2
+    </button>
+    <button
+      mat-menu-item
+      [routerLink]="['/learn/b1']"
+      routerLinkActive="router-link-active"
+      i18n="@@b1Button"
+    >
+      B1
+    </button>
+    <button
+      mat-menu-item
+      [routerLink]="['/learn/b2']"
+      routerLinkActive="router-link-active"
+      i18n="@@b2Button"
+    >
+      B2
+    </button>
+    <button
+      mat-menu-item
+      [routerLink]="['/learn/c1']"
+      routerLinkActive="router-link-active"
+      i18n="@@c1Button"
+    >
+      C1
+    </button>
+    <button
+      mat-menu-item
+      [routerLink]="['/learn/c2']"
+      routerLinkActive="router-link-active"
+      i18n="@@c2Button"
+    >
+      C2
+    </button> -->
+  </mat-menu>
+
+  <button
+    mat-button
+    i18n="@@exercisesButton"
+    [routerLink]="['/exercises']"
+    routerLinkActive="router-link-active"
+  >
+    Exercises
+  </button>
+  <button
+    mat-button
+    i18n="@@tipsButton"
+    [routerLink]="['/tips']"
+    routerLinkActive="router-link-active"
+  >
+    Tips
+  </button>
+
+  <button
+    mat-button
+    i18n="@@myProgressButton"
+    [routerLink]="['/progress']"
+    routerLinkActive="router-link-active"
+  >
+    My Progress
+  </button>
+  @if(currentUserRole === 'admin'){
+  <button mat-button [matMenuTriggerFor]="managementMenu" i18n="@@adminButton">
+    <div class="button-content-center">
+      <span>Admin</span>
+      <mat-icon>keyboard_arrow_down</mat-icon>
+    </div>
+  </button>
+
+  <mat-menu #managementMenu="matMenu">
+    <button
+      mat-menu-item
+      routerLinkActive="router-link-active"
+      i18n="@@wordsManagementButton"
+      [routerLink]="['/words-management']"
+    >
+      Words Management
+    </button>
+    <button
+      mat-menu-item
+      routerLinkActive="router-link-active"
+      i18n="@@exercisesManagementButton"
+      [routerLink]="['/exercises-management']"
+    >
+      Exercises Management
+    </button>
+  </mat-menu>
+  }
+
+  <span class="spacer"></span>
+
+  <!-- Search -->
+  <!-- <button mat-icon-button aria-label="search" i18n-aria-label="@@searchButton">
+    <mat-icon>search</mat-icon>
+  </button> -->
+
+  <!-- Language Toggle -->
+  <button mat-button [matMenuTriggerFor]="languageMenu" class="language-button">
+    <div class="button-content-center language-selection">
+      @if(currentLanguage == 'en'){
+      <img
+        src="assets/images/en.png"
+        alt="English Flag"
+        width="20"
+        height="20"
+        i18n-alt="@@englishFlagAlt"
+      />
+      } @else if (currentLanguage == 'de') {
+      <img
+        src="assets/images/de.png"
+        alt="German Flag"
+        width="20"
+        height="20"
+        i18n-alt="@@germanFlagAlt"
+      />
+      }
+      <span>{{ currentLanguage.toUpperCase() }}</span>
+      <mat-icon>keyboard_arrow_down</mat-icon>
+    </div>
+  </button>
+
+  <mat-menu #languageMenu="matMenu">
+    <button mat-menu-item (click)="changeLanguage('en')">
+      <div class="language-selection">
+        <img
+          src="assets/images/en.png"
+          alt="English Flag"
+          width="20"
+          height="20"
+          i18n-alt="@@englishFlagAlt"
+        />
+        <span i18n="@@languageEN">EN</span>
+      </div>
+    </button>
+    <button mat-menu-item (click)="changeLanguage('de')">
+      <div class="language-selection">
+        <img
+          src="assets/images/de.png"
+          alt="German Flag"
+          width="20"
+          height="20"
+          i18n-alt="@@germanFlagAlt"
+        />
+        <span i18n="@@languageDE">DE</span>
+      </div>
+    </button>
+  </mat-menu>
+
+  <!-- Theme Toggle -->
+  <button
+    mat-icon-button
+    [matMenuTriggerFor]="themeMenu"
+    aria-label="Toggle Theme"
+    i18n-aria-label="@@toggleThemeButton"
+  >
+    <mat-icon>{{ isDarkTheme() ? "dark_mode" : "light_mode" }}</mat-icon>
+  </button>
+
+  <mat-menu #themeMenu="matMenu">
+    <button mat-menu-item (click)="setTheme('dark')">
+      <mat-icon>dark_mode</mat-icon>
+      <span i18n="@@darkMode">Dark</span>
+    </button>
+    <button mat-menu-item (click)="setTheme('light')">
+      <mat-icon>light_mode</mat-icon>
+      <span i18n="@@lightMode">Light</span>
+    </button>
+  </mat-menu>
+
+  @if(!isLoggedIn){
+  <button
+    mat-button
+    i18n="@@loginButton"
+    [routerLink]="['/auth/login']"
+    routerLinkActive="router-link-active"
+  >
+    Login
+  </button>
+  } @if(!isLoggedIn){
+  <button
+    mat-button
+    i18n="@@signUpButton"
+    [routerLink]="['/auth/signup']"
+    routerLinkActive="router-link-active"
+  >
+    Sign Up
+  </button>
+  } @if(isLoggedIn){
+  <button mat-button i18n="@@logoutButton" (click)="onLogout()">Logout</button>
+  }
+</mat-toolbar>

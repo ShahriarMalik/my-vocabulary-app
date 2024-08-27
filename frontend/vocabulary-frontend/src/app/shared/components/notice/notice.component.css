@@ -1,0 +1,23 @@
+.message {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+  text-align: center;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Error styling */
+.error {
+  background-color: var(--error-background-color);
+  color: var(--error-text-color);
+  border: 1px solid var(--error-border-color);
+}
+
+/* Success styling */
+.success {
+  background-color: var(--success-background-color);
+  color: var(--success-text-color);
+  border: 1px solid var(--success-border-color);
+}

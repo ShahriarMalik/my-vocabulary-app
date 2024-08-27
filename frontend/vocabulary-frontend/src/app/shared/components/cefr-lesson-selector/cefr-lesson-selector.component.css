@@ -1,0 +1,80 @@
+.cefr-lesson-selector {
+  padding: 1rem;
+  background-color: var(--background-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px var(--shadow-color);
+  color: var(--text-color);
+  text-align: left;
+  width: 100%;
+  /* min-width: 21rem; */
+  max-width: 38rem;
+  margin: 0 auto;
+}
+
+.cefr-selectors {
+  display: flex; /* Enable flexbox for the selectors */
+  gap: 1rem; /* Add space between the selectors */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: center;
+}
+
+.cefr-lesson-selector label {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary-color);
+}
+
+.cefr-lesson-selector select {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+  background-color: var(--background-color-lighter);
+  color: var(--text-color);
+  transition: border-color 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.cefr-selectors select {
+  flex: 1;
+  min-width: 45%;
+}
+
+.cefr-lesson-selector select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.cefr-lesson-selector option {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  min-width: 14rem;
+}
+
+.cefr-lesson-selector p {
+  margin-top: 1rem;
+  color: var(--accent-color);
+  font-size: 0.9rem;
+}
+
+.notice-container {
+  margin-top: 1rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  /*  for small screens  */
+  .cefr-lesson-selector {
+    padding: 0rem;
+    margin: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  /*  for medium screens  */
+}
+
+@media (min-width: 1024px) {
+  /*  for large screens  */
+}

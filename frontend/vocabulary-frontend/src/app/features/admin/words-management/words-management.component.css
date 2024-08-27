@@ -1,0 +1,245 @@
+.word-management-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.word-management-card {
+  width: 100%;
+  max-width: 37.5rem;
+  margin: 1.25rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  box-shadow: 0 4px 8px var(--shadow-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+.word-management-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.mat-mdc-card-header {
+  justify-content: center;
+}
+
+.title {
+  color: var(--accent-color);
+}
+
+.word-management-form {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-form-field {
+  margin-bottom: 1.25rem;
+  color: var(--text-color);
+}
+
+mat-form-field mat-label[label] {
+  color: var(--text-color);
+  opacity: 0.7;
+}
+.mat-mdc-select {
+  color: var(--text-color);
+}
+
+mat-form-field input[matInput] {
+  color: var(--text-color);
+}
+mat-form-field textarea[type="text"] {
+  color: var(--text-color);
+}
+
+mat-form-field {
+  margin-bottom: 1.25rem;
+  color: var(--text-color);
+}
+.search-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  padding: 0 1.2rem;
+}
+.emoji-form-field,
+.example-form-field {
+  width: 78%;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-container {
+  margin-left: 1.7rem;
+}
+
+.form-field {
+  margin-left: 1rem;
+}
+
+button[mat-stroked-button] {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+button[mat-stroked-button][disabled] {
+  background-color: var(--primary-color);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+button[mat-stroked-button]:hover {
+  background-color: darken(var(--primary-color), 10%);
+  color: var(--accent-color);
+}
+
+/* Success and Error Messages */
+.message-card {
+  background-color: var(--primary-color);
+  display: block;
+}
+mat-card .message-card {
+  margin-bottom: 1rem;
+}
+
+.success-message {
+  color: var(--accent-color);
+  font-weight: bold;
+  padding: 0 0.5rem;
+}
+
+.error-message {
+  color: var(--accent-color);
+  font-weight: bold;
+  padding: 0 0.5rem;
+}
+
+mat-card-header mat-icon {
+  font-size: 1.5rem;
+}
+
+.success-card mat-card-header mat-icon {
+  color: green;
+}
+
+.error-card mat-card-header mat-icon {
+  color: red;
+}
+
+/* Media Queries */
+@media (min-width: 320px) and (max-width: 480px) {
+  .success-message,
+  .error-message {
+    padding: 0px;
+  }
+
+  mat-card-header mat-icon {
+    display: none;
+  }
+
+  .search-container {
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  .button-container {
+    margin-left: 0rem;
+  }
+
+  .button-container button {
+    margin-bottom: 1.25rem;
+  }
+  mat-form-field {
+    margin-bottom: 0.25rem;
+  }
+  .form-field {
+    margin-left: 0rem;
+  }
+
+  .emoji-form-field,
+  .example-form-field {
+    width: 65%;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  /* Large Mobile */
+  /* .button-container {
+    margin-left: 0rem;
+  }
+  .button-container button {
+    margin-bottom: 1.25rem;
+  } */
+
+  .search-container {
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  mat-form-field {
+    margin-bottom: 0.25rem;
+  }
+  .form-field {
+    margin-left: 0rem;
+  }
+
+  .container {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Tablet */
+  .button-container {
+    margin-left: 2rem;
+  }
+  .button-container button {
+    margin-bottom: 0.5rem;
+  }
+  .search-container {
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: baseline;
+    padding: 0 1rem;
+  }
+  mat-form-field {
+    margin-bottom: 0.25rem;
+  }
+  .form-field {
+    margin-left: 1rem;
+  }
+
+  .emoji-form-field,
+  .example-form-field {
+    width: 75%;
+  }
+  .container {
+    align-items: flex-start;
+    flex-direction: row;
+  }
+
+  .container audio {
+    margin-bottom: 1.25rem;
+  }
+  audio {
+    width: 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  /* Desktop */
+}

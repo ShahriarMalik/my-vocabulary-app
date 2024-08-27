@@ -1,0 +1,112 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.mat-mdc-card-header {
+  justify-content: center;
+}
+
+.title {
+  color: var(--accent-color); /* Use global accent color */
+}
+
+.login-card {
+  width: 100%;
+  max-width: 37.5rem;
+  margin: 1.25rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  box-shadow: 0 4px 8px var(--shadow-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-form-field {
+  margin-bottom: 1.25rem;
+  color: var(--text-color);
+}
+
+mat-form-field mat-label[label] {
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+mat-form-field input[matInput] {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  box-shadow: none;
+}
+
+/* Error Styles */
+.error-message {
+  color: red;
+  font-weight: bold;
+  padding: 0 0.5rem;
+}
+
+.error-card {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+button[mat-raised-button] {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+button[mat-raised-button][disabled] {
+  background-color: var(--primary-color);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+button[mat-raised-button]:hover {
+  background-color: var(
+    --primary-color
+  ); /* Hover should darken appropriately */
+  color: var(--accent-color); /* Change text color on hover */
+}
+
+.forget-password-container {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.forget-password-button {
+  font-size: 0.875rem;
+  color: var(--accent-color); /* Use global accent color */
+  text-transform: none;
+}
+
+/* Media Queries */
+@media (min-width: 320px) and (max-width: 480px) {
+  .error-message {
+    padding: 0px;
+  }
+
+  mat-card-header mat-icon {
+    display: none;
+  }
+}
+
+/* Placeholder Input Label Color - Overriding Angular Material Defaults */
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-floating-label {
+  color: red !important;
+}

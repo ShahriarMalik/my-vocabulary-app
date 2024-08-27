@@ -1,0 +1,252 @@
+/* Container and Card Styles */
+.exercises-management-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.exercises-management-card {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  box-shadow: 0 4px 8px var(--shadow-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.exercise-management-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Message Card Styles */
+.message-card {
+  background-color: var(--border-color);
+  margin-bottom: 1rem;
+  padding: 0 2rem;
+}
+
+.success-message,
+.error-message {
+  color: var(--accent-color);
+  padding: 0 0.5rem;
+}
+
+/* Header and Title Styles */
+.mat-mdc-card-header {
+  justify-content: center;
+}
+
+.title {
+  color: var(--accent-color);
+}
+
+.notice {
+  text-align: center;
+}
+
+/* Form and Input Styles */
+.level-lesson-container,
+.level-container,
+.lesson-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+mat-form-field {
+  margin-bottom: 1.25rem;
+  color: var(--text-color);
+}
+
+mat-form-field mat-label[label] {
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+mat-form-field mat-select {
+  color: var(--text-color);
+  outline: none;
+}
+
+mat-form-field mat-select:hover {
+  color: var(--text-color);
+  outline: none;
+}
+
+mat-form-field input[matInput],
+mat-form-field textarea[type="text"] {
+  color: var(--text-color);
+}
+
+.exercise-management-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Table Styles */
+.excercise-container {
+  position: relative;
+}
+
+.excercise-table-container {
+  position: relative;
+  min-height: 200px;
+  max-height: 400px;
+  overflow: auto;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  box-shadow: 0 4px 8px var(--shadow-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.mat-cell input {
+  width: 100%;
+}
+
+.excercise-table th,
+.excercise-table td,
+.excercise-table td input {
+  color: var(--text-color);
+}
+.excercise-table th,
+.excercise-table td {
+  text-align: center;
+}
+
+.excercise-table td input {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 8px;
+  box-shadow: none;
+}
+.excercise-table td input:focus {
+  border: 1px solid var(--border-color);
+  outline: none;
+}
+
+.wide-column {
+  width: 30%;
+  min-width: 300px;
+}
+
+.wide-column-input {
+  width: 280px;
+}
+
+.mat-column-number,
+.mat-column-state {
+  width: 120px;
+}
+
+.mat-column-created {
+  width: 124px;
+}
+
+.excercise-table-container::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.excercise-table-container::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 4px;
+}
+
+.excercise-table-container::-webkit-scrollbar-track {
+  background-color: var(--background-color-lighter);
+}
+
+/* Button Styles */
+button[mat-raised-button] {
+  background-color: var(--background-color-lighter);
+  color: var(--accent-color);
+}
+
+button[mat-raised-button]:hover {
+  background-color: darken(var(--primary-color), 10%);
+}
+
+mat-form-field mat-label[label] {
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+/* Media Queries */
+@media (min-width: 320px) and (max-width: 480px) {
+  .level-lesson-container {
+    flex-direction: column;
+  }
+  mat-form-field {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .button-container {
+    margin-left: 0rem;
+  }
+
+  .button-container button {
+    margin-bottom: 1.25rem;
+  }
+
+  .search-container {
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  mat-form-field {
+    margin-bottom: 0.25rem;
+  }
+
+  .form-field {
+    margin-left: 0rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .button-container {
+    margin-left: 2rem;
+  }
+
+  .button-container button {
+    margin-bottom: 0.5rem;
+  }
+
+  .search-container {
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: baseline;
+    padding: 0 1rem;
+  }
+
+  mat-form-field {
+    margin-bottom: 0.25rem;
+  }
+
+  .form-field {
+    margin-left: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  /* Desktop */
+}
+
+/* Placeholder Input Label Color - Overriding Angular Material Defaults */
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-floating-label {
+  color: var(--text-color);
+}

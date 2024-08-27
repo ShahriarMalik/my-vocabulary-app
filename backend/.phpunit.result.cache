@@ -1,0 +1,1 @@
+{"version":1,"defects":{"AuthControllerTest::testRegisterSuccess":4,"AuthControllerTest::testLoginInvalidCredentials":4,"ExerciseControllerTest::testCreateExercise":4},"times":{"ExampleTest::testExample":0.001,"AuthControllerTest::testRegisterSuccess":0.069,"AuthControllerTest::testLoginInvalidCredentials":0,"ExerciseControllerTest::testCreateExercise":0.006}}

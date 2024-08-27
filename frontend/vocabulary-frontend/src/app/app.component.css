@@ -1,0 +1,51 @@
+.sidenav-container {
+  min-height: calc(100vh - 56px); /* For the footer height */
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding-bottom: 1rem;
+}
+
+.mat-mdc-progress-color.mat-accent {
+  --mdc-linear-progress-active-indicator-color: var(--primary-color);
+
+  --mdc-linear-progress-track-height: 7px !important;
+
+  border-radius: 5px !important;
+}
+
+/* Loading Bar Styles */
+.loading-bar-container {
+  height: 8px;
+}
+
+.loading-bar {
+  height: 8px;
+  visibility: hidden;
+}
+
+.loading-bar.active {
+  visibility: visible;
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .content {
+    margin-top: 1rem;
+  }
+}

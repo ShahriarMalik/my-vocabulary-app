@@ -4,6 +4,12 @@
   "newProjectRoot": "projects",
   "projects": {
     "vocabulary-frontend": {
+      "i18n": {
+        "sourceLocale": "en",
+        "locales": {
+          "de": "src/locale/messages.de.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -16,9 +22,7 @@
             "outputPath": "dist/vocabulary-frontend",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js", "@angular/localize/init"],
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
@@ -27,14 +31,11 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.css"
             ],
             "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "localize": ["en", "de"]
           },
           "configurations": {
             "production": {
@@ -50,12 +51,22 @@
                   "maximumError": "4kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "fileReplacements": [
+                {
+                  "replace": "src/base-url.ts",
+                  "with": "src/base-url.prod.ts"
+                }
+              ]
             },
             "development": {
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
+            },
+            "de": {
+              "localize": ["de"],
+              "outputPath": "dist/vocabulary-frontend-de"
             }
           },
           "defaultConfiguration": "production"
@@ -68,6 +79,9 @@
             },
             "development": {
               "buildTarget": "vocabulary-frontend:build:development"
+            },
+            "de": {
+              "buildTarget": "vocabulary-frontend:build:de"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +94,8 @@
           "options": {
             "polyfills": [
               "zone.js",
-              "zone.js/testing"
+              "zone.js/testing",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
@@ -90,6 +105,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.css"
             ],
             "scripts": []

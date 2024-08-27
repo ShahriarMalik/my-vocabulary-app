@@ -1,0 +1,1700 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2"
+  xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="2821179408673282599" datatype="html">
+        <source>Home</source>
+        <target>Startseite</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description">2821179408673282599</note>
+      </trans-unit>
+      <trans-unit id="loginRequired" datatype="html">
+        <source>Login Required</source>
+        <target>Anmeldung erforderlich</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/guards/login.guard.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="loggedinMessage" datatype="html">
+        <source>You must be logged in to access this page.</source>
+        <target>Sie müssen angemeldet sein, um auf diese Seite zuzugreifen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/guards/login.guard.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="unsavedChanges" datatype="html">
+        <source>Unsaved Changes</source>
+        <target>Ungespeicherte Änderungen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/guards/unsaved-changes.guard.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="unsavedMessage" datatype="html">
+        <source>You have unsaved changes. Do you really want to leave this page?</source>
+        <target>Sie haben ungespeicherte Änderungen. Möchten Sie diese Seite wirklich verlassen?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/guards/unsaved-changes.guard.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="exercisesManagementTitle" datatype="html">
+        <source> Exercises Management </source>
+        <target>Übungsverwaltung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/exercises-management/exercises-management.component.html</context>
+          <context context-type="linenumber">5,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="successMessage" datatype="html">
+        <source>
+          <x id="INTERPOLATION" equiv-text="{{ successMessage }}" />
+        </source>
+        <target>
+          <x id="INTERPOLATION" equiv-text="{{ successMessage }}" />
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/exercises-management/exercises-management.component.html</context>
+          <context context-type="linenumber">13,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="errorMessage" datatype="html">
+        <source>
+          <x id="INTERPOLATION" equiv-text="{{ errorMessage }}" />
+        </source>
+        <target>
+          <x id="INTERPOLATION" equiv-text="{{ errorMessage }}" />
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/exercises-management/exercises-management.component.html</context>
+          <context context-type="linenumber">20,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cefrLevelLabel" datatype="html">
+        <source>CEFR Level</source>
+        <target>CEFR-Niveau</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/exercises-management/exercises-management.component.html</context>
+          <context context-type="linenumber">29,30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/words-management/words-management.component.html</context>
+          <context context-type="linenumber">53,54</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/exercises/exercises.component.html</context>
+          <context context-type="linenumber">6,8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/learn/learn.component.html</context>
+          <context context-type="linenumber">6,8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/cefr-lesson-selector/cefr-lesson-selector.component.html</context>
+          <context context-type="linenumber">6,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="selectLessonLabel" datatype="html">
+        <source>Select Lesson</source>
+        <target>Wählen Sie eine Lektion</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/exercises-management/exercises-management.component.html</context>
+          <context context-type="linenumber">47,49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="selectLessonNumber" datatype="html">
+        <source>Lesson </source>
+        <target>Lektion </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/exercises-management/exercises-management.component.html</context>
+          <context context-type="linenumber">52,53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="selectCefrLessonNotice" datatype="html">
+        <source> Please Select CEFR Level and Lesson to proceed </source>
+        <target>Bitte wählen Sie ein CEFR-Niveau und eine Lektion, um fortzufahren</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/exercises-management/exercises-management.component.html</context>
+          <context context-type="linenumber">64,66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="wordIdHeader" datatype="html">
+        <source> ID </source>
+        <target>ID</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/exercises-management/exercises-management.component.html</context>
+          <context context-type="linenumber">74,75</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="wordHeader" datatype="html">
+        <source> Word </source>
+        <target>Wort</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/exercises-management/exercises-management.component.html</context>
+          <context context-type="linenumber">81,82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="exerciseTypeHeader" datatype="html">
+        <source> Exercise Type </source>
+        <target>Übungstyp</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/exercises-management/exercises-management.component.html</context>
+          <context context-type="linenumber">88,89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="enterTypePlaceholder" datatype="html">
+        <source>Enter type</source>
+        <target>Geben Sie den Typ ein</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/exercises-management/exercises-management.component.html</context>
+          <context context-type="linenumber">94,95</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="questionHeader" datatype="html">
+        <source> Question </source>
+        <target>Frage</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/exercises-management/exercises-management.component.html</context>
+          <context context-type="linenumber">108,109</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="enterQuestionPlaceholder" datatype="html">
+        <source>Enter question</source>
+        <target>Geben Sie die Frage ein</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/exercises-management/exercises-management.component.html</context>
+          <context context-type="linenumber">114,115</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="optionsHeader" datatype="html">
+        <source> Options </source>
+        <target>Optionen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/exercises-management/exercises-management.component.html</context>
+          <context context-type="linenumber">128,129</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="enterOptionsPlaceholder" datatype="html">
+        <source>Enter options</source>
+        <target>Geben Sie Optionen ein</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/exercises-management/exercises-management.component.html</context>
+          <context context-type="linenumber">134,135</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="answerHeader" datatype="html">
+        <source> Answer </source>
+        <target>Antwort</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/exercises-management/exercises-management.component.html</context>
+          <context context-type="linenumber">143,144</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="enterAnswerPlaceholder" datatype="html">
+        <source>Enter answer</source>
+        <target>Geben Sie die Antwort ein</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/exercises-management/exercises-management.component.html</context>
+          <context context-type="linenumber">149,150</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="actionsHeader" datatype="html">
+        <source> Actions </source>
+        <target>Aktionen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/exercises-management/exercises-management.component.html</context>
+          <context context-type="linenumber">157,158</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4893616715766810081" datatype="html">
+        <source>No data available</source>
+        <target>Keine Daten verfügbar</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/exercises-management/exercises-management.component.ts</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/exercises-management/exercises-management.component.ts</context>
+          <context context-type="linenumber">157</context>
+        </context-group>
+        <note priority="1" from="description">noData</note>
+      </trans-unit>
+      <trans-unit id="1757327389395211870" datatype="html">
+        <source>All fields are required</source>
+        <target>Alle Felder sind erforderlich</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/exercises-management/exercises-management.component.ts</context>
+          <context context-type="linenumber">173</context>
+        </context-group>
+        <note priority="1" from="description">allFieldRequired</note>
+      </trans-unit>
+      <trans-unit id="7064609092824156475" datatype="html">
+        <source>Exercise updated successfully</source>
+        <target>Übung erfolgreich aktualisiert</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/exercises-management/exercises-management.component.ts</context>
+          <context context-type="linenumber">194</context>
+        </context-group>
+        <note priority="1" from="description">exerciseUpdatedSuccessfully</note>
+      </trans-unit>
+      <trans-unit id="6059742538877460733" datatype="html">
+        <source>Error updating exercise</source>
+        <target>Fehler beim Aktualisieren der Übung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/exercises-management/exercises-management.component.ts</context>
+          <context context-type="linenumber">198</context>
+        </context-group>
+        <note priority="1" from="description">errorUpdateExercise</note>
+      </trans-unit>
+      <trans-unit id="3073181192642999615" datatype="html">
+        <source>Error creating exercise</source>
+        <target>Fehler beim Erstellen der Übung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/exercises-management/exercises-management.component.ts</context>
+          <context context-type="linenumber">212</context>
+        </context-group>
+        <note priority="1" from="description">errorCreateExercise</note>
+      </trans-unit>
+      <trans-unit id="wordManagementTitle" datatype="html">
+        <source>Word Management</source>
+        <target>Wortverwaltung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/words-management/words-management.component.html</context>
+          <context context-type="linenumber">4,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="searchWordLabel" datatype="html">
+        <source>Search Word</source>
+        <target>Wort suchen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/words-management/words-management.component.html</context>
+          <context context-type="linenumber">25,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="searchWordPlaceholder" datatype="html">
+        <source>Enter word to fetch</source>
+        <target>Wort eingeben, um es abzurufen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/words-management/words-management.component.html</context>
+          <context context-type="linenumber">30,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fetchWordButton" datatype="html">
+        <source> Fetch Word </source>
+        <target>Wort abrufen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/words-management/words-management.component.html</context>
+          <context context-type="linenumber">42,43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="wordLabel" datatype="html">
+        <source>Word</source>
+        <target>Wort</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/words-management/words-management.component.html</context>
+          <context context-type="linenumber">49,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="emojiLabel" datatype="html">
+        <source>Emoji</source>
+        <target>Emoji</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/words-management/words-management.component.html</context>
+          <context context-type="linenumber">61,62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="exampleLabel" datatype="html">
+        <source>Example</source>
+        <target>Beispiel</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/words-management/words-management.component.html</context>
+          <context context-type="linenumber">65,66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="translationLabel" datatype="html">
+        <source>Translation</source>
+        <target>Übersetzung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/words-management/words-management.component.html</context>
+          <context context-type="linenumber">69,70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="translatedLanguageLabel" datatype="html">
+        <source>Translated Language</source>
+        <target>Übersetzte Sprache</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/words-management/words-management.component.html</context>
+          <context context-type="linenumber">74,76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="saveButton" datatype="html">
+        <source> Save </source>
+        <target>Speichern</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/words-management/words-management.component.html</context>
+          <context context-type="linenumber">93,94</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7158033106518253277" datatype="html">
+        <source>An unexpected error occurred. Please try again later</source>
+        <target>Ein unerwarteter Fehler ist aufgetreten. Bitte versuchen Sie es später noch einmal.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/words-management/words-management.component.ts</context>
+          <context context-type="linenumber">94</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/authentication/login/login.component.ts</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.ts</context>
+          <context context-type="linenumber">94</context>
+        </context-group>
+        <note priority="1" from="description">7158033106518253277</note>
+      </trans-unit>
+      <trans-unit id="1466012768716286509" datatype="html">
+        <source>Sign Up</source>
+        <target>Registrieren</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/authentication/auth.routes.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description">1466012768716286509</note>
+      </trans-unit>
+      <trans-unit id="2454050363478003966" datatype="html">
+        <source>Login</source>
+        <target>Anmelden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/authentication/auth.routes.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description">2454050363478003966</note>
+      </trans-unit>
+      <trans-unit id="1527095269431550693" datatype="html">
+        <source>Password Reset</source>
+        <target>Passwort zurücksetzen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/authentication/auth.routes.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description">1527095269431550693</note>
+      </trans-unit>
+      <trans-unit id="loginTitle" datatype="html">
+        <source>Login</source>
+        <target>Anmelden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/authentication/login/login.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="emailLabel" datatype="html">
+        <source>Email</source>
+        <target>E-Mail</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/authentication/login/login.component.html</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/authentication/password-reset/password-reset.component.html</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
+          <context context-type="linenumber">52,53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="emailRequired" datatype="html">
+        <source>Email is required.</source>
+        <target>E-Mail ist erforderlich.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/authentication/login/login.component.html</context>
+          <context context-type="linenumber">30,31</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/authentication/password-reset/password-reset.component.html</context>
+          <context context-type="linenumber">30,31</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
+          <context context-type="linenumber">57,58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="invalidEmail" datatype="html">
+        <source>Invalid email address.</source>
+        <target>Ungültige E-Mail-Adresse.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/authentication/login/login.component.html</context>
+          <context context-type="linenumber">32,34</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/authentication/password-reset/password-reset.component.html</context>
+          <context context-type="linenumber">32,34</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
+          <context context-type="linenumber">59,60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="passwordLabel" datatype="html">
+        <source>Password</source>
+        <target>Passwort</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/authentication/login/login.component.html</context>
+          <context context-type="linenumber">40,41</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
+          <context context-type="linenumber">69,70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="passwordRequired" datatype="html">
+        <source>Password is required.</source>
+        <target>Passwort ist erforderlich.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/authentication/login/login.component.html</context>
+          <context context-type="linenumber">50,51</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
+          <context context-type="linenumber">79,80</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="passwordMinLength" datatype="html">
+        <source>Password must be at least 6 characters long.</source>
+        <target>Das Passwort muss mindestens 6 Zeichen lang sein.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/authentication/login/login.component.html</context>
+          <context context-type="linenumber">53,55</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
+          <context context-type="linenumber">82,84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="loginButton" datatype="html">
+        <source> Login </source>
+        <target>Anmelden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/authentication/login/login.component.html</context>
+          <context context-type="linenumber">69,70</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">93,95</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">315,317</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgotPasswordButton" datatype="html">
+        <source> Forgot Password? </source>
+        <target>Passwort vergessen?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/authentication/login/login.component.html</context>
+          <context context-type="linenumber">79,81</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="passwordResetTitle" datatype="html">
+        <source>Password Reset</source>
+        <target>Passwort zurücksetzen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/authentication/password-reset/password-reset.component.html</context>
+          <context context-type="linenumber">4,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resetPasswordButton" datatype="html">
+        <source> Reset Password </source>
+        <target>Passwort zurücksetzen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/authentication/password-reset/password-reset.component.html</context>
+          <context context-type="linenumber">46,47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="signUpTitle" datatype="html">
+        <source>Sign Up</source>
+        <target>Registrieren</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="usernameLabel" datatype="html">
+        <source>User Name</source>
+        <target>Benutzername</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
+          <context context-type="linenumber">29,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="usernameRequired" datatype="html">
+        <source>User Name is required.</source>
+        <target>Benutzername ist erforderlich.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
+          <context context-type="linenumber">40,41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="usernameMinLength" datatype="html">
+        <source>User Name must be at least 3 characters long.</source>
+        <target>Der Benutzername muss mindestens 3 Zeichen lang sein.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
+          <context context-type="linenumber">43,45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="emailExists" datatype="html">
+        <source>Email already exists.</source>
+        <target>E-Mail existiert bereits.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
+          <context context-type="linenumber">61,63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="signUpButton" datatype="html">
+        <source> Sign Up </source>
+        <target>Registrieren</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.html</context>
+          <context context-type="linenumber">98,99</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">102,104</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">324,326</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cefrLevelAriaLabel" datatype="html">
+        <source>Select CEFR Level</source>
+        <target>Wählen Sie CEFR-Niveau</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/exercises/exercises.component.html</context>
+          <context context-type="linenumber">12,14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/learn/learn.component.html</context>
+          <context context-type="linenumber">12,14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/cefr-lesson-selector/cefr-lesson-selector.component.html</context>
+          <context context-type="linenumber">12,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="lessonLabel" datatype="html">
+        <source>Select Lesson:</source>
+        <target>Lektion wählen:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/exercises/exercises.component.html</context>
+          <context context-type="linenumber">22,24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/learn/learn.component.html</context>
+          <context context-type="linenumber">22,24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/cefr-lesson-selector/cefr-lesson-selector.component.html</context>
+          <context context-type="linenumber">22,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="lessonAriaLabel" datatype="html">
+        <source>Select Lesson</source>
+        <target>Lektion wählen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/exercises/exercises.component.html</context>
+          <context context-type="linenumber">28,30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/learn/learn.component.html</context>
+          <context context-type="linenumber">28,30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/cefr-lesson-selector/cefr-lesson-selector.component.html</context>
+          <context context-type="linenumber">29,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="lessonNumber" datatype="html">
+        <source>Lesson</source>
+        <target>Lektion</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/exercises/exercises.component.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/learn/learn.component.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/cefr-lesson-selector/cefr-lesson-selector.component.html</context>
+          <context context-type="linenumber">35,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="errorMessageAriaLabel" datatype="html">
+        <source>Error message</source>
+        <target>Fehlermeldung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/exercises/exercises.component.html</context>
+          <context context-type="linenumber">49,51</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/learn/learn.component.html</context>
+          <context context-type="linenumber">49,51</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/progress/progress.component.html</context>
+          <context context-type="linenumber">48,51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="successMessageAriaLabel" datatype="html">
+        <source>Success message</source>
+        <target>Erfolgsmeldung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/exercises/exercises.component.html</context>
+          <context context-type="linenumber">55,58</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/learn/learn.component.html</context>
+          <context context-type="linenumber">55,58</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/progress/progress.component.html</context>
+          <context context-type="linenumber">41,43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="questionPrefix" datatype="html">
+        <source>What is the meaning of </source>
+        <target>Was bedeutet im Englischen </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/exercises/exercises.component.html</context>
+          <context context-type="linenumber">75,76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="questionSuffix" datatype="html">
+        <source> ?</source>
+        <target>?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/exercises/exercises.component.html</context>
+          <context context-type="linenumber">77,79</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="submitButton" datatype="html">
+        <source> Submit Answer </source>
+        <target>Antwort absenden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/exercises/exercises.component.html</context>
+          <context context-type="linenumber">114,116</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="paginatorAriaLabel" datatype="html">
+        <source>Pagination control</source>
+        <target>Seitennavigation</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/exercises/exercises.component.html</context>
+          <context context-type="linenumber">137,140</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/learn/learn.component.html</context>
+          <context context-type="linenumber">84,87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="noDataAvailableMessage" datatype="html">
+        <source>No data available for the selected CEFR level</source>
+        <target>Keine Daten für das ausgewählte CEFR-Niveau verfügbar</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/exercises/exercises.component.ts</context>
+          <context context-type="linenumber">115</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/cefr-lesson-selector/cefr-lesson-selector.component.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="errorSomethingWentWrong" datatype="html">
+        <source>Something went wrong. Please try again later.</source>
+        <target>Etwas ist schief gelaufen. Bitte versuchen Sie es später noch einmal.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/exercises/exercises.component.ts</context>
+          <context context-type="linenumber">124</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/cefr-lesson-selector/cefr-lesson-selector.component.ts</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="noExerise" datatype="html">
+        <source>No exercise available for the selection at this moment</source>
+        <target>Für die Auswahl ist momentan keine Übung verfügbar</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/exercises/exercises.component.ts</context>
+          <context context-type="linenumber">163</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/exercises/exercises.component.ts</context>
+          <context context-type="linenumber">186</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="correctAnswer" datatype="html">
+        <source>Correct!</source>
+        <target>Richtig!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/exercises/exercises.component.ts</context>
+          <context context-type="linenumber">204</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="incorrectAnswer" datatype="html">
+        <source>Incorrect!</source>
+        <target>Falsch!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/exercises/exercises.component.ts</context>
+          <context context-type="linenumber">207</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6899134966533859260" datatype="html">
+        <source>Learn</source>
+        <target>Lernen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/features.routes.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description">6899134966533859260</note>
+      </trans-unit>
+      <trans-unit id="5815398842801469550" datatype="html">
+        <source>Exercises</source>
+        <target>Übungen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/features.routes.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <note priority="1" from="description">5815398842801469550</note>
+      </trans-unit>
+      <trans-unit id="141084884839689192" datatype="html">
+        <source>Words Management</source>
+        <target>Wortverwaltung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/features.routes.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <note priority="1" from="description">141084884839689192</note>
+      </trans-unit>
+      <trans-unit id="214113554445327519" datatype="html">
+        <source> Exercises Management</source>
+        <target>Übungsverwaltung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/features.routes.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <note priority="1" from="description">exercisesManagement</note>
+      </trans-unit>
+      <trans-unit id="3419681791450150574" datatype="html">
+        <source>Progress</source>
+        <target>Fortschritt</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/features.routes.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+        <note priority="1" from="description">3419681791450150574</note>
+      </trans-unit>
+      <trans-unit id="3285315590661482349" datatype="html">
+        <source>Tips</source>
+        <target>Tipps</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/features.routes.ts</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+        <note priority="1" from="description">3285315590661482349</note>
+      </trans-unit>
+      <trans-unit id="heroTitle" datatype="html">
+        <source>VokabelProfi: Master German Vocabulary</source>
+        <target>VokabelProfi: Beherrschen Sie den deutschen Wortschatz</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="heroDescription" datatype="html">
+        <source> Experience level-based learning with content aligned to the Common European Framework of Reference for Languages (CEFR) for a more organized and personalized learning journey. Interactive exercises, progress tracking, and seamless multi-device support. </source>
+        <target>Erleben Sie niveaubasiertes Lernen mit Inhalten, die dem Gemeinsamen Europäischen Referenzrahmen für Sprachen (GER) entsprechen, für eine besser organisierte und personalisierte Lernreise. Interaktive Übungen, Fortschrittsverfolgung und nahtlose Unterstützung auf mehreren Geräten.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">6,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="startLearningTitle" datatype="html">
+        <source>Start learning with VokabelProfi</source>
+        <target>Beginnen Sie mit VokabelProfi zu lernen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">16,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="startLearningButton" datatype="html">
+        <source> Start Learning </source>
+        <target>Jetzt lernen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">20,22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="structuredLearningTitle" datatype="html">
+        <source> Structured Learning Path </source>
+        <target>Strukturierter Lernpfad</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">34,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="structuredLearningDescription" datatype="html">
+        <source> Follow a well-organized curriculum aligned with CEFR for comprehensive language mastery. </source>
+        <target>Folgen Sie einem gut organisierten Lehrplan, der dem GER entspricht, für eine umfassende Sprachbeherrschung.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">39,42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="engagingExercisesTitle" datatype="html">
+        <source> Engaging Exercises </source>
+        <target>Fesselnde Übungen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">51,53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="engagingExercisesDescription" datatype="html">
+        <source> Dive into a variety of interactive exercises to reinforce vocabulary and language skills. </source>
+        <target>Tauchen Sie ein in eine Vielzahl von interaktiven Übungen, um Ihren Wortschatz und Ihre Sprachfähigkeiten zu festigen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">56,59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="progressTrackingTitle" datatype="html">
+        <source> Progress Tracking </source>
+        <target>Fortschrittsverfolgung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">68,70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="progressTrackingDescription" datatype="html">
+        <source> Monitor your learning journey with real-time progress tracking and personalized feedback. </source>
+        <target>Überwachen Sie Ihre Lernreise mit Echtzeit-Fortschrittsverfolgung und personalisiertem Feedback.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">73,75</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pronunciationTitle" datatype="html">
+        <source> Pronunciation </source>
+        <target>Aussprache</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">85,87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pronunciationDescription" datatype="html">
+        <source> Improve your pronunciation and understanding with integrated translation services and audio features. </source>
+        <target>Verbessern Sie Ihre Aussprache und Ihr Verständnis mit integrierten Übersetzungsdiensten und Audiofunktionen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">90,92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="interactiveDemoTitle" datatype="html">
+        <source>Try an Exercise</source>
+        <target>Probieren Sie eine Übung aus</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">101,103</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="interactiveDemoDescription" datatype="html">
+        <source> Experience a sample exercise and see how VokabelProfi can enhance your German vocabulary skills. </source>
+        <target>Erleben Sie eine Beispielübung und sehen Sie, wie VokabelProfi Ihre deutschen Wortschatzfähigkeiten verbessern kann.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">105,108</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="chooseAnswerTitle" datatype="html">
+        <source>Choose an answer</source>
+        <target>Wählen Sie eine Antwort</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">122,123</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="submitAnswerTitle" datatype="html">
+        <source>Please select an answer</source>
+        <target>Bitte wählen Sie eine Antwort</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">132,133</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="submitAnswerButton" datatype="html">
+        <source> Submit Answer </source>
+        <target>Antwort absenden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">136,138</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="exploreMoreTitle" datatype="html">
+        <source>Explore more exercises</source>
+        <target>Entdecken Sie mehr Übungen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">146,147</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="exploreMoreButton" datatype="html">
+        <source> Explore More Exercises </source>
+        <target>Mehr Übungen entdecken</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">150,152</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="testimonialsTitle" datatype="html">
+        <source>What Our Users Say</source>
+        <target>Was unsere Benutzer sagen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">158,159</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faqTitle" datatype="html">
+        <source>Frequently Asked Questions</source>
+        <target>Häufig gestellte Fragen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">180,181</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faqQ1Title" datatype="html">
+        <source> How does VokabelProfi work? </source>
+        <target>Wie funktioniert VokabelProfi?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">185,186</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faqQ1Description" datatype="html">
+        <source> VokabelProfi offers personalized exercises to help you master German vocabulary with interactive tools and real-time progress tracking. The platform follows a structured learning path based on the Common European Framework of Reference for Languages (CEFR), ensuring that your learning journey is aligned with standardized language proficiency levels. Best of all, the service is completely free! </source>
+        <target>VokabelProfi bietet personalisierte Übungen, um Ihnen zu helfen, den deutschen Wortschatz mit interaktiven Werkzeugen und Echtzeit-Fortschrittsverfolgung zu beherrschen. Die Plattform folgt einem strukturierten Lernpfad basierend auf dem Gemeinsamen Europäischen Referenzrahmen für Sprachen (GER), um sicherzustellen, dass Ihre Lernreise den standardisierten Sprachkompetenzstufen entspricht. Und das Beste daran: Der Service ist völlig kostenlos!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">189,194</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faqQ2Title" datatype="html">
+        <source> Can I track my progress? </source>
+        <target>Kann ich meinen Fortschritt verfolgen?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">201,202</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faqQ2Description" datatype="html">
+        <source> Yes, the platform tracks your progress in real-time and provides detailed reports on your learning activities. </source>
+        <target>Ja, die Plattform verfolgt Ihren Fortschritt in Echtzeit und bietet detaillierte Berichte über Ihre Lernaktivitäten.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">205,208</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faqQ3Title" datatype="html">
+        <source> What translation services are integrated? </source>
+        <target>Welche Übersetzungsdienste sind integriert?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">213,214</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faqQ3Description" datatype="html">
+        <source> VokabelProfi integrates DeepL API for translations and Google Translation API for audio pronunciation services. </source>
+        <target>VokabelProfi integriert die DeepL-API für Übersetzungen und die Google-Übersetzungs-API für Audio-Aussprachedienste.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">217,220</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faqQ4Title" datatype="html">
+        <source> Is my data secure? </source>
+        <target>Ist meine Daten sicher?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">225,226</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faqQ4Description" datatype="html">
+        <source> Yes, we use JWT-based authentication and secure session management to protect your data. </source>
+        <target>Ja, wir verwenden JWT-basierte Authentifizierung und sicheres Sitzungsmanagement, um Ihre Daten zu schützen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">229,232</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faqQ5Title" datatype="html">
+        <source> How is the platform themed? </source>
+        <target>Wie ist die Plattform gestaltet?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">237,238</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faqQ5Description" datatype="html">
+        <source> VokabelProfi offers a modern, customizable theme that adapts to both light and dark modes. Users can experience a visually appealing interface that aligns with their personal preferences, ensuring a comfortable and immersive learning environment. </source>
+        <target>VokabelProfi bietet ein modernes, anpassbares Thema, das sowohl für den hellen als auch für den dunklen Modus geeignet ist. Benutzer können eine optisch ansprechende Benutzeroberfläche erleben, die sich an ihre persönlichen Vorlieben anpasst und eine angenehme und eindringliche Lernumgebung gewährleistet.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">241,244</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faqQ6Title" datatype="html">
+        <source> Is VokabelProfi mobile-friendly? </source>
+        <target>Ist VokabelProfi mobilfreundlich?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">251,252</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faqQ6Description" datatype="html">
+        <source> Yes, VokabelProfi is designed to be fully responsive and optimized for mobile devices. Whether you&apos;re using a phone, tablet, or desktop, the platform adapts seamlessly to provide a smooth and user-friendly experience on all screen sizes. </source>
+        <target>Ja, VokabelProfi wurde entwickelt, um vollständig anpassungsfähig und für mobile Geräte optimiert zu sein. Egal, ob Sie ein Telefon, Tablet oder einen Desktop verwenden, die Plattform passt sich nahtlos an, um eine reibungslose und benutzerfreundliche Erfahrung auf allen Bildschirmgrößen zu bieten.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">255,258</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faqQ7Title" datatype="html">
+        <source> Is VokabelProfi accessible for disabled users? </source>
+        <target>Ist VokabelProfi für behinderte Benutzer zugänglich?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">265,266</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faqQ7Description" datatype="html">
+        <source> Yes, VokabelProfi is designed with accessibility in mind. The platform includes features like screen reader compatibility, keyboard navigation, and appropriate contrast levels to ensure that users with disabilities can effectively engage with the content and improve their language skills. </source>
+        <target>Ja, VokabelProfi wurde mit Blick auf Barrierefreiheit entwickelt. Die Plattform umfasst Funktionen wie Bildschirmleser-Kompatibilität, Tastaturnavigation und geeignete Kontraststufen, um sicherzustellen, dass Benutzer mit Behinderungen effektiv mit den Inhalten interagieren und ihre Sprachfähigkeiten verbessern können.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.html</context>
+          <context context-type="linenumber">269,273</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="klimaQuestion" datatype="html">
+        <source>What is the meaning of Klima?</source>
+        <target>Was bedeutet Klima?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.component.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="correctFeedback" datatype="html">
+        <source>Correct! <x id="PH" equiv-text="this.exercises[this.currentExerciseIndex].german_word" />
+ means <x id="PH_1" equiv-text="this.exercises[this.currentExerciseIndex].correctOption" />
+.</source>
+      <target>Richtig! <x id="PH" equiv-text="this.exercises[this.currentExerciseIndex].german_word" />
+ bedeutet <x id="PH_1" equiv-text="this.exercises[this.currentExerciseIndex].correctOption" />
+.</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/features/home/home.component.ts</context>
+      <context context-type="linenumber">71,73</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="incorrectFeedback" datatype="html">
+    <source>Incorrect! The correct answer is <x id="PH" equiv-text="this.exercises[this.currentExerciseIndex].correctOption" />
+.</source>
+    <target>Falsch! Die richtige Antwort ist <x id="PH" equiv-text="this.exercises[this.currentExerciseIndex].correctOption" />
+.</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/features/home/home.component.ts</context>
+      <context context-type="linenumber">76,78</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="noWordsForSelection" datatype="html">
+    <source>No words available for the selection at this moment</source>
+    <target>Derzeit sind keine Wörter für die Auswahl verfügbar</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/features/learn/learn.component.ts</context>
+      <context context-type="linenumber">104</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="errorFetchingWords" datatype="html">
+    <source>Error fetching words for the selected lesson</source>
+    <target>Fehler beim Abrufen der Wörter für die ausgewählte Lektion</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/features/learn/learn.component.ts</context>
+      <context context-type="linenumber">117</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="cefrProgressTitle" datatype="html">
+    <source>Your CEFR Level Progress</source>
+    <target>Ihr CEFR-Level-Fortschritt</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/features/progress/progress.component.html</context>
+      <context context-type="linenumber">4,6</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="lessonProgressTitle" datatype="html">
+    <source> Lesson Progress for Selected CEFR Level </source>
+    <target>Lektionsfortschritt für das ausgewählte CEFR-Niveau</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/features/progress/progress.component.html</context>
+      <context context-type="linenumber">17,19</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="selectCefrLevelLabel" datatype="html">
+    <source>Select CEFR Level:</source>
+    <target>Wählen Sie CEFR-Niveau:</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/features/progress/progress.component.html</context>
+      <context context-type="linenumber">22,24</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="logInToSeeProgress" datatype="html">
+    <source>You need to log in to view your progress. Please log in to continue.</source>
+    <target>Sie müssen sich anmelden, um Ihren Fortschritt zu sehen. Bitte melden Sie sich an, um fortzufahren.</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/features/progress/progress.component.ts</context>
+      <context context-type="linenumber">71</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="noInfoProgress" datatype="html">
+    <source>No info found for the selected CEFR level</source>
+    <target>Keine Informationen für das ausgewählte CEFR-Niveau gefunden</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/features/progress/progress.component.ts</context>
+      <context context-type="linenumber">199</context>
+    </context-group>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/features/progress/progress.component.ts</context>
+      <context context-type="linenumber">208</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="tipsTitle" datatype="html">
+    <source> Tips for Maximizing Your Learning with VokabelProfi </source>
+    <target>Tipps zur Maximierung Ihres Lernens mit VokabelProfi</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/features/tips/tips.component.html</context>
+      <context context-type="linenumber">3,6</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="tip1Title" datatype="html">
+    <source>1. Set Clear Goals</source>
+    <target>1. Setzen Sie sich klare Ziele</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/features/tips/tips.component.html</context>
+      <context context-type="linenumber">8,9</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="tip1Description" datatype="html">
+    <source> Define specific language learning goals, such as mastering a certain CEFR level or completing a set number of exercises per day. Setting clear goals will help you stay focused and motivated. </source>
+    <target>Definieren Sie spezifische Sprachlernziele, z. B. das Beherrschen eines bestimmten CEFR-Niveaus oder das Abschließen einer bestimmten Anzahl von Übungen pro Tag. Klare Ziele zu setzen hilft Ihnen, fokussiert und motiviert zu bleiben.</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/features/tips/tips.component.html</context>
+      <context context-type="linenumber">10,13</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="tip2Title" datatype="html">
+    <source>2. Consistency is Key</source>
+    <target>2. Beständigkeit ist der Schlüssel</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/features/tips/tips.component.html</context>
+      <context context-type="linenumber">17,18</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="tip2Description" datatype="html">
+    <source> Make learning a daily habit. Consistency will reinforce your memory and language skills over time. Try to dedicate at least 10-15 minutes a day to practice. </source>
+    <target>Machen Sie das Lernen zur täglichen Gewohnheit. Beständigkeit wird Ihr Gedächtnis und Ihre Sprachfähigkeiten im Laufe der Zeit festigen. Versuchen Sie, sich mindestens 10-15 Minuten pro Tag zum Üben zu widmen.</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/features/tips/tips.component.html</context>
+      <context context-type="linenumber">19,22</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="tip3Title" datatype="html">
+    <source>3. Use Progress Tracking</source>
+    <target>3. Verwenden Sie die Fortschrittsverfolgung</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/features/tips/tips.component.html</context>
+      <context context-type="linenumber">26,27</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="tip3Description" datatype="html">
+    <source> Regularly check your progress through the platform’s tracking tools. Seeing your progress can boost your motivation and give you insight into areas that need improvement. </source>
+    <target>Überprüfen Sie regelmäßig Ihren Fortschritt mit den Verfolgungswerkzeugen der Plattform. Ihren Fortschritt zu sehen kann Ihre Motivation steigern und Ihnen Einblicke in Bereiche geben, die verbessert werden müssen.</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/features/tips/tips.component.html</context>
+      <context context-type="linenumber">28,31</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="tip4Title" datatype="html">
+    <source>4. Diversify Your Learning</source>
+    <target>4. Diversifizieren Sie Ihr Lernen</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/features/tips/tips.component.html</context>
+      <context context-type="linenumber">35,36</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="tip4Description" datatype="html">
+    <source> Mix up your learning routine with different types of exercises, such as multiple-choice questions, translation tasks, and pronunciation practice. Diversifying your activities will keep you engaged and help reinforce your learning. </source>
+    <target>Mischen Sie Ihre Lernroutine mit verschiedenen Arten von Übungen, wie Multiple-Choice-Fragen, Übersetzungsaufgaben und Ausspracheübungen. Ihre Aktivitäten zu diversifizieren wird Sie engagiert halten und Ihr Lernen festigen.</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/features/tips/tips.component.html</context>
+      <context context-type="linenumber">37,40</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="tip5Title" datatype="html">
+    <source>5. Take Advantage of Audio Features</source>
+    <target>5. Nutzen Sie die Audiofunktionen</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/features/tips/tips.component.html</context>
+      <context context-type="linenumber">45,46</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="tip5Description" datatype="html">
+    <source> Use the integrated audio features to practice pronunciation and improve your listening skills. Repeating after the audio will help you get used to the sounds and rhythm of the language. </source>
+    <target>Verwenden Sie die integrierten Audiofunktionen, um die Aussprache zu üben und Ihre Hörfähigkeiten zu verbessern. Das Wiederholen nach dem Audio wird Ihnen helfen, sich an die Klänge und den Rhythmus der Sprache zu gewöhnen.</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/features/tips/tips.component.html</context>
+      <context context-type="linenumber">47,50</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="tip6Title" datatype="html">
+    <source>6. Review Regularly</source>
+    <target>6. Regelmäßig überprüfen</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/features/tips/tips.component.html</context>
+      <context context-type="linenumber">54,55</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="tip6Description" datatype="html">
+    <source> Periodically review past exercises to refresh your memory. Regular reviews will help you retain what you’ve learned and strengthen your long-term memory. </source>
+    <target>Überprüfen Sie regelmäßig vergangene Übungen, um Ihr Gedächtnis aufzufrischen. Regelmäßige Überprüfungen helfen Ihnen, das Gelernte zu behalten und Ihr Langzeitgedächtnis zu stärken.</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/features/tips/tips.component.html</context>
+      <context context-type="linenumber">56,59</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="tip7Title" datatype="html">
+    <source>7. Utilize the CEFR Structure</source>
+    <target>7. Nutzen Sie die CEFR-Struktur</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/features/tips/tips.component.html</context>
+      <context context-type="linenumber">63,64</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="tip7Description" datatype="html">
+    <source> Leverage the structured CEFR levels to guide your learning. The CEFR framework ensures that you are progressing in a systematic way, which is particularly helpful for mastering vocabulary and grammar at each level. </source>
+    <target>Nutzen Sie die strukturierten CEFR-Niveaus, um Ihr Lernen zu lenken. Der CEFR-Rahmen stellt sicher, dass Sie systematisch vorankommen, was besonders hilfreich ist, um Wortschatz und Grammatik auf jedem Niveau zu beherrschen.</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/features/tips/tips.component.html</context>
+      <context context-type="linenumber">65,68</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="audioSupportMessage" datatype="html">
+    <source>Your browser does not support the audio element.</source>
+    <target>Ihr Browser unterstützt das Audioelement nicht.</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/audio-player/audio-player.component.html</context>
+      <context context-type="linenumber">5,9</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="seekSlider" datatype="html">
+    <source>Seek through the audio</source>
+    <target>Durch das Audio navigieren</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/audio-player/audio-player.component.html</context>
+      <context context-type="linenumber">23,26</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="timeDisplay" datatype="html">
+    <source>
+      <x id="INTERPOLATION" equiv-text="{{ formatTime(currentTime) }}" />
+ /      <x id="INTERPOLATION_1" equiv-text="{{ formatTime(duration) }}" />
+    </source>
+    <target>
+      <x id="INTERPOLATION" equiv-text="{{ formatTime(currentTime) }}" />
+ /      <x id="INTERPOLATION_1" equiv-text="{{ formatTime(duration) }}" />
+    </target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/audio-player/audio-player.component.html</context>
+      <context context-type="linenumber">27,29</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="dialogTitle" datatype="html">
+    <source>
+      <x id="INTERPOLATION" equiv-text="{{ data.title }}" />
+    </source>
+    <target>
+      <x id="INTERPOLATION" equiv-text="{{ data.title }}" />
+    </target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/confirm-dialog/confirm-dialog.component.html</context>
+      <context context-type="linenumber">1,2</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="dialogMessage" datatype="html">
+    <source>
+      <x id="INTERPOLATION" equiv-text="{{ data.message }}" />
+    </source>
+    <target>
+      <x id="INTERPOLATION" equiv-text="{{ data.message }}" />
+    </target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/confirm-dialog/confirm-dialog.component.html</context>
+      <context context-type="linenumber">3,5</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="cancelButton" datatype="html">
+    <source>No</source>
+    <target>Nein</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/confirm-dialog/confirm-dialog.component.html</context>
+      <context context-type="linenumber">6,8</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="confirmButton" datatype="html">
+    <source> Yes </source>
+    <target>Ja</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/confirm-dialog/confirm-dialog.component.html</context>
+      <context context-type="linenumber">13,16</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="footerText" datatype="html">
+    <source>©      <x id="INTERPOLATION" equiv-text="{{ currentYear }}" />
+ Shahriar Malik. All rights reserved.</source>
+    <target>©      <x id="INTERPOLATION" equiv-text="{{ currentYear }}" />
+ Shahriar Malik. Alle Rechte vorbehalten.</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/footer/footer.component.html</context>
+      <context context-type="linenumber">3,5</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="githubLink" datatype="html">
+    <source>GitHub</source>
+    <target>GitHub</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/footer/footer.component.html</context>
+      <context context-type="linenumber">12</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="linkedinLink" datatype="html">
+    <source>LinkedIn</source>
+    <target>LinkedIn</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/footer/footer.component.html</context>
+      <context context-type="linenumber">21,22</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="xingLink" datatype="html">
+    <source>Xing</source>
+    <target>Xing</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/footer/footer.component.html</context>
+      <context context-type="linenumber">32</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="menuButton" datatype="html">
+    <source>Menu</source>
+    <target>Menü</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">6</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="appLogo" datatype="html">
+    <source>
+      <x id="TAG_IMG" ctype="image" equiv-text="&lt;img src=&quot;assets/images/logo.png&quot;
+      mat-icon-button alt=&quot;Logo&quot; width=&quot;40&quot; height=&quot;40&quot; i18n-alt=&quot;@@logoAlt&quot; routerLinkActive=&quot;router-link-active&quot; [routerLink]=&quot;[&apos;/&apos;]&quot;
+    /&gt;" />
+    </source>
+    <target>
+      <x id="TAG_IMG" ctype="image" equiv-text="&lt;img src=&quot;assets/images/logo.png&quot;
+      mat-icon-button alt=&quot;Logo&quot; width=&quot;40&quot; height=&quot;40&quot; i18n-alt=&quot;@@logoAlt&quot; routerLinkActive=&quot;router-link-active&quot; [routerLink]=&quot;[&apos;/&apos;]&quot;
+    /&gt;" />
+    </target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">15,24</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="logoAlt" datatype="html">
+    <source>Logo</source>
+    <target>Logo</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">18,19</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="learnButton" datatype="html">
+    <source> Learn </source>
+    <target>Lernen</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">33,36</context>
+    </context-group>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">119,124</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="exercisesButton" datatype="html">
+    <source> Exercises </source>
+    <target>Übungen</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">42,44</context>
+    </context-group>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">181,184</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="tipsButton" datatype="html">
+    <source> Tips </source>
+    <target>Tipps</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">50,52</context>
+    </context-group>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">189,192</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="myProgressButton" datatype="html">
+    <source> My Progress</source>
+    <target>Mein Fortschritt</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">59,60</context>
+    </context-group>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">198,200</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="adminButton" datatype="html">
+    <source> Admin </source>
+    <target>Administrator</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">66,68</context>
+    </context-group>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">202,208</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="wordsManagementButton" datatype="html">
+    <source> Words Management </source>
+    <target>Wortverwaltung</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">75,77</context>
+    </context-group>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">215,218</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="exercisesManagementButton" datatype="html">
+    <source> Exercises Management </source>
+    <target>Übungsverwaltung</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">83,85</context>
+    </context-group>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">223,226</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="logoutButton" datatype="html">
+    <source> Logout </source>
+    <target>Abmelden</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">106,108</context>
+    </context-group>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">327,329</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="a1Button" datatype="html">
+    <source> A1 </source>
+    <target>A1</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">131,133</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="a2Button" datatype="html">
+    <source> A2 </source>
+    <target>A2</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">139,141</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="b1Button" datatype="html">
+    <source> B1 </source>
+    <target>B1</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">147,149</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="b2Button" datatype="html">
+    <source> B2 </source>
+    <target>B2</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">155,157</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="c1Button" datatype="html">
+    <source> C1 </source>
+    <target>C1</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">163,165</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="c2Button" datatype="html">
+    <source> C2 </source>
+    <target>C2</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">171,173</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="englishFlagAlt" datatype="html">
+    <source>English Flag</source>
+    <target>Englische Flagge</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">241,243</context>
+    </context-group>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">265,267</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="germanFlagAlt" datatype="html">
+    <source>German Flag</source>
+    <target>Deutsche Flagge</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">249,251</context>
+    </context-group>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">277,279</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="languageEN" datatype="html">
+    <source>EN</source>
+    <target>EN</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">270,272</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="languageDE" datatype="html">
+    <source>DE</source>
+    <target>DE</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">282,284</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="toggleThemeButton" datatype="html">
+    <source>Toggle Theme</source>
+    <target>Thema wechseln</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">291,292</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="darkMode" datatype="html">
+    <source>Dark</source>
+    <target>Dunkel</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">300,301</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="lightMode" datatype="html">
+    <source>Light</source>
+    <target>Hell</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
+      <context context-type="linenumber">304,306</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="previousButton" datatype="html">
+    <source> Previous </source>
+    <target>Zurück</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/paginator/paginator.component.html</context>
+      <context context-type="linenumber">9,12</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="pageRangeDisplay" datatype="html">
+    <source>
+      <x id="INTERPOLATION" equiv-text="{{ currentPage + 1 }}" />
+ /      <x id="INTERPOLATION_1" equiv-text="{{ totalPages }}" />
+    </source>
+    <target>
+      <x id="INTERPOLATION" equiv-text="{{ currentPage + 1 }}" />
+ /      <x id="INTERPOLATION_1" equiv-text="{{ totalPages }}" />
+    </target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/paginator/paginator.component.html</context>
+      <context context-type="linenumber">14,17</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="nextButton" datatype="html">
+    <source> Next </source>
+    <target>Weiter</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/paginator/paginator.component.html</context>
+      <context context-type="linenumber">24,27</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="pageSizeAriaLabel" datatype="html">
+    <source>Select page size</source>
+    <target>Seitengröße wählen</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/paginator/paginator.component.html</context>
+      <context context-type="linenumber">32,35</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="pageSizeOption" datatype="html">
+    <source>
+      <x id="INTERPOLATION" equiv-text="{{ size }}" />
+ per page </source>
+    <target>
+      <x id="INTERPOLATION" equiv-text="{{ size }}" />
+ pro Seite</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/shared/components/paginator/paginator.component.html</context>
+      <context context-type="linenumber">39,41</context>
+    </context-group>
+  </trans-unit>
+</body>
+</file>
+</xliff>

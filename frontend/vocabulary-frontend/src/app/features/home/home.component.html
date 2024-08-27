@@ -1,0 +1,277 @@
+<!-- Hero Section -->
+<div class="hero-section">
+  <div class="hero-content">
+    <h3 i18n="@@heroTitle">VokabelProfi: Master German Vocabulary</h3>
+    <p i18n="@@heroDescription">
+      Experience level-based learning with content aligned to the Common
+      European Framework of Reference for Languages (CEFR) for a more organized
+      and personalized learning journey. Interactive exercises, progress
+      tracking, and seamless multi-device support.
+    </p>
+    <div class="cta-button">
+      <button
+        mat-raised-button
+        color="primary"
+        [routerLink]="['/learn']"
+        title="Start learning with VokabelProfi"
+        i18n-title="@@startLearningTitle"
+        i18n="@@startLearningButton"
+      >
+        Start Learning
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Key Features Section -->
+<div class="features-section">
+  <div class="feature-grid-container">
+    <div class="feature-grid-item">
+      <div class="feature-card">
+        <div class="feature-card-header">
+          <span class="feature-icon">🎯</span>
+          <h3 class="feature-card-title" i18n="@@structuredLearningTitle">
+            Structured Learning Path
+          </h3>
+        </div>
+        <div class="feature-card-content">
+          <p i18n="@@structuredLearningDescription">
+            Follow a well-organized curriculum aligned with CEFR for
+            comprehensive language mastery.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-grid-item">
+      <div class="feature-card">
+        <div class="feature-card-header">
+          <span class="feature-icon">📝</span>
+          <h3 class="feature-card-title" i18n="@@engagingExercisesTitle">
+            Engaging Exercises
+          </h3>
+        </div>
+        <div class="feature-card-content">
+          <p i18n="@@engagingExercisesDescription">
+            Dive into a variety of interactive exercises to reinforce vocabulary
+            and language skills.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-grid-item">
+      <div class="feature-card">
+        <div class="feature-card-header">
+          <span class="feature-icon">📊</span>
+          <h3 class="feature-card-title" i18n="@@progressTrackingTitle">
+            Progress Tracking
+          </h3>
+        </div>
+        <div class="feature-card-content">
+          <p i18n="@@progressTrackingDescription">
+            Monitor your learning journey with real-time progress tracking and
+            personalized feedback.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-grid-item">
+      <div class="feature-card">
+        <div class="feature-card-header">
+          <span class="feature-icon">🎧</span>
+          <h3 class="feature-card-title" i18n="@@pronunciationTitle">
+            Pronunciation
+          </h3>
+        </div>
+        <div class="feature-card-content">
+          <p i18n="@@pronunciationDescription">
+            Improve your pronunciation and understanding with integrated
+            translation services and audio features.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Interactive Demo Section -->
+<div class="interactive-demo-section">
+  <h4 i18n="@@interactiveDemoTitle">Try an Exercise</h4>
+  <div class="demo-card">
+    <div class="demo-content">
+      <p i18n="@@interactiveDemoDescription">
+        Experience a sample exercise and see how VokabelProfi can enhance your
+        German vocabulary skills.
+      </p>
+      <div class="exercise-container">
+        <h3 class="exercise-question">
+          {{ exercises[currentExerciseIndex].question }}
+        </h3>
+        <form [formGroup]="exerciseForm" class="options-form">
+          <div
+            *ngFor="let option of exercises[currentExerciseIndex].options"
+            class="option"
+          >
+            <input
+              type="radio"
+              [id]="option"
+              formControlName="exerciseOption"
+              [value]="option"
+              title="Choose an answer"
+              i18n-title="@@chooseAnswerTitle"
+            />
+            <label [for]="option">{{ option }}</label>
+          </div>
+        </form>
+        <button
+          class="submit-button"
+          (click)="submitAnswer()"
+          [disabled]="!exerciseForm.valid || exerciseForm.pristine"
+          title="Please select an answer"
+          i18n-title="@@submitAnswerTitle"
+          i18n="@@submitAnswerButton"
+        >
+          Submit Answer
+        </button>
+        <p [ngStyle]="{ color: feedbackColor }" class="feedback">
+          {{ feedbackMessage }}
+        </p>
+      </div>
+      <button
+        class="explore-button"
+        type="button"
+        [routerLink]="['/exercises']"
+        title="Explore more exercises"
+        i18n-title="@@exploreMoreTitle"
+        i18n="@@exploreMoreButton"
+      >
+        Explore More Exercises
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Testimonials Section -->
+<div class="testimonials-section">
+  <h4 i18n="@@testimonialsTitle">What Our Users Say</h4>
+  <div class="testimonials-section__container">
+    <div class="testimonial-card">
+      <p class="testimonial-text">
+        "VokabelProfi has transformed my learning experience with its real-time
+        tracking and personalized exercises!"
+      </p>
+      <p class="testimonial-author">- Sulaiman Jabir</p>
+    </div>
+
+    <div class="testimonial-card">
+      <p class="testimonial-text">
+        "The integrated translation and audio features make learning new words a
+        breeze!"
+      </p>
+      <p class="testimonial-author">- Anwar Mithu</p>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ Section -->
+<div class="faq-section">
+  <h4 i18n="@@faqTitle">Frequently Asked Questions</h4>
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title i18n="@@faqQ1Title">
+          How does VokabelProfi work?
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p i18n="@@faqQ1Description">
+        VokabelProfi offers personalized exercises to help you master German
+        vocabulary with interactive tools and real-time progress tracking. The
+        platform follows a structured learning path based on the Common European
+        Framework of Reference for Languages (CEFR), ensuring that your learning
+        journey is aligned with standardized language proficiency levels. Best
+        of all, the service is completely free!
+      </p>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title i18n="@@faqQ2Title">
+          Can I track my progress?
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p i18n="@@faqQ2Description">
+        Yes, the platform tracks your progress in real-time and provides
+        detailed reports on your learning activities.
+      </p>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title i18n="@@faqQ3Title">
+          What translation services are integrated?
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p i18n="@@faqQ3Description">
+        VokabelProfi integrates DeepL API for translations and Google
+        Translation API for audio pronunciation services.
+      </p>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title i18n="@@faqQ4Title">
+          Is my data secure?
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p i18n="@@faqQ4Description">
+        Yes, we use JWT-based authentication and secure session management to
+        protect your data.
+      </p>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title i18n="@@faqQ5Title">
+          How is the platform themed?
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p i18n="@@faqQ5Description">
+        VokabelProfi offers a modern, customizable theme that adapts to both
+        light and dark modes. Users can experience a visually appealing
+        interface that aligns with their personal preferences, ensuring a
+        comfortable and immersive learning environment.
+      </p>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title i18n="@@faqQ6Title">
+          Is VokabelProfi mobile-friendly?
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p i18n="@@faqQ6Description">
+        Yes, VokabelProfi is designed to be fully responsive and optimized for
+        mobile devices. Whether you're using a phone, tablet, or desktop, the
+        platform adapts seamlessly to provide a smooth and user-friendly
+        experience on all screen sizes.
+      </p>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title i18n="@@faqQ7Title">
+          Is VokabelProfi accessible for disabled users?
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p i18n="@@faqQ7Description">
+        Yes, VokabelProfi is designed with accessibility in mind. The platform
+        includes features like screen reader compatibility, keyboard navigation,
+        and appropriate contrast levels to ensure that users with disabilities
+        can effectively engage with the content and improve their language
+        skills.
+      </p>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

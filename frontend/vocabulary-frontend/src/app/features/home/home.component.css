@@ -1,0 +1,323 @@
+/* Hero Section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(255, 0, 0, 0.7),
+    rgba(255, 204, 0, 0.7)
+  );
+  background-size: cover;
+  background-position: center;
+  color: var(--text-secondary-color);
+  margin-bottom: 1rem auto;
+  padding-top: 0.5rem;
+}
+
+.hero-content h3 {
+  /* font-size: 2.5rem; */
+  margin-bottom: 1.25rem;
+  color: whitesmoke;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.875rem;
+  padding: 1rem;
+  color: whitesmoke;
+}
+
+.cta-button {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  padding-bottom: 1rem;
+}
+
+.cta-button button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 0.75rem 1.5625rem;
+  margin-top: 1.875rem;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button button:hover {
+  background-color: var(--accent-color);
+}
+
+/* Key Features Section */
+.features-section {
+  padding: 1.25rem;
+  background-color: var(--background-color-lighter);
+}
+
+.feature-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+  gap: 1rem;
+}
+
+.feature-grid-item {
+  background-color: var(--background-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.3125rem var(--shadow-color);
+  overflow: hidden;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.feature-card-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.feature-card-header .feature-icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.feature-card-title {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.feature-card-content {
+  padding: 1rem;
+  flex-grow: 1;
+}
+
+.feature-card-content p {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+/* Interactive Demo Section */
+.interactive-demo-section {
+  padding: 2.5rem 1.25rem;
+  background-color: var(--background-color);
+  text-align: center;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.5rem var(--shadow-color);
+  margin: 2.5rem 0;
+}
+
+.demo-card {
+  background-color: var(--background-color-lighter);
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.3125rem var(--shadow-color);
+  max-width: 37.5rem;
+  margin: 0 auto;
+}
+
+.demo-content p {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin-bottom: 1.25rem;
+}
+
+.exercise-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.exercise-question {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.options-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.option {
+  margin: 0.625rem 0;
+  display: flex;
+  align-items: flex-start;
+}
+
+.option label {
+  margin-left: 0.625rem;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+input[type="radio"] {
+  accent-color: var(--primary-color);
+}
+
+.submit-button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 0.625rem 1.25rem;
+  margin-top: 1.25rem;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button[disabled] {
+  cursor: not-allowed;
+  background-color: var(--primary-color);
+}
+
+.submit-button:hover {
+  background-color: var(--accent-color);
+}
+
+.feedback {
+  margin-top: 1.25rem;
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.explore-button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 0.75rem 1.5625rem;
+  margin-top: 1.875rem;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.explore-button:hover {
+  background-color: var(--accent-color);
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  padding: 2.5rem 1.25rem;
+  background-color: var(--background-color-lighter);
+  text-align: center;
+}
+
+.testimonials-section h4 {
+  font-size: 1.8rem;
+  margin-bottom: 1.875rem;
+  color: var(--text-color);
+}
+
+.testimonials-section__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.testimonial-card {
+  background-color: var(--background-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.3125rem var(--shadow-color);
+  padding: 1.25rem;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-0.3125rem);
+  box-shadow: 0 0.3125rem 0.9375rem var(--shadow-color);
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-bottom: 0.9375rem;
+}
+
+.testimonial-author {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--text-color);
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: 2.5rem 1.25rem;
+  background-color: var(--background-color-lighter);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.5rem var(--shadow-color);
+}
+
+.faq-section h4 {
+  font-size: 2rem;
+  margin-bottom: 1.875rem;
+  text-align: center;
+  color: var(--text-color);
+}
+
+mat-expansion-panel {
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 0.3125rem;
+  margin-bottom: 0.625rem;
+}
+
+mat-expansion-panel-header {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+mat-expansion-panel-header:hover {
+  background-color: var(--primary-color);
+}
+
+mat-expansion-panel-header mat-panel-title {
+  color: var(--text-color);
+}
+
+mat-expansion-panel-content {
+  background-color: var(--background-color-lighter);
+  color: var(--text-color);
+  padding: 0.9375rem;
+}
+
+mat-accordion mat-expansion-panel p {
+  color: var(--text-color);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  /*  for small screens  */
+}
+
+@media (min-width: 768px) {
+  /*  for medium screens  */
+  .testimonials-section__container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .testimonial-card {
+    width: 45%;
+    margin: 0 0.625rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  /*  for large screens  */
+}

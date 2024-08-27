@@ -1,0 +1,29 @@
+<div class="audio-player">
+  <audio #audioPlayer (timeupdate)="updateProgress()" (ended)="onAudioEnd()">
+    <source [src]="audioSrc" type="audio/mp3" />
+    <span i18n="@@audioSupportMessage"
+      >Your browser does not support the audio element.</span
+    >
+  </audio>
+
+  <button
+    (click)="togglePlayPause()"
+    i18n-title="@@playPauseButton"
+    [title]="isPlaying ? 'Pause' : 'Play'"
+  >
+    {{ isPlaying ? "⏸️" : "►" }}
+  </button>
+
+  <input
+    type="range"
+    [value]="currentTime"
+    [max]="duration"
+    (input)="seekAudio($event)"
+    i18n-title="@@seekSlider"
+    title="Seek through the audio"
+  />
+
+  <span i18n="@@timeDisplay"
+    >{{ formatTime(currentTime) }} / {{ formatTime(duration) }}</span
+  >
+</div>

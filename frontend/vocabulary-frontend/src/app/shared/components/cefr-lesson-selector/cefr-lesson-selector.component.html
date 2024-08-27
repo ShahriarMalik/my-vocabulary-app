@@ -1,0 +1,48 @@
+<div class="cefr-lesson-selector">
+  <!-- CEFR LEVEL and Lesson Dropdowns -->
+  <div class="cefr-selectors">
+    <!-- CEFR LEVEL Dropdown -->
+    <div>
+      <label for="cefrLevel" i18n="@@cefrLevelLabel">Select CEFR Level:</label>
+      <select
+        id="cefrLevel"
+        (change)="onCefrLevelSelect($event)"
+        [value]="selectedCefrLevel"
+        i18n-aria-label="@@cefrLevelAriaLabel"
+        aria-label="CEFR Level"
+      >
+        @for(level of cefrLevels; track $index){
+        <option [value]="level">{{ level }}</option>
+        }
+      </select>
+    </div>
+
+    <!-- Lessons Dropdown -->
+    <div>
+      <label for="lesson" i18n="@@lessonLabel">Select Lesson:</label>
+      <select
+        id="lesson"
+        (change)="onLessonSelect($event)"
+        [disabled]="lessons.length === 0"
+        i18n-aria-label="@@lessonAriaLabel"
+        aria-label="Lesson"
+      >
+        @if(lessons.length === 0){
+        <option value="0">No lesson</option>
+
+        } @for(lesson of lessons; track lesson.lesson_number){
+        <option [value]="lesson.lesson_number">
+          <span i18n="@@lessonNumber">Lesson</span>
+          {{ lesson.lesson_number }}
+        </option>
+        }
+      </select>
+    </div>
+  </div>
+
+  <!-- Message -->
+  <div class="notice-container">
+    <app-notice [message]="errorMessage" [isError]="true"></app-notice>
+    <app-notice [message]="successMessage" [isError]="false"></app-notice>
+  </div>
+</div>

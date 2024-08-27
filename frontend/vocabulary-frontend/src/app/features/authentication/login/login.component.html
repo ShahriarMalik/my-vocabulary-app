@@ -1,0 +1,85 @@
+<div class="login-container">
+  <mat-card class="login-card">
+    <mat-card-header>
+      <h4 class="title" i18n="@@loginTitle">Login</h4>
+    </mat-card-header>
+    <mat-card-content>
+      <!-- Display error message when login fails -->
+      @if (errorMessage) {
+      <mat-card class="error-card">
+        <mat-card-header>
+          <p class="error-message">{{ errorMessage }}</p>
+        </mat-card-header>
+      </mat-card>
+      }
+
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+        <!-- Email Field -->
+        <mat-form-field appearance="outline">
+          <mat-label label i18n="@@emailLabel">Email</mat-label>
+          <input
+            matInput
+            type="email"
+            id="email"
+            formControlName="email"
+            #emailInput
+          />
+          @if (email?.invalid && email?.touched) {
+          <mat-error>
+            @if (email?.errors?.['required']) {
+            <small i18n="@@emailRequired">Email is required.</small>
+            } @if (email?.errors?.['email']) {
+            <small i18n="@@invalidEmail">Invalid email address.</small>
+            }
+          </mat-error>
+          }
+        </mat-form-field>
+
+        <!-- Password Field -->
+        <mat-form-field appearance="outline">
+          <mat-label label i18n="@@passwordLabel">Password</mat-label>
+          <input
+            matInput
+            type="password"
+            id="password"
+            formControlName="password"
+          />
+          @if (password?.invalid && password?.touched) {
+          <mat-error>
+            @if (password?.errors?.['required']) {
+            <small i18n="@@passwordRequired">Password is required.</small>
+            } @if (password?.errors?.['minlength']) {
+            <small i18n="@@passwordMinLength"
+              >Password must be at least 6 characters long.</small
+            >
+            }
+          </mat-error>
+          }
+        </mat-form-field>
+
+        <!-- Submit Button -->
+        <div class="button-container">
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            [disabled]="loginForm.invalid"
+            i18n="@@loginButton"
+          >
+            Login
+          </button>
+
+          <button
+            mat-button
+            [routerLink]="['/auth/password-reset']"
+            class="forget-password-button"
+            type="button"
+            i18n="@@forgotPasswordButton"
+          >
+            Forgot Password?
+          </button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
