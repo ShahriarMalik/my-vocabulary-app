@@ -185,10 +185,8 @@ backend/
 4. **Start the PHP development server**:
 
    ```bash
-   php -S localhost
+   php -S localhost :8000 -t public
    ```
-
-:8000 -t public
 
 ````
 
