@@ -1,6 +1,6 @@
 ### VokabelProfi - German Vocabulary Learning Platform
 
-VokabelProfi is a comprehensive web application designed to help users learn and manage German vocabulary. It features interactive exercises, real-time progress tracking, multi-device support, and administrative tools. The platform provides personalized learning experiences, supports multiple languages through internationalization (i18n), and ensures a responsive user interface across different devices.
+VokabelProfi is a comprehensive web application designed to help users learn and manage German vocabulary. It features interactive exercises, real-time progress tracking, multi-device support, and administrative tools. The platform provides excellent learning experiences, supports multiple languages through internationalization (i18n), and ensures a responsive user interface across different devices.
 
 #### Live Demo:
 
@@ -24,7 +24,6 @@ You can try out the application at: [VokabelProfi Live Demo](https://vokabelprof
 
 ```
 frontend/
-├── .netlify/
 ├── node_modules/
 ├── vocabulary-frontend/
 │   ├── .angular/                   # Angular CLI and project configuration files
@@ -186,10 +185,8 @@ backend/
 4. **Start the PHP development server**:
 
    ```bash
-   php -S localhost
+   php -S localhost :8000 -t public
    ```
-
-:8000 -t public
 
 ````
 
