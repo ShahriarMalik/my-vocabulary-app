@@ -27,7 +27,8 @@ Thumbs.db
 
 # Ignore api keys
 backend/phpunit.xml
-backend/fluent-justice-431711-m6-a1aefe34f6ad.json
+fluent-justice-431711-m6-a1aefe34f6ad.json
+fluent-justice-431711-m6-3d4644e99857.json
 
 # Ignore debug file
 *.log
@@ -35,9 +36,56 @@ backend/fluent-justice-431711-m6-a1aefe34f6ad.json
 
 
 # Ignore server settings file
-.htaccess
-
+backend/public/
 # Ingore folders
 .netlify
 
 /audio
+
+# Fronent default
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Node
+/node_modules
+npm-debug.log
+yarn-error.log
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Miscellaneous
+/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Base URL
+src/base-url.prod.ts
+src/base-url.dev.ts

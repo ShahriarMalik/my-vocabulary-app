@@ -212,12 +212,33 @@ class WordGateway implements WordGatewayInterface {
      * @return array
      */
     public function getWordbyCefrLevel(string $cefrLevel, int $lessonNumber, int $limit, int $offset): array {
-        $stmt = $this->db->prepare("SELECT * FROM words WHERE cefr_level = :cefr_level AND lesson_id = :lesson_number LIMIT :limit OFFSET :offset");
+        $stmt = $this->db->prepare("
+        SELECT 
+            w.*, 
+            t.translation 
+        FROM 
+            words w
+        LEFT JOIN 
+            translations t 
+        ON 
+            w.id = t.word_id
+        WHERE 
+            w.cefr_level = :cefr_level 
+        AND 
+            w.lesson_id = :lesson_number 
+        LIMIT 
+            :limit 
+        OFFSET 
+            :offset
+    ");
+
         $stmt->bindParam(":cefr_level", $cefrLevel);
         $stmt->bindParam(":lesson_number", $lessonNumber, PDO::PARAM_INT);
         $stmt->bindParam(":limit", $limit, PDO::PARAM_INT);
         $stmt->bindParam(":offset", $offset, PDO::PARAM_INT);
         $stmt->execute();
+
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
 }

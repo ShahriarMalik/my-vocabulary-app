@@ -123,7 +123,7 @@ class WordDataHelper {
     public static function fetchPronunciationUrl(string $word): ?string {
         try {
             // Set the path to the Google Cloud credentials file in the root folder
-            putenv('GOOGLE_APPLICATION_CREDENTIALS=' . __DIR__ . '/../../fluent-justice-431711-m6-a1aefe34f6ad.json');
+            putenv('GOOGLE_APPLICATION_CREDENTIALS=' . __DIR__ . '/../../fluent-justice-431711-m6-3d4644e99857.json');
 
             // Initialize the TextToSpeechClient
             $client = new TextToSpeechClient();

@@ -225,7 +225,7 @@
         <source>Error creating exercise</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/admin/exercises-management/exercises-management.component.ts</context>
-          <context context-type="linenumber">212</context>
+          <context context-type="linenumber">211</context>
         </context-group>
         <note priority="1" from="description">errorCreateExercise</note>
       </trans-unit>
@@ -308,6 +308,10 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/authentication/login/login.component.ts</context>
           <context context-type="linenumber">77</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/authentication/password-reset/password-reset.component.ts</context>
+          <context context-type="linenumber">70</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/authentication/signup/signup.component.ts</context>
@@ -629,7 +633,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/learn/learn.component.html</context>
-          <context context-type="linenumber">85,88</context>
+          <context context-type="linenumber">87,90</context>
         </context-group>
       </trans-unit>
       <trans-unit id="noDataAvailableMessage" datatype="html">
@@ -683,7 +687,7 @@
         <source>Learn</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/features.routes.ts</context>
-          <context context-type="linenumber">17</context>
+          <context context-type="linenumber">14</context>
         </context-group>
         <note priority="1" from="description">6899134966533859260</note>
       </trans-unit>
@@ -691,7 +695,7 @@
         <source>Exercises</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/features.routes.ts</context>
-          <context context-type="linenumber">23</context>
+          <context context-type="linenumber">20</context>
         </context-group>
         <note priority="1" from="description">5815398842801469550</note>
       </trans-unit>
@@ -699,7 +703,7 @@
         <source>Words Management</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/features.routes.ts</context>
-          <context context-type="linenumber">32</context>
+          <context context-type="linenumber">29</context>
         </context-group>
         <note priority="1" from="description">141084884839689192</note>
       </trans-unit>
@@ -707,7 +711,7 @@
         <source> Exercises Management</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/features.routes.ts</context>
-          <context context-type="linenumber">42</context>
+          <context context-type="linenumber">39</context>
         </context-group>
         <note priority="1" from="description">exercisesManagement</note>
       </trans-unit>
@@ -715,7 +719,7 @@
         <source>Progress</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/features.routes.ts</context>
-          <context context-type="linenumber">50</context>
+          <context context-type="linenumber">47</context>
         </context-group>
         <note priority="1" from="description">3419681791450150574</note>
       </trans-unit>
@@ -723,7 +727,7 @@
         <source>Tips</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/features.routes.ts</context>
-          <context context-type="linenumber">58</context>
+          <context context-type="linenumber">55</context>
         </context-group>
         <note priority="1" from="description">3285315590661482349</note>
       </trans-unit>
@@ -996,18 +1000,46 @@
         <context context-type="linenumber">76,78</context>
       </context-group>
     </trans-unit>
+    <trans-unit id="translation" datatype="html">
+      <source>Translation:</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/learn/learn.component.html</context>
+        <context context-type="linenumber">70</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="example" datatype="html">
+      <source>Example:</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/learn/learn.component.html</context>
+        <context context-type="linenumber">72</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="noLessonCEFR" datatype="html">
+      <source>No lessons available for the selected CEFR level</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/learn/learn.component.ts</context>
+        <context context-type="linenumber">77</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="wentWrong" datatype="html">
+      <source>Something went wrong. Please try again later.</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/learn/learn.component.ts</context>
+        <context context-type="linenumber">81</context>
+      </context-group>
+    </trans-unit>
     <trans-unit id="noWordsForSelection" datatype="html">
       <source>No words available for the selection at this moment</source>
       <context-group purpose="location">
         <context context-type="sourcefile">src/app/features/learn/learn.component.ts</context>
-        <context context-type="linenumber">104</context>
+        <context context-type="linenumber">103</context>
       </context-group>
     </trans-unit>
     <trans-unit id="errorFetchingWords" datatype="html">
       <source>Error fetching words for the selected lesson</source>
       <context-group purpose="location">
         <context context-type="sourcefile">src/app/features/learn/learn.component.ts</context>
-        <context context-type="linenumber">117</context>
+        <context context-type="linenumber">116</context>
       </context-group>
     </trans-unit>
     <trans-unit id="cefrProgressTitle" datatype="html">
@@ -1350,48 +1382,6 @@
       <context-group purpose="location">
         <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
         <context context-type="linenumber">327,329</context>
-      </context-group>
-    </trans-unit>
-    <trans-unit id="a1Button" datatype="html">
-      <source> A1 </source>
-      <context-group purpose="location">
-        <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-        <context context-type="linenumber">131,133</context>
-      </context-group>
-    </trans-unit>
-    <trans-unit id="a2Button" datatype="html">
-      <source> A2 </source>
-      <context-group purpose="location">
-        <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-        <context context-type="linenumber">139,141</context>
-      </context-group>
-    </trans-unit>
-    <trans-unit id="b1Button" datatype="html">
-      <source> B1 </source>
-      <context-group purpose="location">
-        <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-        <context context-type="linenumber">147,149</context>
-      </context-group>
-    </trans-unit>
-    <trans-unit id="b2Button" datatype="html">
-      <source> B2 </source>
-      <context-group purpose="location">
-        <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-        <context context-type="linenumber">155,157</context>
-      </context-group>
-    </trans-unit>
-    <trans-unit id="c1Button" datatype="html">
-      <source> C1 </source>
-      <context-group purpose="location">
-        <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-        <context context-type="linenumber">163,165</context>
-      </context-group>
-    </trans-unit>
-    <trans-unit id="c2Button" datatype="html">
-      <source> C2 </source>
-      <context-group purpose="location">
-        <context context-type="sourcefile">src/app/shared/components/navbar/navbar.component.html</context>
-        <context context-type="linenumber">171,173</context>
       </context-group>
     </trans-unit>
     <trans-unit id="englishFlagAlt" datatype="html">

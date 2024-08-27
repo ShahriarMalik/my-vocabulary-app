@@ -66,8 +66,10 @@
     <h3>
       {{ word.german_word }}
     </h3>
-    <p><strong>Translation:</strong> {{ word.translation }}</p>
-    <p><strong>Example:</strong> {{ word.example }}</p>
+    <p>
+      <strong i18n="@@translation">Translation:</strong> {{ word.translation }}
+    </p>
+    <p><strong i18n="@@example">Example:</strong> {{ word.example }}</p>
     @if (word.pronunciation_url) {
     <app-audio-player [audioSrc]="word.pronunciation_url"></app-audio-player>
     }

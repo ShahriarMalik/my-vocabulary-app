@@ -113,7 +113,7 @@ export class LearnComponent implements OnInit {
             this.paginateWords(); // Paginate words
           },
           error: (err) => {
-            this.errorMessage = $localize`::@@errorFetchingWords:Error fetching words for the selected lesson`;
+            this.errorMessage = $localize`:@@errorFetchingWords:Error fetching words for the selected lesson`;
           },
         });
     }

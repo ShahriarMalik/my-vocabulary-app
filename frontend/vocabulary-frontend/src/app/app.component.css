@@ -14,6 +14,7 @@
   background-color: var(--background-color);
   color: var(--text-color);
   padding-bottom: 1rem;
+  margin-top: 4rem;
 }
 
 .mat-mdc-progress-color.mat-accent {
@@ -38,14 +39,24 @@
   visibility: visible;
 }
 
-@media screen and (max-width: 600px) {
+/* Mobile devices - max width 480px */
+@media (max-width: 480px) {
   .content {
-    margin-top: 1.5rem;
+    margin-top: 3rem;
   }
 }
 
-@media screen and (min-width: 601px) {
+/* Small tablets - min width 481px and max width 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+}
+
+/* Tablets and small desktops - min width 769px and max width 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
   .content {
-    margin-top: 1rem;
+    margin-top: 4rem;
   }
+}
+
+/* Large desktops - min width 1025px */
+@media (min-width: 1025px) {
 }

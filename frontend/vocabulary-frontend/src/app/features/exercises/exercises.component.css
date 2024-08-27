@@ -177,7 +177,6 @@ input[type="radio"] {
   }
   .cefr-lesson-selector {
     padding: 0rem;
-    margin: 0;
   }
   .exercise-container {
     grid-template-columns: repeat(2, 1fr);

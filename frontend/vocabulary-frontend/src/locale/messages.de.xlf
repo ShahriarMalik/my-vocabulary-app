@@ -1093,7 +1093,7 @@
       </trans-unit>
       <trans-unit id="klimaQuestion" datatype="html">
         <source>What is the meaning of Klima?</source>
-        <target>Was bedeutet Klima?</target>
+        <target>Was bedeutet "Klima" auf Englisch?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/home.component.ts</context>
           <context context-type="linenumber">45</context>
@@ -1121,6 +1121,48 @@
       <context context-type="linenumber">76,78</context>
     </context-group>
   </trans-unit>
+
+  <trans-unit id="translation" datatype="html">
+    <source>Translation:</source>
+    <target>Übersetzung (Englisch):</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/features/learn/learn.component.html</context>
+      <context context-type="linenumber">70</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="example" datatype="html">
+    <source>Example:</source>
+    <target>Beispiel:</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/features/learn/learn.component.html</context>
+      <context context-type="linenumber">72</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="noLessonCEFR" datatype="html">
+    <source>No lessons available for the selected CEFR level</source>
+    <target>Keine Lektionen für das ausgewählte CEFR-Niveau verfügbar</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/features/learn/learn.component.ts</context>
+      <context context-type="linenumber">77</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="wentWrong" datatype="html">
+    <source>Something went wrong. Please try again later.</source>
+    <target>Etwas ist schiefgelaufen. Bitte versuchen Sie es später noch einmal.</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/features/learn/learn.component.ts</context>
+      <context context-type="linenumber">81</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="errorFetchingWords" datatype="html">
+    <source>Error fetching words for the selected lesson</source>
+    <target>Fehler beim Abrufen der Wörter für die ausgewählte Lektion</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/features/learn/learn.component.ts</context>
+      <context context-type="linenumber">116</context>
+    </context-group>
+  </trans-unit>
+
   <trans-unit id="noWordsForSelection" datatype="html">
     <source>No words available for the selection at this moment</source>
     <target>Derzeit sind keine Wörter für die Auswahl verfügbar</target>

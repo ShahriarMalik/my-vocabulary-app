@@ -100,27 +100,32 @@
   border-radius: 22px;
 }
 
-/* Responsive Design */
-
-@media (max-width: 30rem) {
+/* Mobile devices - max width 480px */
+@media (max-width: 480px) {
+  .cefr-lesson-selector {
+    max-width: 17rem;
+  }
   .words-grid {
     grid-template-columns: repeat(1, 1fr);
   }
 }
 
-@media (min-width: 30.0625rem) and (max-width: 48rem) {
+/* Small tablets - min width 481px and max width 768px */
+@media (min-width: 481px) and (max-width: 768px) {
   .words-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 48.0625rem) and (max-width: 64rem) {
+/* Tablets and small desktops - min width 769px and max width 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
   .words-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (min-width: 64.0625rem) {
+/* Large desktops - min width 1025px */
+@media (min-width: 1025px) {
   .words-grid {
     grid-template-columns: repeat(4, 1fr);
   }
