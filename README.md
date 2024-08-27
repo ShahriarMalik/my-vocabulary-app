@@ -1,6 +1,6 @@
 ### VokabelProfi - German Vocabulary Learning Platform
 
-VokabelProfi is a comprehensive web application designed to help users learn and manage German vocabulary. It features interactive exercises, real-time progress tracking, multi-device support, and administrative tools. The platform provides personalized learning experiences, supports multiple languages through internationalization (i18n), and ensures a responsive user interface across different devices.
+VokabelProfi is a comprehensive web application designed to help users learn and manage German vocabulary. It features interactive exercises, real-time progress tracking, multi-device support, and administrative tools. The platform provides excellent learning experiences, supports multiple languages through internationalization (i18n), and ensures a responsive user interface across different devices.
 
 #### Live Demo:
 
