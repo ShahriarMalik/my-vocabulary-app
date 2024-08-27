@@ -93,7 +93,7 @@ use Shahr\Backend\Models\Exercise;
      * @return object
      */
     public function show(array $request, object $response): object {
-        $id = $request['id'];
+        $id = (int) $request['id'];
 
         $exercise = Exercise::find($id);
         if (!$exercise) {
@@ -147,8 +147,10 @@ use Shahr\Backend\Models\Exercise;
         $offset = $request['offset'] ?? 0;
 
         $exercises = Exercise::findByCefrLevel($cefrLevel, $lessonNumber, $limit, $offset);
-        if (!$exercises) {
-            return $response->withJson(['message' => 'No exercises found for this lesson'], 404);
+        // Check if there are no exercises found
+        if (empty($exercises)) {
+            // Return a 204 No Content response
+            return $response->withJson(null, 204);
         }
 
         return $response->withJson(['exercises' => $exercises]);

@@ -1,9 +1,10 @@
 <?php
 namespace Shahr\Backend\Models;
 
+use AllowDynamicProperties;
 use Shahr\Backend\Gateways\ExerciseGatewayInterface;
 
-class Exercise {
+#[AllowDynamicProperties] class Exercise {
     public ?int $id = null;
     public string $exercise_type;
     public int $word_id;
@@ -12,6 +13,9 @@ class Exercise {
     public string $question;
     public array $options;
     public string $correct_option;
+    public string $created_at;
+    public ?string $german_word = null;
+    public ?string $translation = null;
 
     private static ExerciseGatewayInterface $gateway;
 
@@ -93,6 +97,6 @@ class Exercise {
  * @return Exercise[]
      */
     public static function findByCefrLevel(string $cefr_level,int $lesson_id, int $limit, int $offset): array {
-        return self::$gateway->findByLessonId($lesson_id);
+        return self::$gateway->findByCefrLevel($cefr_level, $lesson_id, $limit, $offset);
     }
 }
