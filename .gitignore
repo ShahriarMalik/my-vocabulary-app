@@ -5,7 +5,7 @@ node_modules/
 vendor/
 
 # Ignore environment variables
-.env
+*.env
 
 # Ignore IDE config files
 .idea/
@@ -24,3 +24,20 @@ Thumbs.db
 # Ignore other build or dependency directories
 /dist
 /build
+
+# Ignore api keys
+backend/phpunit.xml
+backend/fluent-justice-431711-m6-a1aefe34f6ad.json
+
+# Ignore debug file
+*.log
+*.txt
+
+
+# Ignore server settings file
+.htaccess
+
+# Ingore folders
+.netlify
+
+/audio
