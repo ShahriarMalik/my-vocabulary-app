@@ -86,7 +86,7 @@ export class LearnComponent implements OnInit {
     setTimeout(() => {
       this.successMessage = '';
       this.errorMessage = '';
-    }, 3000);
+    }, 7000);
   }
 
   loadWords(): void {
@@ -100,29 +100,28 @@ export class LearnComponent implements OnInit {
         )
         .subscribe({
           next: (response) => {
-            if (!response) {
-              this.errorMessage =
-                'No words available for the selection at this moment';
+            if (response.words.length <= 0) {
+              this.errorMessage = $localize`:@@noWordsForSelection:No words available for the selection at this moment`;
               setTimeout(() => {
                 this.errorMessage = '';
-              }, 3000);
+              }, 7000);
               this.allWords = [];
               this.paginatedWords = [];
               return;
             }
-
+            this.currentPage = 0;
             this.allWords = response.words; // Store all words
             this.paginateWords(); // Paginate words
           },
           error: (err) => {
-            this.errorMessage = 'Error fetching words for the selected lesson';
+            this.errorMessage = $localize`::@@errorFetchingWords:Error fetching words for the selected lesson`;
           },
         });
     }
     setTimeout(() => {
       this.successMessage = '';
       this.errorMessage = '';
-    }, 3000);
+    }, 7000);
   }
 
   // Method to paginate words

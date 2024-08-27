@@ -48,6 +48,7 @@ export class NavbarComponent implements OnInit {
   get currentUserRole() {
     return this.authService.getUserRole();
   }
+
   setTheme(theme: string): void {
     if (theme === 'dark') {
       this.themeService.setDarkTheme();
@@ -63,6 +64,7 @@ export class NavbarComponent implements OnInit {
   changeLanguage(lang: string): void {
     this.languageService.setLanguage(lang);
     this.currentLanguage = lang;
+    // Redirection will be handled inside the setLanguage method in the service
   }
 
   onLogout() {

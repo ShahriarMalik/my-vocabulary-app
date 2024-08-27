@@ -130,6 +130,7 @@
 <app-paginator
   [length]="exercises.length"
   [pageSize]="pageSize"
+  [currentPage]="currentPage"
   [pageSizeOptions]="[4, 8, 12, 16, 20]"
   (pageChange)="onPageChange($event)"
   (pageSizeChange)="onPageSizeChange($event)"

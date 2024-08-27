@@ -6,10 +6,16 @@ use Shahr\Backend\Gateways\UserProgressGatewayInterface;
 class UserProgress {
     public ?int $id = null;
     public int $user_id;
-    public int $word_id;
+    public string $cefr_level;
     public int $lesson_id;
-    public int $score;
-    public bool $completed;
+    public int $word_id;
+    public bool $word_completed = false;
+    public int $word_score = 0;
+    public ?int $exercise_id = null;
+    public int $exercise_score = 0;
+    public bool $exercise_completed = false;
+    public bool $lesson_completed = false; // New property
+    public bool $cefr_level_completed = false; // New property
     public string $created_at;
 
     private static UserProgressGatewayInterface $gateway;
@@ -45,13 +51,15 @@ class UserProgress {
     }
 
     /**
-     * Check if progress exists for a specific user and word.
+     * Check if progress exists for a specific user, word, lesson, and exercise.
      *
      * @param int $user_id
      * @param int $word_id
+     * @param int $lesson_id
+     * @param int $exercise_id
      * @return bool
      */
-    public static function progressExists(int $user_id, int $word_id): bool {
-        return self::$gateway->progressExists($user_id, $word_id);
+    public static function progressExists(int $user_id, string $cefr_level, int $lesson_id, int $word_id): bool {
+        return self::$gateway->progressExists($user_id, $cefr_level, $lesson_id, $word_id);
     }
 }

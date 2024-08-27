@@ -21,13 +21,15 @@ interface UserProgressGatewayInterface {
     public function update(UserProgress $progress): void;
 
     /**
-     * Check if progress exists for a specific user and word.
+     * Check if progress exists for a specific user, word, lesson, and exercise.
      *
      * @param int $user_id
      * @param int $word_id
+     * @param int $lesson_id
+     * @param int $exercise_id
      * @return bool
      */
-    public function progressExists(int $user_id, int $word_id): bool;
+    public function progressExists(int $user_id, int $word_id, int $lesson_id, int $exercise_id): bool;
 
     /**
      * Get the progress of a user by their ID.

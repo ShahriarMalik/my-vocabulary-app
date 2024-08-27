@@ -35,12 +35,15 @@ route('GET', '/words/level/{cefr_level}', [WordController::class, 'getWordsbyCef
 route('POST', '/user-progress/save', [UserProgressController::class, 'save']);
 route('PUT', '/user-progress/update', [UserProgressController::class, 'update']);
 route('GET', '/user-progress/get', [UserProgressController::class, 'getProgress']);
+route('GET', '/user-progress/cefr-levels', [UserProgressController::class, 'getCefrProgress']);
+route('GET', '/user-progress/lessons', [UserProgressController::class, 'getLessonsProgress']);
+
 
 // Define ExerciseController routes
 route('POST', '/exercises', [ExerciseController::class, 'create']);
 route('PUT', '/exercises', [ExerciseController::class, 'update']);
 route('DELETE', '/exercises', [ExerciseController::class, 'delete']);
-route('GET', '/exercises/{id}', [ExerciseController::class, 'show']);
+// route('GET', '/exercises/{id}', [ExerciseController::class, 'show']);
 route('GET', '/exercises', [ExerciseController::class, 'index']);
 route('GET', '/exercises/lesson/{lesson_id}', [ExerciseController::class, 'getByLesson']);
 route('GET', '/exercises/{cefr_level}', [ExerciseController::class, 'getLessonByCefrLevel']);

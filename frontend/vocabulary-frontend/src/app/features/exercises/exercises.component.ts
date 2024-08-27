@@ -145,6 +145,7 @@ export class ExercisesComponent {
     this.selectedLesson =
       this.lessons.find((lesson) => lesson.id === selectedLessonId) || null;
     console.log(this.selectedLesson);
+    this.currentPage = 0;
     this.loadExercises();
   }
 
@@ -159,6 +160,7 @@ export class ExercisesComponent {
         )
         .subscribe({
           next: (response) => {
+            console.log(response);
             if (!response) {
               this.errorMessage = $localize`:@@noExerise:No exercise available for the selection at this moment`;
               setTimeout(() => {
@@ -182,7 +184,13 @@ export class ExercisesComponent {
 
             console.log(this.exercises);
           },
-          error: () => {},
+          error: () => {
+            this.errorMessage = $localize`:@@noExerise:No exercise available for the selection at this moment`;
+            setTimeout(() => {
+              this.errorMessage = '';
+            }, 3000);
+            this.exercisesToShow = [];
+          },
         });
     }
   }

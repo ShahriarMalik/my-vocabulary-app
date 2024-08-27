@@ -12,11 +12,12 @@ export class PaginatorComponent {
   @Input() length: number = 0; // Total number of items
   @Input() pageSize: number = 4; // Number of items per page
   @Input() pageSizeOptions: number[] = [4, 8, 12, 16, 20]; // Available page size options
+  @Input() currentPage: number = 0;
 
   @Output() pageChange = new EventEmitter<number>(); // Emit the current page index
   @Output() pageSizeChange = new EventEmitter<number>(); // Emit the page size
 
-  currentPage: number = 0; // Current page index
+  // currentPage: number = 0; // Current page index
 
   ngOnInit() {}
 

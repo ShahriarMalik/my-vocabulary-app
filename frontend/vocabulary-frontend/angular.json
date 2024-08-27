@@ -5,7 +5,7 @@
   "projects": {
     "vocabulary-frontend": {
       "i18n": {
-        "sourceLocale": "en-US",
+        "sourceLocale": "en",
         "locales": {
           "de": "src/locale/messages.de.xlf"
         }
@@ -35,12 +35,7 @@
               "src/styles.css"
             ],
             "scripts": [],
-            "localize": ["en-US", "de"],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "localize": ["en", "de"]
           },
           "configurations": {
             "production": {

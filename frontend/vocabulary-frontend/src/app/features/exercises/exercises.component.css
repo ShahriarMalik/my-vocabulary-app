@@ -160,6 +160,10 @@ input[type="radio"] {
 
 /* For small screens (portrait phones) */
 @media (max-width: 30rem) {
+  .cefr-lesson-selector {
+    max-width: 22rem;
+    margin: 0 auto;
+  }
   .exercise-container {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -167,6 +171,10 @@ input[type="radio"] {
 
 /* For medium screens (tablets and smaller laptops) */
 @media (min-width: 30.0625rem) and (max-width: 48rem) {
+  .cefr-lesson-selector {
+    max-width: 23rem;
+    margin: 0 auto;
+  }
   .cefr-lesson-selector {
     padding: 0rem;
     margin: 0;
