@@ -24,7 +24,6 @@ You can try out the application at: [VokabelProfi Live Demo](https://vokabelprof
 
 ```
 frontend/
-├── .netlify/
 ├── node_modules/
 ├── vocabulary-frontend/
 │   ├── .angular/                   # Angular CLI and project configuration files
