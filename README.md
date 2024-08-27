@@ -260,7 +260,7 @@ The following files and directories are ignored by the `.gitignore` file in this
 
 ## Database Schema Overview
 
-The database schema for **VokabelProfi - German Vocabulary Learning Platform** is designed to support the application's core functionality, including user management, vocabulary management, exercises, translations, and progress tracking. Below is an overview of the tables and their relationships.
+The database schema for **VokabelProfi - German Vocabulary Learning Platform** is designed to support the application's core functionality, including user management, vocabulary management, exercises, translations, and progress tracking. Below is an overview of the tables and their relationships. For a detailed visualization of the database schema, please refer to the PDF in the `sql` folder.
 
 ### Tables:
 
