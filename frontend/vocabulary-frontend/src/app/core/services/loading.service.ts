@@ -10,7 +10,7 @@ export class LoadingService {
 
   constructor() {}
 
-  showLaoding() {
+  showLoading() {
     this.loadingSubject.next(true);
   }
 

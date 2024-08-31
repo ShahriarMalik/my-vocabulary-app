@@ -9,7 +9,7 @@ export function loadingInterceptor(
 ): Observable<HttpEvent<unknown>> {
   const loadingService = inject(LoadingService);
 
-  loadingService.showLaoding();
+  loadingService.showLoading();
 
   return next(req).pipe(
     tap({

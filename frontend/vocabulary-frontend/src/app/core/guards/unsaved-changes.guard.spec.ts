@@ -1,17 +1,54 @@
 import { TestBed } from '@angular/core/testing';
-import { CanDeactivateFn } from '@angular/router';
-
+import { MatDialog } from '@angular/material/dialog';
+import { of } from 'rxjs';
 import { unsavedChangesGuard } from './unsaved-changes.guard';
+import { SignupComponent } from '../../features/authentication/signup/signup.component';
+import { FormGroup } from '@angular/forms';
 
 describe('unsavedChangesGuard', () => {
-  const executeGuard: CanDeactivateFn = (...guardParameters) => 
-      TestBed.runInInjectionContext(() => unsavedChangesGuard(...guardParameters));
+  let dialog: MatDialog;
+  let component: SignupComponent;
+
+  const executeGuard = () =>
+    TestBed.runInInjectionContext(() =>
+      unsavedChangesGuard(component, {} as any, {} as any, {} as any)
+    );
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      providers: [{ provide: MatDialog, useValue: { open: jest.fn() } }],
+    });
+
+    dialog = TestBed.inject(MatDialog);
+
+    const mockFormGroup = new FormGroup({});
+    mockFormGroup.markAsDirty(); // Set the form as dirty initially for testing
+
+    component = {
+      signUpForm: mockFormGroup,
+    } as SignupComponent;
   });
 
-  it('should be created', () => {
-    expect(executeGuard).toBeTruthy();
+  it('should allow navigation if form is not dirty', () => {
+    component.signUpForm.markAsPristine(); // Ensure form is pristine
+
+    const result = executeGuard();
+
+    expect(result).toBe(true); // Guard should return true
+    expect(dialog.open).not.toHaveBeenCalled(); // Dialog should not open
+  });
+
+  it('should open confirmation dialog if form is dirty', () => {
+    component.signUpForm.markAsDirty(); // Mark the form as dirty
+
+    dialog.open = jest.fn().mockReturnValue({
+      afterClosed: () => of(true),
+    });
+
+    const result = executeGuard();
+
+    expect(dialog.open).toHaveBeenCalled(); // Dialog should be opened
+    // Since the dialog's afterClosed observable is mocked to return true,
+    // the guard should allow navigation.
   });
 });
