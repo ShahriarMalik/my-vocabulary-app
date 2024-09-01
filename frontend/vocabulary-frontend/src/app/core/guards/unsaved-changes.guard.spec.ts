@@ -51,4 +51,25 @@ describe('unsavedChangesGuard', () => {
     // Since the dialog's afterClosed observable is mocked to return true,
     // the guard should allow navigation.
   });
+
+  it('should prevent navigation if form is dirty and user selects no', () => {
+    component.signUpForm.markAsDirty();
+
+    dialog.open = jest.fn().mockReturnValue({
+      afterClosed: () => of(false), // Simulate user selecting 'No'
+    });
+
+    const result = executeGuard();
+
+    expect(dialog.open).toHaveBeenCalled(); // Dialog should be opened
+    expect(result).toBeInstanceOf(Object);
+
+    if (typeof result === 'boolean') {
+      expect(result).toBe(false);
+    } else if ('subscribe' in result) {
+      result.subscribe((value) => {
+        expect(value).toBe(false);
+      });
+    }
+  });
 });

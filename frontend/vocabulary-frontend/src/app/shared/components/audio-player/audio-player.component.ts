@@ -40,7 +40,7 @@ export class AudioPlayerComponent implements AfterViewInit {
         })
         .catch((error: Error) => {
           if (error.name !== 'AbortError') {
-            console.error('Error playing audio:', error);
+            console.log('Error playing audio:', error);
           }
         });
     } else {
