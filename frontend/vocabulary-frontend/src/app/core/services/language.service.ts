@@ -13,11 +13,23 @@ export class LanguageService {
     private router: Router
   ) {
     if (isPlatformBrowser(this.platformId)) {
+      // Check the language from the URL
+      const currentUrl = window.location.href;
+      let detectedLanguage = this.defaultLanguage;
+
+      if (currentUrl.includes('/de')) {
+        detectedLanguage = 'de';
+      } else if (currentUrl.includes('/en')) {
+        detectedLanguage = 'en';
+      }
+
       const savedLanguage = window.localStorage.getItem('selectedLanguage');
-      if (savedLanguage) {
+
+      if (savedLanguage && savedLanguage === detectedLanguage) {
         this.setLanguage(savedLanguage, false); // No redirection on initialization
       } else {
-        this.setLanguage(this.defaultLanguage, false); // No redirection on initialization
+        // Set the language based on URL or fallback to default
+        this.setLanguage(detectedLanguage, false); // No redirection on initialization
       }
     }
   }

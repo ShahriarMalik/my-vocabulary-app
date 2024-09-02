@@ -3,6 +3,7 @@ import {
   Component,
   ElementRef,
   OnInit,
+  signal,
   ViewChild,
 } from '@angular/core';
 import {
@@ -11,10 +12,14 @@ import {
   Validators,
   ReactiveFormsModule,
 } from '@angular/forms';
-import { MatError, MatFormField, MatLabel } from '@angular/material/form-field';
+import {
+  MatError,
+  MatFormFieldModule,
+  MatLabel,
+} from '@angular/material/form-field';
 import { MatInput } from '@angular/material/input';
 import { MatButton } from '@angular/material/button';
-import { MatIcon } from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 import { MatCard, MatCardContent, MatCardHeader } from '@angular/material/card';
 import { MatProgressSpinner } from '@angular/material/progress-spinner';
 import { AuthService } from '../../../core/services/auth.service';
@@ -25,10 +30,10 @@ import { Router, RouterLink } from '@angular/router';
   standalone: true,
   imports: [
     ReactiveFormsModule,
-    MatFormField,
+    MatFormFieldModule,
     MatInput,
     MatButton,
-    MatIcon,
+    MatIconModule,
     MatCard,
     MatCardHeader,
     MatCardContent,
@@ -43,6 +48,8 @@ import { Router, RouterLink } from '@angular/router';
 export class LoginComponent implements OnInit, AfterViewInit {
   loginForm!: FormGroup;
   errorMessage = '';
+  hide = signal(true);
+
   @ViewChild('emailInput') emailInput!: ElementRef;
 
   constructor(private authService: AuthService, private router: Router) {}
@@ -61,6 +68,11 @@ export class LoginComponent implements OnInit, AfterViewInit {
     setTimeout(() => {
       this.emailInput.nativeElement.focus();
     });
+  }
+
+  togglePasswordVisibility(event: MouseEvent) {
+    this.hide.set(!this.hide());
+    event.stopPropagation();
   }
 
   onSubmit() {

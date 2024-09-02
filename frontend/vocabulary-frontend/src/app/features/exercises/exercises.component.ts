@@ -24,6 +24,7 @@ import { PaginatorComponent } from '../../shared/components/paginator/paginator.
 import { AuthService } from '../../core/services/auth.service';
 import { ProgressService } from '../../core/services/progress.service';
 import { UserProgress } from '../../core/models/user-progress.model';
+import { Progress } from '../../core/models/lesson-progress.model';
 
 @Component({
   selector: 'app-exercises',
@@ -180,7 +181,10 @@ export class ExercisesComponent {
             }
 
             // Paginate the exercises
-            this.paginateExercises();
+            // this.paginateExercises();
+
+            // After fecthing exercies, fetch user's progress
+            this.loadUserProgress();
 
             console.log(this.exercises);
           },
@@ -195,6 +199,52 @@ export class ExercisesComponent {
     }
   }
 
+  loadUserProgress() {
+    if (this.authService.getUserIdFromToken()) {
+      this.userId = Number(this.authService.getUserIdFromToken());
+      this.progressService
+        .getDetailsProgress(
+          this.userId,
+          this.selectedCefrLevel,
+          this.selectedLesson?.lesson_number ?? 0
+        )
+        .subscribe({
+          next: (progressData) => {
+            if (progressData && progressData.progress.length > 0) {
+              this.paginateExercises();
+              this.markCompletedExercises(progressData.progress);
+            }
+          },
+          error: (err) => {
+            console.error('Error fetching user progress:', err);
+            this.paginateExercises();
+          },
+        });
+    } else {
+      // If no user ID is available, directly paginate exercises
+      this.paginateExercises();
+    }
+  }
+
+  markCompletedExercises(progressData: Progress[]) {
+    this.exercisesToShow.forEach((showedExercises) => {
+      // console.log('markCompletedExercises', showedExercises, progressData);
+
+      const completedProgress = progressData.find((progress) => {
+        return (
+          progress.word_id === showedExercises.word_id &&
+          progress.exercise_id === showedExercises.id
+        );
+      });
+
+      if (completedProgress) {
+        console.log(completedProgress);
+
+        showedExercises.answerSubmitted = true;
+        showedExercises.isCorrect = true;
+      }
+    });
+  }
   // Method to handle the option selection
   onOptionSelect(event: Event, exercise: any): void {
     const target = event.target as HTMLInputElement;
@@ -261,11 +311,27 @@ export class ExercisesComponent {
     }
   }
 
+  // hideCompleted: boolean = false;
+  // toggleHideCompleted(event: Event) {
+  //   const target = event.target as HTMLInputElement;
+  //   this.hideCompleted = target.checked;
+  // }
+
   // Method to paginate
   paginateExercises(): void {
     const start = this.currentPage * this.pageSize;
     const end = start + this.pageSize;
-    this.exercisesToShow = this.exercises.slice(start, end);
+
+    let filteredExercises = this.exercises;
+
+    // if (this.hideCompleted) {
+    //   filteredExercises = filteredExercises.filter(
+    //     (exercise) => !exercise.answerSubmitted
+    //   );
+    // }
+
+    this.exercisesToShow = filteredExercises.slice(start, end);
+    // console.log(this.exercisesToShow);
   }
 
   onPageChange(page: number): void {

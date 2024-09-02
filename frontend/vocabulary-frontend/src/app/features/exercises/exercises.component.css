@@ -121,7 +121,7 @@ input[type="radio"] {
   padding: 0.5rem;
   border-radius: 0.25rem;
   text-align: center;
-  width: 90%;
+  width: 50%;
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
@@ -161,7 +161,7 @@ input[type="radio"] {
 /* For small screens (portrait phones) */
 @media (max-width: 30rem) {
   .cefr-lesson-selector {
-    max-width: 22rem;
+    max-width: 20.5rem;
     margin: 0 auto;
   }
   .exercise-container {

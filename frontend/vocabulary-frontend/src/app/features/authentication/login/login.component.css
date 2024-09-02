@@ -45,7 +45,14 @@ mat-form-field input[matInput] {
   border: 1px solid var(--border-color);
   box-shadow: none;
 }
-
+#password-visibilty__btn {
+  border: none;
+  margin-right: 0.8rem;
+  background: var(--background-color);
+}
+.mat-icon {
+  color: var(--text-color);
+}
 /* Error Styles */
 .error-message {
   color: red;

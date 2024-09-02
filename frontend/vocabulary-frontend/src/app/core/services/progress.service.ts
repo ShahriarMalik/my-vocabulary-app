@@ -14,6 +14,7 @@ import {
 import {
   LessonProgress,
   LessonProgressResponse,
+  ProgressResponse,
 } from '../models/lesson-progress.model';
 
 @Injectable({
@@ -72,6 +73,31 @@ export class ProgressService {
       `${this.apiUrl}/user-progress/lessons`,
       {
         params: { user_id: userId.toString(), cefr_level: cefrLevel },
+      }
+    );
+  }
+
+  /**
+   * Fetches detailed overall progress for a user within a specific CEFR level and lesson.
+   * @param userId - The ID of the user whose progress is being fetched.
+   * @param cefrLevel - The CEFR level for which progress is being fetched.
+   * @param lesson_id - The lesson ID for which progress is being fetched.
+   * @returns An Observable containing an array of LessonProgress objects.
+   */
+
+  getDetailsProgress(
+    userId: number,
+    cefrLevel: string,
+    lesson_id: number
+  ): Observable<ProgressResponse> {
+    return this.http.get<ProgressResponse>(
+      `${this.apiUrl}/user-progress/details`,
+      {
+        params: {
+          user_id: userId.toString(),
+          cefr_level: cefrLevel,
+          lesson_id: lesson_id.toString(),
+        },
       }
     );
   }

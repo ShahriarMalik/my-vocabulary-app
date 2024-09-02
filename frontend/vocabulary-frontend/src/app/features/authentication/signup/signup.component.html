@@ -66,13 +66,24 @@
 
         <!-- Password Field -->
         <mat-form-field appearance="outline">
-          <mat-label label i18n="@@passwordLabel">Password</mat-label>
+          <mat-label i18n="@@passwordLabel">Password</mat-label>
           <input
             matInput
-            type="password"
+            [type]="hide() ? 'password' : 'text'"
             id="password"
             formControlName="password"
           />
+          <button
+            id="password-visibilty__btn"
+            type="button"
+            mat-icon-button
+            matSuffix
+            (click)="togglePasswordVisibility($event)"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="!hide()"
+          >
+            <mat-icon>{{ hide() ? "visibility" : "visibility_off" }}</mat-icon>
+          </button>
           @if(password?.invalid && password?.touched){
           <mat-error>
             @if(password?.errors?.['required']){

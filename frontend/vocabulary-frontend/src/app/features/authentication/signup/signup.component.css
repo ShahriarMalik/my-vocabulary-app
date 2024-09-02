@@ -63,6 +63,12 @@ button[mat-raised-button]:hover {
   color: var(--accent-color);
 }
 
+#password-visibilty__btn {
+  border: none;
+  margin-right: 0.8rem;
+  background: var(--background-color);
+}
+
 .signup-card,
 .success-card {
   width: 100%;
@@ -97,6 +103,10 @@ mat-card-header mat-icon {
 
 .error-card mat-card-header mat-icon {
   color: red;
+}
+
+.mat-icon {
+  color: var(--text-color);
 }
 
 /* Media Queries */

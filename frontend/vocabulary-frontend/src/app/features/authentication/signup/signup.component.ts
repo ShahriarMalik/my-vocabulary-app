@@ -3,6 +3,7 @@ import {
   Component,
   ElementRef,
   OnInit,
+  signal,
   ViewChild,
 } from '@angular/core';
 import {
@@ -42,6 +43,7 @@ export class SignupComponent implements OnInit, AfterViewInit {
   signUpForm!: FormGroup;
   errorMessage = '';
   successMessage = '';
+  hide = signal(true);
   @ViewChild('usernameInput') usernameInput!: ElementRef;
 
   constructor(
@@ -74,6 +76,11 @@ export class SignupComponent implements OnInit, AfterViewInit {
     setTimeout(() => {
       this.usernameInput.nativeElement.focus();
     });
+  }
+
+  togglePasswordVisibility(event: MouseEvent) {
+    this.hide.set(!this.hide());
+    event.stopPropagation();
   }
   onSubmit() {
     if (this.signUpForm.valid) {

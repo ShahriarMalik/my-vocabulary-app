@@ -20,3 +20,23 @@ export interface Exercise {
   question: string;
   completed: boolean;
 }
+
+export interface Progress {
+  id: number;
+  user_id: number;
+  word_id: number;
+  lesson_id: number;
+  word_score: number;
+  word_completed: boolean;
+  created_at: string;
+  exercise_id: number;
+  exercise_score: number;
+  exercise_completed: boolean;
+  cefr_level: string;
+  lesson_completed: boolean;
+  cefr_level_completed: boolean;
+}
+
+export interface ProgressResponse {
+  progress: Progress[];
+}
