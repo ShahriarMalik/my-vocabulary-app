@@ -48,7 +48,7 @@ export class WordsManagementComponent {
       emoji: [''],
       example: [''],
       translation: [''],
-      translated_language: [''], // <-- Ensure this is added
+      translated_language: [''],
     });
   }
 

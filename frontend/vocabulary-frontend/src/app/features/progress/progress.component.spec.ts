@@ -8,9 +8,8 @@ describe('ProgressComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ProgressComponent]
-    })
-    .compileComponents();
+      imports: [ProgressComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ProgressComponent);
     component = fixture.componentInstance;

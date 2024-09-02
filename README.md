@@ -188,8 +188,6 @@ backend/
    php -S localhost :8000 -t public
    ```
 
-````
-
 ## Usage
 
 1. **Open your browser** and navigate to `http://localhost:4200` to access the frontend.
@@ -276,7 +274,7 @@ CREATE TABLE users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     role VARCHAR(50) DEFAULT 'user' NOT NULL
 );
-````
+```
 
 2. **Lessons Table**
 
